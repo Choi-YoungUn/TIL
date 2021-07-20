@@ -1,0 +1,16 @@
+
+State Machine - |UART_Echoback|UART_RX:inst4|state
+Name state.STOP state.PARITY state.RECEIVE state.START state.IDLE 
+state.IDLE 0 0 0 0 0 
+state.START 0 0 0 1 1 
+state.RECEIVE 0 0 1 0 1 
+state.PARITY 0 1 0 0 1 
+state.STOP 1 0 0 0 1 
+
+State Machine - |UART_Echoback|UART_TX:inst|state
+Name state.STOP state.PARITY state.SEND state.START state.IDLE 
+state.IDLE 0 0 0 0 0 
+state.START 0 0 0 1 1 
+state.SEND 0 0 1 0 1 
+state.PARITY 0 1 0 0 1 
+state.STOP 1 0 0 0 1 

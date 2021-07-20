@@ -1,0 +1,68 @@
+|fourbit_non_twoup_count_sw
+clk => JK_FF:jk1.clk
+reset => JK_FF:jk1.clr
+reset => JK_FF:jk2.clr
+reset => JK_FF:jk3.clr
+reset => JK_FF:jk4.clr
+q[0] <= JK_FF:jk1.q
+q[1] <= JK_FF:jk2.q
+q[2] <= JK_FF:jk3.q
+q[3] <= JK_FF:jk4.q
+
+
+|fourbit_non_twoup_count_sw|JK_FF:jk1
+j => process_0~1.IN0
+j => process_0~3.IN0
+j => process_0~2.IN0
+j => process_0~0.IN0
+k => process_0~2.IN1
+k => process_0~3.IN1
+k => process_0~1.IN1
+k => process_0~0.IN1
+clk => temp.CLK
+clr => temp.ACLR
+q <= temp.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|fourbit_non_twoup_count_sw|JK_FF:jk2
+j => process_0~1.IN0
+j => process_0~3.IN0
+j => process_0~2.IN0
+j => process_0~0.IN0
+k => process_0~2.IN1
+k => process_0~3.IN1
+k => process_0~1.IN1
+k => process_0~0.IN1
+clk => temp.CLK
+clr => temp.ACLR
+q <= temp.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|fourbit_non_twoup_count_sw|JK_FF:jk3
+j => process_0~1.IN0
+j => process_0~3.IN0
+j => process_0~2.IN0
+j => process_0~0.IN0
+k => process_0~2.IN1
+k => process_0~3.IN1
+k => process_0~1.IN1
+k => process_0~0.IN1
+clk => temp.CLK
+clr => temp.ACLR
+q <= temp.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|fourbit_non_twoup_count_sw|JK_FF:jk4
+j => process_0~1.IN0
+j => process_0~3.IN0
+j => process_0~2.IN0
+j => process_0~0.IN0
+k => process_0~2.IN1
+k => process_0~3.IN1
+k => process_0~1.IN1
+k => process_0~0.IN1
+clk => temp.CLK
+clr => temp.ACLR
+q <= temp.DB_MAX_OUTPUT_PORT_TYPE
+
+

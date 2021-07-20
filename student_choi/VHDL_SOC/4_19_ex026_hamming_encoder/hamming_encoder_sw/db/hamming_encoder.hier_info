@@ -1,0 +1,21 @@
+|hamming_encoder
+ai[0] => yo~0.IN0
+ai[0] => yo[3].DATAIN
+ai[1] => yo~0.IN1
+ai[1] => yo~2.IN0
+ai[1] => yo[4].DATAIN
+ai[2] => yo~2.IN1
+ai[2] => yo~4.IN1
+ai[2] => yo[5].DATAIN
+ai[3] => yo~1.IN1
+ai[3] => yo~3.IN1
+ai[3] => yo[6].DATAIN
+yo[0] <= yo~4.DB_MAX_OUTPUT_PORT_TYPE
+yo[1] <= yo~3.DB_MAX_OUTPUT_PORT_TYPE
+yo[2] <= yo~1.DB_MAX_OUTPUT_PORT_TYPE
+yo[3] <= ai[0].DB_MAX_OUTPUT_PORT_TYPE
+yo[4] <= ai[1].DB_MAX_OUTPUT_PORT_TYPE
+yo[5] <= ai[2].DB_MAX_OUTPUT_PORT_TYPE
+yo[6] <= ai[3].DB_MAX_OUTPUT_PORT_TYPE
+
+

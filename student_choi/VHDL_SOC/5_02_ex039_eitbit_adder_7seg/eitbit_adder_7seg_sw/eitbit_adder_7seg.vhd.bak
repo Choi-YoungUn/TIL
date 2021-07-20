@@ -1,0 +1,55 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity eitbit_adder_7seg is
+port( x : in std_logic_vector(7 downto 0);
+      y : in std_logic_vector(7 downto 0);
+		
+		segziro : out std_logic_vector(3 downto 0);
+		segten : out std_logic_vector(3 downto 0);
+		seghund : out std_logic_vector(3 downto 0));
+		
+		end eitbit_adder_7seg;
+		
+		architecture behav of eitbit_adder_7seg is
+		
+		component eibbit_adder_vhd is
+
+port (
+       add_a : in std_logic_vector( 7 downto 0);
+		 add_b : in std_logic_vector( 7 downto 0);
+		 
+		 add_sum : out std_logic_vector( 8 downto 0)
+		 );
+		 end component;
+		 
+		 component nine_bcd is
+port ( nbit : in std_logic_vector(8 downto 0);        
+       bcdcord : out std_logic_vector(11 downto 0));
+		 end component;
+		 
+		 component FNDdecoder is
+port (data_in : in std_logic_vector(3 downto 0);
+      seg : out std_logic_vector(6 downto 0));
+		end component;
+		
+		siganl summ : std_logic_vector(8 downto 0);
+		signal bcds : std_logic_vector(11 downto 0);
+		
+		eitbit_adder : eibbit_adder_vhd
+		port map(add_a => x , add_b => y, add_sum => summ);
+		
+		bi_to_bcd : nine_bcd
+		port map(nbit => summ, bcdcord => bcds);
+		
+		seg1 : FNDdecoder
+		port map(data_in => bcds(3 downto 0), seg => segziro);
+		
+		seg2 : FNDdecoder
+		port map(data_in => bcds(7 downto 4), seg => segten);
+		
+		seg3 : FNDdecoder
+		port map(data_in => bcds(11 downto 8), seg => seghund);
+		
+		end behav;
+		

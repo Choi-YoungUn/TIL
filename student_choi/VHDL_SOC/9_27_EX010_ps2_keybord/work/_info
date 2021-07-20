@@ -1,0 +1,122 @@
+m255
+K3
+13
+cModel Technology
+dD:\MO_VHDL\9_20_EX009_CNT10
+Eps2_keybord
+Z0 w1569569018
+Z1 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+Z2 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dD:\MO_VHDL\9_27_EX010_ps2_keybord
+Z6 8D:/MO_VHDL/9_27_EX010_ps2_keybord/ps2_keybord.vhd
+Z7 FD:/MO_VHDL/9_27_EX010_ps2_keybord/ps2_keybord.vhd
+l0
+L6
+VRbJ<ZJKDAA8=ACzeBTLoD3
+Z8 OV;C;10.1d;51
+32
+Z9 !s108 1570177997.491000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/MO_VHDL/9_27_EX010_ps2_keybord/ps2_keybord.vhd|
+Z11 !s107 D:/MO_VHDL/9_27_EX010_ps2_keybord/ps2_keybord.vhd|
+Z12 o-work work -2002 -explicit -O0
+Z13 tExplicit 1
+!s100 ]5cn<Q2o`DhJnD7CS:3f21
+!i10b 1
+Abeh
+R1
+R2
+R3
+R4
+DEx4 work 11 ps2_keybord 0 22 RbJ<ZJKDAA8=ACzeBTLoD3
+l31
+L17
+V9E1ciaXQoi2Sgm]ZHH0D13
+R8
+32
+R9
+R10
+R11
+R12
+R13
+!s100 _f]]dzzOljU?:HLi7J^e03
+!i10b 1
+Eps2_receiver
+Z14 w1570178194
+R1
+R2
+R3
+R4
+R5
+Z15 8D:/MO_VHDL/9_27_EX010_ps2_keybord/ps2_receiver.vhd
+Z16 FD:/MO_VHDL/9_27_EX010_ps2_keybord/ps2_receiver.vhd
+l0
+L6
+VRJDK8WJdz[8CNgTf0Xbiz2
+R8
+32
+Z17 !s108 1570178204.056000
+Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/MO_VHDL/9_27_EX010_ps2_keybord/ps2_receiver.vhd|
+Z19 !s107 D:/MO_VHDL/9_27_EX010_ps2_keybord/ps2_receiver.vhd|
+R12
+R13
+!s100 X520RhQ`h<B3a5Z>HLGe72
+!i10b 1
+Abeh
+R1
+R2
+R3
+R4
+DEx4 work 12 ps2_receiver 0 22 RJDK8WJdz[8CNgTf0Xbiz2
+l28
+L17
+VhanCj4^gZ5eoecOh;iS:92
+R8
+32
+R17
+R18
+R19
+R12
+R13
+!s100 MY]K^??Qe2S<kNcCN;_6R1
+!i10b 1
+Etb_ps2_keybord
+Z20 w1570178968
+R1
+R2
+R3
+R4
+R5
+Z21 8D:/MO_VHDL/9_27_EX010_ps2_keybord/tb_ps2_keybord.vhd
+Z22 FD:/MO_VHDL/9_27_EX010_ps2_keybord/tb_ps2_keybord.vhd
+l0
+L6
+VE`GBV[<ZH5:SPTOffeUDI0
+!s100 _JZKVR@a4IMC1BBg7;1^i3
+R8
+32
+!i10b 1
+Z23 !s108 1570178970.885000
+Z24 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/MO_VHDL/9_27_EX010_ps2_keybord/tb_ps2_keybord.vhd|
+Z25 !s107 D:/MO_VHDL/9_27_EX010_ps2_keybord/tb_ps2_keybord.vhd|
+R12
+R13
+Abeh
+R1
+R2
+R3
+R4
+Z26 DEx4 work 14 tb_ps2_keybord 0 22 E`GBV[<ZH5:SPTOffeUDI0
+l39
+L8
+V=jaRBWkHAR9A0Z1ogej;71
+!s100 KX?JoG?h4zD6>czm5eT@z3
+R8
+32
+!i10b 1
+R23
+R24
+R25
+R12
+R13

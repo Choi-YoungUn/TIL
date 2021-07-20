@@ -1,0 +1,18 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity mux2x1 is
+port (a : in std_logic;
+      b : in std_logic;
+		sel : in std_logic;
+		y : out std_logic);
+		end mux2x1;
+		
+		architecture dataflow of mux2x1 is
+		
+		begin
+		with sel select
+		y <= not b when '1'
+		 a when '0'
+		 'z' when others;
+		 end dataflow;

@@ -1,0 +1,15 @@
+|jonnson_count
+reset => temp[0].ACLR
+reset => temp[1].ACLR
+reset => temp[2].ACLR
+reset => temp[3].ACLR
+clk => temp[0].CLK
+clk => temp[1].CLK
+clk => temp[2].CLK
+clk => temp[3].CLK
+q[0] <= temp[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= temp[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= temp[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= temp[3].DB_MAX_OUTPUT_PORT_TYPE
+
+

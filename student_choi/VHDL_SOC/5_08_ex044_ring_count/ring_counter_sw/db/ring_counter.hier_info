@@ -1,0 +1,43 @@
+|ring_counter
+reset => D_FF:d0.clear
+reset => D_FF:d1.clear
+reset => D_FF:d2.clear
+reset => D_FF:d3.clear
+clk => D_FF:d0.clk
+clk => D_FF:d1.clk
+clk => D_FF:d2.clk
+clk => D_FF:d3.clk
+q[0] <= D_FF:d0.Q
+q[1] <= D_FF:d1.Q
+q[2] <= D_FF:d2.Q
+q[3] <= D_FF:d3.Q
+
+
+|ring_counter|D_FF:d0
+D => temp.DATAIN
+clk => temp.CLK
+clear => temp.ACLR
+Q <= temp.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ring_counter|D_FF:d1
+D => temp.DATAIN
+clk => temp.CLK
+clear => temp.ACLR
+Q <= temp.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ring_counter|D_FF:d2
+D => temp.DATAIN
+clk => temp.CLK
+clear => temp.ACLR
+Q <= temp.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ring_counter|D_FF:d3
+D => temp.DATAIN
+clk => temp.CLK
+clear => temp.ACLR
+Q <= temp.DB_MAX_OUTPUT_PORT_TYPE
+
+

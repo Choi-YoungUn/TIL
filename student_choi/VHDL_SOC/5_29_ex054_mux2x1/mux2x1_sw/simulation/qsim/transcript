@@ -1,0 +1,14 @@
+# do mux2x1.do 
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mux2x1
+# 
+# Top level modules:
+# 	mux2x1
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mux2x1_vlg_sample_tst
+# -- Compiling module mux2x1_vlg_check_tst
+# -- Compiling module mux2x1_vlg_vec_tst
+# 
+# Top level modules:
+# 	mux2x1_vlg_vec_tst
+# vsim -L cycloneii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate -c -t 1ps -novopt work.mux2x1_vlg_vec_tst 

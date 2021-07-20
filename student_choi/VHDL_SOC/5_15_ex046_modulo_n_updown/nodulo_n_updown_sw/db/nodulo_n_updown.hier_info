@@ -1,0 +1,20 @@
+|nodulo_n_updown
+clk => state~5.DATAIN
+reset => state~9.DATAIN
+updown => Selector0.IN3
+updown => Selector1.IN3
+updown => Selector2.IN3
+updown => Selector3.IN3
+updown => Selector4.IN3
+updown => Selector5.IN3
+updown => Selector0.IN1
+updown => Selector1.IN1
+updown => Selector2.IN1
+updown => Selector3.IN1
+updown => Selector4.IN1
+updown => Selector5.IN1
+y[0] <= y~9.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y~8.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y~7.DB_MAX_OUTPUT_PORT_TYPE
+
+

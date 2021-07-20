@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="MCU_8051">
+		<CBX_INST_ENTRY INSTANCE_NAME="|MCU_8051|mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_la81.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MCU_8051|mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_gra1.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

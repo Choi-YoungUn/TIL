@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Wed May 01 10:37:11 2019
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+Revision Name : JK_FF
+Top-level Entity Name : JK_FF
+Family : Cyclone II
+Total logic elements : 5
+    Total combinational functions : 5
+    Dedicated logic registers : 1
+Total registers : 1
+Total pins : 7
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

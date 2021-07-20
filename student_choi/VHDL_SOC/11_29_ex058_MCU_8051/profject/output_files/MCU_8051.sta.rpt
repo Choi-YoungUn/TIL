@@ -1,0 +1,1123 @@
+TimeQuest Timing Analyzer report for MCU_8051
+Fri Nov 29 17:00:00 2019
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'inst5|altpll_component|pll|clk[0]'
+ 12. Slow Model Hold: 'inst5|altpll_component|pll|clk[0]'
+ 13. Slow Model Minimum Pulse Width: 'clk_50Mhz'
+ 14. Slow Model Minimum Pulse Width: 'inst5|altpll_component|pll|clk[0]'
+ 15. Setup Times
+ 16. Hold Times
+ 17. Clock to Output Times
+ 18. Minimum Clock to Output Times
+ 19. Fast Model Setup Summary
+ 20. Fast Model Hold Summary
+ 21. Fast Model Recovery Summary
+ 22. Fast Model Removal Summary
+ 23. Fast Model Minimum Pulse Width Summary
+ 24. Fast Model Setup: 'inst5|altpll_component|pll|clk[0]'
+ 25. Fast Model Hold: 'inst5|altpll_component|pll|clk[0]'
+ 26. Fast Model Minimum Pulse Width: 'clk_50Mhz'
+ 27. Fast Model Minimum Pulse Width: 'inst5|altpll_component|pll|clk[0]'
+ 28. Setup Times
+ 29. Hold Times
+ 30. Clock to Output Times
+ 31. Minimum Clock to Output Times
+ 32. Multicorner Timing Analysis Summary
+ 33. Setup Times
+ 34. Hold Times
+ 35. Clock to Output Times
+ 36. Minimum Clock to Output Times
+ 37. Setup Transfers
+ 38. Hold Transfers
+ 39. Report TCCS
+ 40. Report RSKM
+ 41. Unconstrained Paths
+ 42. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; MCU_8051                                                          ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C35F672C6                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                                                                                    ;
++-----------------------------------+-----------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+-----------+-------------------------------------+---------------------------------------+
+; Clock Name                        ; Type      ; Period ; Frequency ; Rise  ; Fall   ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master    ; Source                              ; Targets                               ;
++-----------------------------------+-----------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+-----------+-------------------------------------+---------------------------------------+
+; clk_50Mhz                         ; Base      ; 20.000 ; 50.0 MHz  ; 0.000 ; 10.000 ;            ;           ;             ;       ;        ;           ;            ;          ;           ;                                     ; { clk_50Mhz }                         ;
+; inst5|altpll_component|pll|clk[0] ; Generated ; 40.000 ; 25.0 MHz  ; 0.000 ; 20.000 ; 50.00      ; 2         ; 1           ;       ;        ;           ;            ; false    ; clk_50Mhz ; inst5|altpll_component|pll|inclk[0] ; { inst5|altpll_component|pll|clk[0] } ;
++-----------------------------------+-----------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+-----------+-------------------------------------+---------------------------------------+
+
+
++------------------------------------------------------------------------+
+; Slow Model Fmax Summary                                                ;
++-----------+-----------------+-----------------------------------+------+
+; Fmax      ; Restricted Fmax ; Clock Name                        ; Note ;
++-----------+-----------------+-----------------------------------+------+
+; 42.37 MHz ; 42.37 MHz       ; inst5|altpll_component|pll|clk[0] ;      ;
++-----------+-----------------+-----------------------------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++-----------------------------------------------------------+
+; Slow Model Setup Summary                                  ;
++-----------------------------------+-------+---------------+
+; Clock                             ; Slack ; End Point TNS ;
++-----------------------------------+-------+---------------+
+; inst5|altpll_component|pll|clk[0] ; 8.200 ; 0.000         ;
++-----------------------------------+-------+---------------+
+
+
++-----------------------------------------------------------+
+; Slow Model Hold Summary                                   ;
++-----------------------------------+-------+---------------+
+; Clock                             ; Slack ; End Point TNS ;
++-----------------------------------+-------+---------------+
+; inst5|altpll_component|pll|clk[0] ; 0.391 ; 0.000         ;
++-----------------------------------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++------------------------------------------------------------+
+; Slow Model Minimum Pulse Width Summary                     ;
++-----------------------------------+--------+---------------+
+; Clock                             ; Slack  ; End Point TNS ;
++-----------------------------------+--------+---------------+
+; clk_50Mhz                         ; 10.000 ; 0.000         ;
+; inst5|altpll_component|pll|clk[0] ; 17.500 ; 0.000         ;
++-----------------------------------+--------+---------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'inst5|altpll_component|pll|clk[0]'                                                                                                                                                                                                         ;
++--------+------------------------------------------------------------+------------------------------------------------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; Slack  ; From Node                                                  ; To Node                                                                ; Launch Clock                      ; Latch Clock                       ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------------------------------------+------------------------------------------------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; 8.200  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LTCON4   ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LLOV1                ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.666     ; 9.170      ;
+; 8.542  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s001bo_e:U1|STATD[6] ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LLOV1                ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.674     ; 8.820      ;
+; 8.566  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LTMOD[3] ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LLOV1                ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.674     ; 8.796      ;
+; 8.584  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LTCON4   ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LOV0                 ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.678     ; 8.774      ;
+; 8.926  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s001bo_e:U1|STATD[6] ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LOV0                 ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.686     ; 8.424      ;
+; 8.950  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LTMOD[3] ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LOV0                 ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.686     ; 8.400      ;
+; 9.034  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LTCON4   ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U1|LCT[7] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.666     ; 8.336      ;
+; 9.376  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s001bo_e:U1|STATD[6] ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U1|LCT[7] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.674     ; 7.986      ;
+; 9.400  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LTMOD[3] ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U1|LCT[7] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.674     ; 7.962      ;
+; 9.523  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LTMOD[7] ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LLOV1                ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.666     ; 7.847      ;
+; 9.598  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LTCON4   ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U1|LCT[4] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.666     ; 7.772      ;
+; 9.723  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LTCON4   ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U1|LCT[5] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.666     ; 7.647      ;
+; 9.850  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LTCON6   ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LLOV1                ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.666     ; 7.520      ;
+; 9.940  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s001bo_e:U1|STATD[6] ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U1|LCT[4] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.674     ; 7.422      ;
+; 9.964  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LTMOD[3] ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U1|LCT[4] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.674     ; 7.398      ;
+; 9.985  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LTCON4   ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U1|LCT[6] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.666     ; 7.385      ;
+; 10.065 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s001bo_e:U1|STATD[6] ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U1|LCT[5] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.674     ; 7.297      ;
+; 10.089 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LTMOD[3] ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U1|LCT[5] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.674     ; 7.273      ;
+; 10.113 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LTCON4   ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U1|LCT[3] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.666     ; 7.257      ;
+; 10.142 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LTMOD[5] ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LLOV1                ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.665     ; 7.229      ;
+; 10.146 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s025bo_e:U14|OPC[6]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|TCON[5]              ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.651     ; 7.239      ;
+; 10.250 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s025bo_e:U14|OPC[2]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|TCON[5]              ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.651     ; 7.135      ;
+; 10.253 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LTMOD[4] ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LLOV1                ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.665     ; 7.118      ;
+; 10.291 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s025bo_e:U14|OPC[1]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|TCON[5]              ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.651     ; 7.094      ;
+; 10.327 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s001bo_e:U1|STATD[6] ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U1|LCT[6] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.674     ; 7.035      ;
+; 10.335 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s025bo_e:U14|OPC[6]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|TCON[7]              ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.651     ; 7.050      ;
+; 10.351 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LTMOD[3] ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U1|LCT[6] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.674     ; 7.011      ;
+; 10.377 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LTCON4   ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U1|LCT[2] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.666     ; 6.993      ;
+; 10.427 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s025bo_e:U14|OPC[5]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|TCON[5]              ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.651     ; 6.958      ;
+; 10.439 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s025bo_e:U14|OPC[2]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|TCON[7]              ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.651     ; 6.946      ;
+; 10.453 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s025bo_e:U14|OPC[3]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|TCON[5]              ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.651     ; 6.932      ;
+; 10.455 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s001bo_e:U1|STATD[6] ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U1|LCT[3] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.674     ; 6.907      ;
+; 10.479 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LTMOD[3] ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U1|LCT[3] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.674     ; 6.883      ;
+; 10.480 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s025bo_e:U14|OPC[1]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|TCON[7]              ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.651     ; 6.905      ;
+; 10.530 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LTMOD[0] ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LLOV1                ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.674     ; 6.832      ;
+; 10.570 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s025bo_e:U14|OPC[0]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|TCON[5]              ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.651     ; 6.815      ;
+; 10.581 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s025bo_e:U14|OPC[7]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|TCON[5]              ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.651     ; 6.804      ;
+; 10.616 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s025bo_e:U14|OPC[5]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|TCON[7]              ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.651     ; 6.769      ;
+; 10.642 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LTCON4   ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U1|LCT[1] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.666     ; 6.728      ;
+; 10.642 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s025bo_e:U14|OPC[3]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|TCON[7]              ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.651     ; 6.743      ;
+; 10.644 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LTMOD[1] ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LLOV1                ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.674     ; 6.718      ;
+; 10.669 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[6]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LLOV1                ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.638     ; 6.729      ;
+; 10.716 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s019bo_e:U11|L_INTA  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s010bo_e:U8|L_PROGRAM_COUNT[14]  ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; 2.646      ; 11.966     ;
+; 10.719 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s001bo_e:U1|STATD[6] ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U1|LCT[2] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.674     ; 6.643      ;
+; 10.743 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LTMOD[3] ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U1|LCT[2] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.674     ; 6.619      ;
+; 10.759 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s025bo_e:U14|OPC[0]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|TCON[7]              ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.651     ; 6.626      ;
+; 10.762 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[4]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LLOV1                ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.667     ; 6.607      ;
+; 10.767 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[5]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LLOV1                ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.675     ; 6.594      ;
+; 10.770 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s025bo_e:U14|OPC[7]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|TCON[7]              ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.651     ; 6.615      ;
+; 10.803 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|SFRWE    ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LLOV1                ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.646     ; 6.587      ;
+; 10.825 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s019bo_e:U11|L_INTA  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s010bo_e:U8|L_PROGRAM_COUNT[10]  ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; 2.675      ; 11.886     ;
+; 10.827 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s025bo_e:U14|OPC[4]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|TCON[5]              ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.660     ; 6.549      ;
+; 10.878 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[1]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|TCON[5]              ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.644     ; 6.514      ;
+; 10.914 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LTMOD[0] ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LOV0                 ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.686     ; 6.436      ;
+; 10.929 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s001bo_e:U1|STATD[6] ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U2|LCT[7] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.680     ; 6.427      ;
+; 10.957 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s001bo_e:U1|STATD[6] ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U2|LCT[6] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.680     ; 6.399      ;
+; 10.957 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[3]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LLOV1                ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.638     ; 6.441      ;
+; 10.984 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s001bo_e:U1|STATD[6] ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U1|LCT[1] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.674     ; 6.378      ;
+; 11.008 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LTMOD[3] ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U1|LCT[1] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.674     ; 6.354      ;
+; 11.016 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s025bo_e:U14|OPC[4]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|TCON[7]              ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.660     ; 6.360      ;
+; 11.028 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LTMOD[1] ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LOV0                 ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.686     ; 6.322      ;
+; 11.036 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[0]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LLOV1                ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.638     ; 6.362      ;
+; 11.044 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[0]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|TCON[5]              ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.644     ; 6.348      ;
+; 11.049 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[1]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LLOV1                ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.638     ; 6.349      ;
+; 11.060 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[1]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|TCON[7]              ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.644     ; 6.332      ;
+; 11.111 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s001bo_e:U1|STATD[6] ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U2|LCT[5] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.680     ; 6.245      ;
+; 11.120 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[6]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[3] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.631     ; 6.285      ;
+; 11.120 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[6]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[4] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.631     ; 6.285      ;
+; 11.120 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[6]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[0] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.631     ; 6.285      ;
+; 11.120 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[6]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[1] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.631     ; 6.285      ;
+; 11.120 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[6]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[2] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.631     ; 6.285      ;
+; 11.120 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[6]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[5] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.631     ; 6.285      ;
+; 11.120 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[6]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[6] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.631     ; 6.285      ;
+; 11.120 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[6]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[7] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.631     ; 6.285      ;
+; 11.139 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[2]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LLOV1                ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.638     ; 6.259      ;
+; 11.198 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[1]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s019bo_e:U11|L_INTA              ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.638     ; 6.200      ;
+; 11.198 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[2]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|TCON[5]              ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.644     ; 6.194      ;
+; 11.213 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[4]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[3] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.660     ; 6.163      ;
+; 11.213 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[4]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[4] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.660     ; 6.163      ;
+; 11.213 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[4]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[0] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.660     ; 6.163      ;
+; 11.213 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[4]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[1] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.660     ; 6.163      ;
+; 11.213 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[4]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[2] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.660     ; 6.163      ;
+; 11.213 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[4]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[5] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.660     ; 6.163      ;
+; 11.213 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[4]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[6] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.660     ; 6.163      ;
+; 11.213 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[4]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[7] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.660     ; 6.163      ;
+; 11.218 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[5]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[3] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.668     ; 6.150      ;
+; 11.218 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[5]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[4] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.668     ; 6.150      ;
+; 11.218 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[5]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[0] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.668     ; 6.150      ;
+; 11.218 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[5]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[1] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.668     ; 6.150      ;
+; 11.218 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[5]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[2] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.668     ; 6.150      ;
+; 11.218 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[5]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[5] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.668     ; 6.150      ;
+; 11.218 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[5]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[6] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.668     ; 6.150      ;
+; 11.218 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[5]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[7] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.668     ; 6.150      ;
+; 11.226 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[0]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|TCON[7]              ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.644     ; 6.166      ;
+; 11.254 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|SFRWE    ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[3] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.639     ; 6.143      ;
+; 11.254 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|SFRWE    ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[4] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.639     ; 6.143      ;
+; 11.254 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|SFRWE    ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[0] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.639     ; 6.143      ;
+; 11.254 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|SFRWE    ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[1] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.639     ; 6.143      ;
+; 11.254 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|SFRWE    ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[2] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.639     ; 6.143      ;
+; 11.254 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|SFRWE    ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[5] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -2.639     ; 6.143      ;
++--------+------------------------------------------------------------+------------------------------------------------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'inst5|altpll_component|pll|clk[0]'                                                                                                                                                                                                                         ;
++-------+--------------------------------------------------------------------------+--------------------------------------------------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; Slack ; From Node                                                                ; To Node                                                                  ; Launch Clock                      ; Latch Clock                       ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------------------------------------------+--------------------------------------------------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; 0.391 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s001bo_e:U1|LDV2CK1                ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s001bo_e:U1|LDV2CK1                ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s001bo_e:U1|SMF                    ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s001bo_e:U1|SMF                    ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; mcu_core:inst|m8051wrap:U0|m8051:U0|CLEAR                                ; mcu_core:inst|m8051wrap:U0|m8051:U0|CLEAR                                ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|DIVTWO                ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|DIVTWO                ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|RSTQ1                 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|RSTQ1                 ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s029bo_e:U8|LQ      ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s029bo_e:U8|LQ      ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s029bo_e:U7|LQ      ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s029bo_e:U7|LQ      ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s029bo_e:U6|LQ      ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s029bo_e:U6|LQ      ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s029bo_e:U5|LQ      ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s029bo_e:U5|LQ      ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|LORCV                 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|LORCV                 ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|LL_SCON[0]            ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|LL_SCON[0]            ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|MAJQ2                 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|MAJQ2                 ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|MAJQ1                 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|MAJQ1                 ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|BITIN                 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|BITIN                 ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|DELCLRRCV             ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|DELCLRRCV             ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|FSREJ                 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|FSREJ                 ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s019bo_e:U11|IP1                   ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s019bo_e:U11|IP1                   ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|INT1PIN                ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|INT1PIN                ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U1|LCT[3]   ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U1|LCT[3]   ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[3]   ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[3]   ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[0]   ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[0]   ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[5]   ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[5]   ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U1|LCT[6]   ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U1|LCT[6]   ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[6]   ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[6]   ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U1|LCT[0]   ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U1|LCT[0]   ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U2|LCT[7]   ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U2|LCT[7]   ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U4|LCT[0]   ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U4|LCT[0]   ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U4|LCT[3]   ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U4|LCT[3]   ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U4|LCT[6]   ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U4|LCT[6]   ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U2|LCT[1]   ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U2|LCT[1]   ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U2|LCT[4]   ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U2|LCT[4]   ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LTCON3                 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LTCON3                 ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LLOV1                  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LLOV1                  ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|Q5                    ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|Q5                    ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|Q6                    ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|Q6                    ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|DATAEN                ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|DATAEN                ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|TXSTOPBIT             ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|TXSTOPBIT             ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|LL_SCON[1]            ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|LL_SCON[1]            ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s019bo_e:U11|L_INTA                ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s019bo_e:U11|L_INTA                ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s029bo_e:U4|LQ      ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s029bo_e:U4|LQ      ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s029bo_e:U3|LQ      ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s029bo_e:U3|LQ      ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s029bo_e:U2|LQ      ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s029bo_e:U2|LQ      ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s029bo_e:U1|LQ      ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s029bo_e:U1|LQ      ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|TSEND                 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|TSEND                 ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|TXCLK                 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|TXCLK                 ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s001bo_e:U1|LCYC                   ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s001bo_e:U1|LCYC                   ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|SEL_DIRADDR            ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|SEL_DIRADDR            ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s020bo_e:U12|L_RESINT              ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s020bo_e:U12|L_RESINT              ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s020bo_e:U12|m3s014bo_e:U1|L_SP[0] ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s020bo_e:U12|m3s014bo_e:U1|L_SP[0] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s020bo_e:U12|m3s014bo_e:U1|L_SP[3] ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s020bo_e:U12|m3s014bo_e:U1|L_SP[3] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s020bo_e:U12|PSWDAT[6]             ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s020bo_e:U12|PSWDAT[6]             ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s020bo_e:U12|m3s014bo_e:U1|L_SP[6] ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s020bo_e:U12|m3s014bo_e:U1|L_SP[6] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s020bo_e:U12|m3s014bo_e:U1|L_SP[7] ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s020bo_e:U12|m3s014bo_e:U1|L_SP[7] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s020bo_e:U12|PSWDAT[0]             ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s020bo_e:U12|PSWDAT[0]             ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s018bo_e:U10|LDI_IN[0]             ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s018bo_e:U10|LDI_IN[0]             ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s001bo_e:U1|Q4                     ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s001bo_e:U1|Q4                     ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s001bo_e:U1|Q5                     ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s001bo_e:U1|Q5                     ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.525 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LTCON3                 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s019bo_e:U11|PRC                   ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.791      ;
+; 0.525 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|TXSTOPBIT             ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|TXLASTBIT             ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.791      ;
+; 0.529 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s025bo_e:U14|L_OPLOAD              ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s020bo_e:U12|L_RESINT              ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.795      ;
+; 0.536 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s001bo_e:U1|SMC                    ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s001bo_e:U1|SMD                    ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.802      ;
+; 0.536 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s001bo_e:U1|Q5                     ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s010bo_e:U8|BA                     ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.802      ;
+; 0.540 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s031bo_e:U10|DAT[6] ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s031bo_e:U10|DAT[5] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.806      ;
+; 0.551 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s010bo_e:U8|L_PROGRAM_COUNT[12]    ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s010bo_e:U8|STACK_DATA[15]         ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.817      ;
+; 0.553 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s010bo_e:U8|L_PROGRAM_COUNT[12]    ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s010bo_e:U8|STACK_DATA[13]         ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.819      ;
+; 0.560 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s001bo_e:U1|SMB                    ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s001bo_e:U1|SMC                    ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.826      ;
+; 0.594 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|NEWDATA               ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|TSHIFT_IN             ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.860      ;
+; 0.594 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|NEWDATA               ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s030bo_e:U9|DAT[2]  ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.860      ;
+; 0.595 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|NEWDATA               ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s030bo_e:U9|DAT[6]  ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.861      ;
+; 0.595 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|NEWDATA               ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s030bo_e:U9|DAT[5]  ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.861      ;
+; 0.597 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|NEWDATA               ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s030bo_e:U9|DAT[3]  ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.863      ;
+; 0.598 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|NEWDATA               ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s030bo_e:U9|DAT[7]  ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.864      ;
+; 0.631 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s031bo_e:U10|DAT[5] ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s031bo_e:U10|DAT[4] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.897      ;
+; 0.657 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s010bo_e:U8|L_PROGRAM_COUNT[6]     ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s010bo_e:U8|PROGRAM_ADDR[6]        ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.923      ;
+; 0.660 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s030bo_e:U9|DAT[2]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s030bo_e:U9|DAT[1]  ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.926      ;
+; 0.666 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s001bo_e:U1|SMA                    ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s001bo_e:U1|SMB                    ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.932      ;
+; 0.667 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s010bo_e:U8|L_PROGRAM_COUNT[14]    ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s010bo_e:U8|STACK_DATA[14]         ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.933      ;
+; 0.667 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s010bo_e:U8|L_PROGRAM_COUNT[2]     ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s010bo_e:U8|PROGRAM_ADDR[2]        ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.933      ;
+; 0.671 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s001bo_e:U1|SMD                    ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s001bo_e:U1|SME                    ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.937      ;
+; 0.672 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s029bo_e:U2|LQ      ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|Q1                    ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.938      ;
+; 0.677 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LTCON1                 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s019bo_e:U11|PRA                   ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.943      ;
+; 0.678 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|LORCV                 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s031bo_e:U10|DAT[3] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.944      ;
+; 0.684 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|LORCV                 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s031bo_e:U10|DAT[2] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.950      ;
+; 0.686 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|LORCV                 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s031bo_e:U10|DAT[0] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.952      ;
+; 0.688 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|LORCV                 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s031bo_e:U10|DAT[6] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.954      ;
+; 0.688 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|LORCV                 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s031bo_e:U10|DAT[1] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.954      ;
+; 0.691 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|RX_DIN                ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|MODE0_IN              ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.957      ;
+; 0.706 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|RAMDI[2]               ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s010bo_e:U8|DPL[2]                 ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.028      ; 1.000      ;
+; 0.707 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s029bo_e:U2|LQ      ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s029bo_e:U1|LQ      ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.973      ;
+; 0.719 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|TXSTOPBIT             ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|Q3                    ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.985      ;
+; 0.727 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|DATAEN                ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|NEWDATA               ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.993      ;
+; 0.736 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s010bo_e:U8|L_PROGRAM_COUNT[1]     ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s010bo_e:U8|STACK_DATA[1]          ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; -0.001     ; 1.001      ;
+; 0.755 ; mcu_core:inst|m8051wrap:U0|m8051:U0|IMMDAT[7]                            ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s010bo_e:U8|STACK_DATA[12]         ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.008      ; 1.029      ;
+; 0.776 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|Q6                    ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|TXEND                 ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.042      ;
+; 0.779 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s029bo_e:U3|LQ      ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|Q1                    ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.045      ;
+; 0.799 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s031bo_e:U10|DAT[5] ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|SBUF[5]               ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.029      ; 1.094      ;
+; 0.799 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s030bo_e:U9|DAT[7]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s030bo_e:U9|DAT[6]  ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.065      ;
+; 0.800 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s029bo_e:U1|LQ      ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|Q1                    ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.066      ;
+; 0.801 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s031bo_e:U10|DAT[7] ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s031bo_e:U10|DAT[6] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.067      ;
+; 0.802 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s029bo_e:U8|LQ      ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s029bo_e:U7|LQ      ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.068      ;
++-------+--------------------------------------------------------------------------+--------------------------------------------------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clk_50Mhz'                                                                              ;
++--------+--------------+----------------+------------------+-----------+------------+-------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock     ; Clock Edge ; Target                              ;
++--------+--------------+----------------+------------------+-----------+------------+-------------------------------------+
+; 10.000 ; 10.000       ; 0.000          ; High Pulse Width ; clk_50Mhz ; Rise       ; clk_50Mhz|combout                   ;
+; 10.000 ; 10.000       ; 0.000          ; Low Pulse Width  ; clk_50Mhz ; Rise       ; clk_50Mhz|combout                   ;
+; 10.000 ; 10.000       ; 0.000          ; High Pulse Width ; clk_50Mhz ; Rise       ; inst5|altpll_component|pll|clk[0]   ;
+; 10.000 ; 10.000       ; 0.000          ; Low Pulse Width  ; clk_50Mhz ; Rise       ; inst5|altpll_component|pll|clk[0]   ;
+; 10.000 ; 10.000       ; 0.000          ; High Pulse Width ; clk_50Mhz ; Rise       ; inst5|altpll_component|pll|inclk[0] ;
+; 10.000 ; 10.000       ; 0.000          ; Low Pulse Width  ; clk_50Mhz ; Rise       ; inst5|altpll_component|pll|inclk[0] ;
+; 17.620 ; 20.000       ; 2.380          ; Port Rate        ; clk_50Mhz ; Rise       ; clk_50Mhz                           ;
++--------+--------------+----------------+------------------+-----------+------------+-------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'inst5|altpll_component|pll|clk[0]'                                                                                                                                                                           ;
++--------+--------------+----------------+------------------+-----------------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock                             ; Clock Edge ; Target                                                                                                                           ;
++--------+--------------+----------------+------------------+-----------------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------+
+; 17.500 ; 20.000       ; 2.500          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0~porta_address_reg0    ;
+; 17.500 ; 20.000       ; 2.500          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0~porta_address_reg0    ;
+; 17.500 ; 20.000       ; 2.500          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0~porta_address_reg1    ;
+; 17.500 ; 20.000       ; 2.500          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0~porta_address_reg1    ;
+; 17.500 ; 20.000       ; 2.500          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0~porta_address_reg2    ;
+; 17.500 ; 20.000       ; 2.500          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0~porta_address_reg2    ;
+; 17.500 ; 20.000       ; 2.500          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0~porta_address_reg3    ;
+; 17.500 ; 20.000       ; 2.500          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0~porta_address_reg3    ;
+; 17.500 ; 20.000       ; 2.500          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0~porta_address_reg4    ;
+; 17.500 ; 20.000       ; 2.500          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0~porta_address_reg4    ;
+; 17.500 ; 20.000       ; 2.500          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0~porta_address_reg5    ;
+; 17.500 ; 20.000       ; 2.500          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0~porta_address_reg5    ;
+; 17.500 ; 20.000       ; 2.500          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0~porta_address_reg6    ;
+; 17.500 ; 20.000       ; 2.500          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0~porta_address_reg6    ;
+; 17.500 ; 20.000       ; 2.500          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0~porta_address_reg7    ;
+; 17.500 ; 20.000       ; 2.500          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0~porta_address_reg7    ;
+; 17.500 ; 20.000       ; 2.500          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0~porta_datain_reg0     ;
+; 17.500 ; 20.000       ; 2.500          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0~porta_datain_reg0     ;
+; 17.500 ; 20.000       ; 2.500          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0~porta_datain_reg1     ;
+; 17.500 ; 20.000       ; 2.500          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0~porta_datain_reg1     ;
+; 17.500 ; 20.000       ; 2.500          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0~porta_datain_reg2     ;
+; 17.500 ; 20.000       ; 2.500          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0~porta_datain_reg2     ;
+; 17.500 ; 20.000       ; 2.500          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0~porta_datain_reg3     ;
+; 17.500 ; 20.000       ; 2.500          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0~porta_datain_reg3     ;
+; 17.500 ; 20.000       ; 2.500          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0~porta_datain_reg4     ;
+; 17.500 ; 20.000       ; 2.500          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0~porta_datain_reg4     ;
+; 17.500 ; 20.000       ; 2.500          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0~porta_datain_reg5     ;
+; 17.500 ; 20.000       ; 2.500          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0~porta_datain_reg5     ;
+; 17.500 ; 20.000       ; 2.500          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0~porta_datain_reg6     ;
+; 17.500 ; 20.000       ; 2.500          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0~porta_datain_reg6     ;
+; 17.500 ; 20.000       ; 2.500          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0~porta_datain_reg7     ;
+; 17.500 ; 20.000       ; 2.500          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0~porta_datain_reg7     ;
+; 17.500 ; 20.000       ; 2.500          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0~porta_memory_reg0     ;
+; 17.500 ; 20.000       ; 2.500          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0~porta_memory_reg0     ;
+; 17.500 ; 20.000       ; 2.500          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0~porta_we_reg          ;
+; 17.500 ; 20.000       ; 2.500          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0~porta_we_reg          ;
+; 17.500 ; 20.000       ; 2.500          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a1~porta_memory_reg0     ;
+; 17.500 ; 20.000       ; 2.500          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a1~porta_memory_reg0     ;
+; 17.500 ; 20.000       ; 2.500          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a2~porta_memory_reg0     ;
+; 17.500 ; 20.000       ; 2.500          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a2~porta_memory_reg0     ;
+; 17.500 ; 20.000       ; 2.500          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a3~porta_memory_reg0     ;
+; 17.500 ; 20.000       ; 2.500          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a3~porta_memory_reg0     ;
+; 17.500 ; 20.000       ; 2.500          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a4~porta_memory_reg0     ;
+; 17.500 ; 20.000       ; 2.500          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a4~porta_memory_reg0     ;
+; 17.500 ; 20.000       ; 2.500          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a5~porta_memory_reg0     ;
+; 17.500 ; 20.000       ; 2.500          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a5~porta_memory_reg0     ;
+; 17.500 ; 20.000       ; 2.500          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a6~porta_memory_reg0     ;
+; 17.500 ; 20.000       ; 2.500          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a6~porta_memory_reg0     ;
+; 17.500 ; 20.000       ; 2.500          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a7~porta_memory_reg0     ;
+; 17.500 ; 20.000       ; 2.500          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a7~porta_memory_reg0     ;
+; 18.077 ; 20.000       ; 1.923          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a0~porta_address_reg0   ;
+; 18.077 ; 20.000       ; 1.923          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a0~porta_address_reg0   ;
+; 18.077 ; 20.000       ; 1.923          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a0~porta_address_reg1   ;
+; 18.077 ; 20.000       ; 1.923          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a0~porta_address_reg1   ;
+; 18.077 ; 20.000       ; 1.923          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a0~porta_address_reg10  ;
+; 18.077 ; 20.000       ; 1.923          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a0~porta_address_reg10  ;
+; 18.077 ; 20.000       ; 1.923          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a0~porta_address_reg11  ;
+; 18.077 ; 20.000       ; 1.923          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a0~porta_address_reg11  ;
+; 18.077 ; 20.000       ; 1.923          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a0~porta_address_reg2   ;
+; 18.077 ; 20.000       ; 1.923          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a0~porta_address_reg2   ;
+; 18.077 ; 20.000       ; 1.923          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a0~porta_address_reg3   ;
+; 18.077 ; 20.000       ; 1.923          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a0~porta_address_reg3   ;
+; 18.077 ; 20.000       ; 1.923          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a0~porta_address_reg4   ;
+; 18.077 ; 20.000       ; 1.923          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a0~porta_address_reg4   ;
+; 18.077 ; 20.000       ; 1.923          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a0~porta_address_reg5   ;
+; 18.077 ; 20.000       ; 1.923          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a0~porta_address_reg5   ;
+; 18.077 ; 20.000       ; 1.923          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a0~porta_address_reg6   ;
+; 18.077 ; 20.000       ; 1.923          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a0~porta_address_reg6   ;
+; 18.077 ; 20.000       ; 1.923          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a0~porta_address_reg7   ;
+; 18.077 ; 20.000       ; 1.923          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a0~porta_address_reg7   ;
+; 18.077 ; 20.000       ; 1.923          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a0~porta_address_reg8   ;
+; 18.077 ; 20.000       ; 1.923          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a0~porta_address_reg8   ;
+; 18.077 ; 20.000       ; 1.923          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a0~porta_address_reg9   ;
+; 18.077 ; 20.000       ; 1.923          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a0~porta_address_reg9   ;
+; 18.077 ; 20.000       ; 1.923          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a10~porta_address_reg0  ;
+; 18.077 ; 20.000       ; 1.923          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a10~porta_address_reg0  ;
+; 18.077 ; 20.000       ; 1.923          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a10~porta_address_reg1  ;
+; 18.077 ; 20.000       ; 1.923          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a10~porta_address_reg1  ;
+; 18.077 ; 20.000       ; 1.923          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a10~porta_address_reg10 ;
+; 18.077 ; 20.000       ; 1.923          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a10~porta_address_reg10 ;
+; 18.077 ; 20.000       ; 1.923          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a10~porta_address_reg11 ;
+; 18.077 ; 20.000       ; 1.923          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a10~porta_address_reg11 ;
+; 18.077 ; 20.000       ; 1.923          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a10~porta_address_reg2  ;
+; 18.077 ; 20.000       ; 1.923          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a10~porta_address_reg2  ;
+; 18.077 ; 20.000       ; 1.923          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a10~porta_address_reg3  ;
+; 18.077 ; 20.000       ; 1.923          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a10~porta_address_reg3  ;
+; 18.077 ; 20.000       ; 1.923          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a10~porta_address_reg4  ;
+; 18.077 ; 20.000       ; 1.923          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a10~porta_address_reg4  ;
+; 18.077 ; 20.000       ; 1.923          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a10~porta_address_reg5  ;
+; 18.077 ; 20.000       ; 1.923          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a10~porta_address_reg5  ;
+; 18.077 ; 20.000       ; 1.923          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a10~porta_address_reg6  ;
+; 18.077 ; 20.000       ; 1.923          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a10~porta_address_reg6  ;
+; 18.077 ; 20.000       ; 1.923          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a10~porta_address_reg7  ;
+; 18.077 ; 20.000       ; 1.923          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a10~porta_address_reg7  ;
+; 18.077 ; 20.000       ; 1.923          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a10~porta_address_reg8  ;
+; 18.077 ; 20.000       ; 1.923          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a10~porta_address_reg8  ;
+; 18.077 ; 20.000       ; 1.923          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a10~porta_address_reg9  ;
+; 18.077 ; 20.000       ; 1.923          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a10~porta_address_reg9  ;
+; 18.077 ; 20.000       ; 1.923          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a11~porta_address_reg0  ;
+; 18.077 ; 20.000       ; 1.923          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a11~porta_address_reg0  ;
++--------+--------------+----------------+------------------+-----------------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------+
+; Setup Times                                                                             ;
++-----------+------------+-------+-------+------------+-----------------------------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference                   ;
++-----------+------------+-------+-------+------------+-----------------------------------+
+; RXD       ; clk_50Mhz  ; 4.778 ; 4.778 ; Rise       ; inst5|altpll_component|pll|clk[0] ;
+; nRst      ; clk_50Mhz  ; 5.900 ; 5.900 ; Rise       ; inst5|altpll_component|pll|clk[0] ;
+; RXD       ; clk_50Mhz  ; 1.594 ; 1.594 ; Fall       ; inst5|altpll_component|pll|clk[0] ;
++-----------+------------+-------+-------+------------+-----------------------------------+
+
+
++-------------------------------------------------------------------------------------------+
+; Hold Times                                                                                ;
++-----------+------------+--------+--------+------------+-----------------------------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference                   ;
++-----------+------------+--------+--------+------------+-----------------------------------+
+; RXD       ; clk_50Mhz  ; -4.548 ; -4.548 ; Rise       ; inst5|altpll_component|pll|clk[0] ;
+; nRst      ; clk_50Mhz  ; -5.670 ; -5.670 ; Rise       ; inst5|altpll_component|pll|clk[0] ;
+; RXD       ; clk_50Mhz  ; -1.364 ; -1.364 ; Fall       ; inst5|altpll_component|pll|clk[0] ;
++-----------+------------+--------+--------+------------+-----------------------------------+
+
+
++-------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                     ;
++-----------+------------+--------+--------+------------+-----------------------------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference                   ;
++-----------+------------+--------+--------+------------+-----------------------------------+
+; pin_name1 ; clk_50Mhz  ; 9.645  ; 9.645  ; Rise       ; inst5|altpll_component|pll|clk[0] ;
+; pin_name1 ; clk_50Mhz  ; 12.502 ; 12.502 ; Fall       ; inst5|altpll_component|pll|clk[0] ;
++-----------+------------+--------+--------+------------+-----------------------------------+
+
+
++-------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                             ;
++-----------+------------+--------+--------+------------+-----------------------------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference                   ;
++-----------+------------+--------+--------+------------+-----------------------------------+
+; pin_name1 ; clk_50Mhz  ; 9.120  ; 9.120  ; Rise       ; inst5|altpll_component|pll|clk[0] ;
+; pin_name1 ; clk_50Mhz  ; 11.955 ; 11.955 ; Fall       ; inst5|altpll_component|pll|clk[0] ;
++-----------+------------+--------+--------+------------+-----------------------------------+
+
+
++------------------------------------------------------------+
+; Fast Model Setup Summary                                   ;
++-----------------------------------+--------+---------------+
+; Clock                             ; Slack  ; End Point TNS ;
++-----------------------------------+--------+---------------+
+; inst5|altpll_component|pll|clk[0] ; 14.439 ; 0.000         ;
++-----------------------------------+--------+---------------+
+
+
++-----------------------------------------------------------+
+; Fast Model Hold Summary                                   ;
++-----------------------------------+-------+---------------+
+; Clock                             ; Slack ; End Point TNS ;
++-----------------------------------+-------+---------------+
+; inst5|altpll_component|pll|clk[0] ; 0.215 ; 0.000         ;
++-----------------------------------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++------------------------------------------------------------+
+; Fast Model Minimum Pulse Width Summary                     ;
++-----------------------------------+--------+---------------+
+; Clock                             ; Slack  ; End Point TNS ;
++-----------------------------------+--------+---------------+
+; clk_50Mhz                         ; 10.000 ; 0.000         ;
+; inst5|altpll_component|pll|clk[0] ; 17.500 ; 0.000         ;
++-----------------------------------+--------+---------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'inst5|altpll_component|pll|clk[0]'                                                                                                                                                                                                         ;
++--------+------------------------------------------------------------+------------------------------------------------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; Slack  ; From Node                                                  ; To Node                                                                ; Launch Clock                      ; Latch Clock                       ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------------------------------------+------------------------------------------------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; 14.439 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LTCON4   ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LLOV1                ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.474     ; 4.119      ;
+; 14.603 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s001bo_e:U1|STATD[6] ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LLOV1                ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.482     ; 3.947      ;
+; 14.607 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LTCON4   ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LOV0                 ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.485     ; 3.940      ;
+; 14.615 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LTMOD[3] ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LLOV1                ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.482     ; 3.935      ;
+; 14.771 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s001bo_e:U1|STATD[6] ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LOV0                 ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.493     ; 3.768      ;
+; 14.783 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LTMOD[3] ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LOV0                 ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.493     ; 3.756      ;
+; 14.802 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LTCON4   ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U1|LCT[7] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.474     ; 3.756      ;
+; 14.966 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s001bo_e:U1|STATD[6] ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U1|LCT[7] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.482     ; 3.584      ;
+; 14.978 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LTMOD[3] ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U1|LCT[7] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.482     ; 3.572      ;
+; 15.028 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LTMOD[7] ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LLOV1                ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.474     ; 3.530      ;
+; 15.052 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LTCON4   ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U1|LCT[4] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.474     ; 3.506      ;
+; 15.111 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LTCON4   ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U1|LCT[5] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.474     ; 3.447      ;
+; 15.156 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LTCON6   ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LLOV1                ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.474     ; 3.402      ;
+; 15.216 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s001bo_e:U1|STATD[6] ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U1|LCT[4] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.482     ; 3.334      ;
+; 15.228 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LTMOD[3] ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U1|LCT[4] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.482     ; 3.322      ;
+; 15.230 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LTCON4   ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U1|LCT[6] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.474     ; 3.328      ;
+; 15.275 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s001bo_e:U1|STATD[6] ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U1|LCT[5] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.482     ; 3.275      ;
+; 15.287 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LTMOD[3] ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U1|LCT[5] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.482     ; 3.263      ;
+; 15.288 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LTCON4   ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U1|LCT[3] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.474     ; 3.270      ;
+; 15.303 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LTMOD[5] ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LLOV1                ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.473     ; 3.256      ;
+; 15.318 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s025bo_e:U14|OPC[6]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|TCON[5]              ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.460     ; 3.254      ;
+; 15.371 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LTMOD[4] ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LLOV1                ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.473     ; 3.188      ;
+; 15.394 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s001bo_e:U1|STATD[6] ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U1|LCT[6] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.482     ; 3.156      ;
+; 15.397 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s025bo_e:U14|OPC[6]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|TCON[7]              ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.460     ; 3.175      ;
+; 15.402 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s025bo_e:U14|OPC[2]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|TCON[5]              ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.460     ; 3.170      ;
+; 15.406 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LTMOD[3] ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U1|LCT[6] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.482     ; 3.144      ;
+; 15.419 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s025bo_e:U14|OPC[1]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|TCON[5]              ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.460     ; 3.153      ;
+; 15.423 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LTCON4   ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U1|LCT[2] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.474     ; 3.135      ;
+; 15.452 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s001bo_e:U1|STATD[6] ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U1|LCT[3] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.482     ; 3.098      ;
+; 15.453 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LTMOD[0] ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LLOV1                ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.482     ; 3.097      ;
+; 15.464 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LTMOD[3] ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U1|LCT[3] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.482     ; 3.086      ;
+; 15.465 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s025bo_e:U14|OPC[5]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|TCON[5]              ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.460     ; 3.107      ;
+; 15.480 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s025bo_e:U14|OPC[3]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|TCON[5]              ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.460     ; 3.092      ;
+; 15.481 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s025bo_e:U14|OPC[2]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|TCON[7]              ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.460     ; 3.091      ;
+; 15.498 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s025bo_e:U14|OPC[1]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|TCON[7]              ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.460     ; 3.074      ;
+; 15.511 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[4]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LLOV1                ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.474     ; 3.047      ;
+; 15.518 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s025bo_e:U14|OPC[0]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|TCON[5]              ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.460     ; 3.054      ;
+; 15.525 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LTMOD[1] ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LLOV1                ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.482     ; 3.025      ;
+; 15.534 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s025bo_e:U14|OPC[7]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|TCON[5]              ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.460     ; 3.038      ;
+; 15.536 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LTCON4   ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U1|LCT[1] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.474     ; 3.022      ;
+; 15.542 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[6]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LLOV1                ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.450     ; 3.040      ;
+; 15.544 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s025bo_e:U14|OPC[5]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|TCON[7]              ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.460     ; 3.028      ;
+; 15.559 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s025bo_e:U14|OPC[3]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|TCON[7]              ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.460     ; 3.013      ;
+; 15.560 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[5]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LLOV1                ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.482     ; 2.990      ;
+; 15.579 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|SFRWE    ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LLOV1                ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.458     ; 2.995      ;
+; 15.587 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s001bo_e:U1|STATD[6] ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U1|LCT[2] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.482     ; 2.963      ;
+; 15.597 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s025bo_e:U14|OPC[0]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|TCON[7]              ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.460     ; 2.975      ;
+; 15.599 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LTMOD[3] ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U1|LCT[2] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.482     ; 2.951      ;
+; 15.613 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s025bo_e:U14|OPC[7]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|TCON[7]              ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.460     ; 2.959      ;
+; 15.617 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[4]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[3] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.467     ; 2.948      ;
+; 15.617 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[4]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[4] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.467     ; 2.948      ;
+; 15.617 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[4]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[0] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.467     ; 2.948      ;
+; 15.617 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[4]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[1] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.467     ; 2.948      ;
+; 15.617 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[4]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[2] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.467     ; 2.948      ;
+; 15.617 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[4]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[5] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.467     ; 2.948      ;
+; 15.617 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[4]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[6] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.467     ; 2.948      ;
+; 15.617 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[4]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[7] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.467     ; 2.948      ;
+; 15.621 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LTMOD[0] ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LOV0                 ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.493     ; 2.918      ;
+; 15.622 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s001bo_e:U1|STATD[6] ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U2|LCT[7] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.488     ; 2.922      ;
+; 15.632 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[1]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|TCON[5]              ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.455     ; 2.945      ;
+; 15.640 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s001bo_e:U1|STATD[6] ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U2|LCT[6] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.488     ; 2.904      ;
+; 15.643 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[3]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LLOV1                ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.450     ; 2.939      ;
+; 15.648 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[6]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[3] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.443     ; 2.941      ;
+; 15.648 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[6]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[4] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.443     ; 2.941      ;
+; 15.648 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[6]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[0] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.443     ; 2.941      ;
+; 15.648 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[6]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[1] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.443     ; 2.941      ;
+; 15.648 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[6]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[2] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.443     ; 2.941      ;
+; 15.648 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[6]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[5] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.443     ; 2.941      ;
+; 15.648 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[6]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[6] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.443     ; 2.941      ;
+; 15.648 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[6]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[7] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.443     ; 2.941      ;
+; 15.657 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s025bo_e:U14|OPC[4]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|TCON[5]              ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.469     ; 2.906      ;
+; 15.659 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[4]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U4|LCT[0] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.493     ; 2.880      ;
+; 15.659 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[4]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U4|LCT[1] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.493     ; 2.880      ;
+; 15.659 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[4]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U4|LCT[2] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.493     ; 2.880      ;
+; 15.659 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[4]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U4|LCT[3] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.493     ; 2.880      ;
+; 15.659 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[4]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U4|LCT[4] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.493     ; 2.880      ;
+; 15.659 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[4]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U4|LCT[6] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.493     ; 2.880      ;
+; 15.659 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[4]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U4|LCT[7] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.493     ; 2.880      ;
+; 15.659 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[4]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U4|LCT[5] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.493     ; 2.880      ;
+; 15.666 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[5]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[3] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.475     ; 2.891      ;
+; 15.666 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[5]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[4] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.475     ; 2.891      ;
+; 15.666 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[5]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[0] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.475     ; 2.891      ;
+; 15.666 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[5]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[1] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.475     ; 2.891      ;
+; 15.666 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[5]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[2] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.475     ; 2.891      ;
+; 15.666 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[5]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[5] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.475     ; 2.891      ;
+; 15.666 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[5]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[6] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.475     ; 2.891      ;
+; 15.666 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[5]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[7] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.475     ; 2.891      ;
+; 15.685 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|SFRWE    ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[3] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.451     ; 2.896      ;
+; 15.685 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|SFRWE    ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[4] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.451     ; 2.896      ;
+; 15.685 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|SFRWE    ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[0] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.451     ; 2.896      ;
+; 15.685 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|SFRWE    ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[1] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.451     ; 2.896      ;
+; 15.685 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|SFRWE    ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[2] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.451     ; 2.896      ;
+; 15.685 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|SFRWE    ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[5] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.451     ; 2.896      ;
+; 15.685 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|SFRWE    ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[6] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.451     ; 2.896      ;
+; 15.685 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|SFRWE    ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[7] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.451     ; 2.896      ;
+; 15.690 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[6]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U4|LCT[0] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.469     ; 2.873      ;
+; 15.690 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[6]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U4|LCT[1] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.469     ; 2.873      ;
+; 15.690 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[6]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U4|LCT[2] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.469     ; 2.873      ;
+; 15.690 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[6]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U4|LCT[3] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.469     ; 2.873      ;
+; 15.690 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|L_FA[6]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U4|LCT[4] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 20.000       ; -1.469     ; 2.873      ;
++--------+------------------------------------------------------------+------------------------------------------------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'inst5|altpll_component|pll|clk[0]'                                                                                                                                                                                                                         ;
++-------+--------------------------------------------------------------------------+--------------------------------------------------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; Slack ; From Node                                                                ; To Node                                                                  ; Launch Clock                      ; Latch Clock                       ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------------------------------------------+--------------------------------------------------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; 0.215 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s001bo_e:U1|LDV2CK1                ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s001bo_e:U1|LDV2CK1                ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s001bo_e:U1|SMF                    ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s001bo_e:U1|SMF                    ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; mcu_core:inst|m8051wrap:U0|m8051:U0|CLEAR                                ; mcu_core:inst|m8051wrap:U0|m8051:U0|CLEAR                                ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|DIVTWO                ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|DIVTWO                ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|RSTQ1                 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|RSTQ1                 ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s029bo_e:U8|LQ      ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s029bo_e:U8|LQ      ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s029bo_e:U7|LQ      ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s029bo_e:U7|LQ      ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s029bo_e:U6|LQ      ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s029bo_e:U6|LQ      ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s029bo_e:U5|LQ      ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s029bo_e:U5|LQ      ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|LORCV                 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|LORCV                 ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|LL_SCON[0]            ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|LL_SCON[0]            ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|MAJQ2                 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|MAJQ2                 ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|MAJQ1                 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|MAJQ1                 ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|BITIN                 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|BITIN                 ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|DELCLRRCV             ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|DELCLRRCV             ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|FSREJ                 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|FSREJ                 ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s019bo_e:U11|IP1                   ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s019bo_e:U11|IP1                   ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|INT1PIN                ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|INT1PIN                ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U1|LCT[3]   ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U1|LCT[3]   ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[3]   ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[3]   ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[0]   ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[0]   ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[5]   ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[5]   ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U1|LCT[6]   ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U1|LCT[6]   ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[6]   ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U3|LCT[6]   ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U1|LCT[0]   ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U1|LCT[0]   ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U2|LCT[7]   ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U2|LCT[7]   ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U4|LCT[0]   ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U4|LCT[0]   ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U4|LCT[3]   ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U4|LCT[3]   ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U4|LCT[6]   ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U4|LCT[6]   ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U2|LCT[1]   ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U2|LCT[1]   ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U2|LCT[4]   ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|m3s016bo_e:U2|LCT[4]   ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LTCON3                 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LTCON3                 ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LLOV1                  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LLOV1                  ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|Q5                    ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|Q5                    ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|Q6                    ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|Q6                    ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|DATAEN                ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|DATAEN                ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|TXSTOPBIT             ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|TXSTOPBIT             ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|LL_SCON[1]            ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|LL_SCON[1]            ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s019bo_e:U11|L_INTA                ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s019bo_e:U11|L_INTA                ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s029bo_e:U4|LQ      ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s029bo_e:U4|LQ      ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s029bo_e:U3|LQ      ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s029bo_e:U3|LQ      ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s029bo_e:U2|LQ      ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s029bo_e:U2|LQ      ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s029bo_e:U1|LQ      ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s029bo_e:U1|LQ      ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|TSEND                 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|TSEND                 ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|TXCLK                 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|TXCLK                 ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s001bo_e:U1|LCYC                   ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s001bo_e:U1|LCYC                   ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|SEL_DIRADDR            ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|SEL_DIRADDR            ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s020bo_e:U12|L_RESINT              ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s020bo_e:U12|L_RESINT              ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s020bo_e:U12|m3s014bo_e:U1|L_SP[0] ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s020bo_e:U12|m3s014bo_e:U1|L_SP[0] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s020bo_e:U12|m3s014bo_e:U1|L_SP[3] ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s020bo_e:U12|m3s014bo_e:U1|L_SP[3] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s020bo_e:U12|PSWDAT[6]             ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s020bo_e:U12|PSWDAT[6]             ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s020bo_e:U12|m3s014bo_e:U1|L_SP[6] ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s020bo_e:U12|m3s014bo_e:U1|L_SP[6] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s020bo_e:U12|m3s014bo_e:U1|L_SP[7] ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s020bo_e:U12|m3s014bo_e:U1|L_SP[7] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s020bo_e:U12|PSWDAT[0]             ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s020bo_e:U12|PSWDAT[0]             ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s018bo_e:U10|LDI_IN[0]             ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s018bo_e:U10|LDI_IN[0]             ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s001bo_e:U1|Q4                     ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s001bo_e:U1|Q4                     ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s001bo_e:U1|Q5                     ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s001bo_e:U1|Q5                     ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.241 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|TXSTOPBIT             ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|TXLASTBIT             ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.393      ;
+; 0.242 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LTCON3                 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s019bo_e:U11|PRC                   ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.394      ;
+; 0.245 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s025bo_e:U14|L_OPLOAD              ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s020bo_e:U12|L_RESINT              ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.397      ;
+; 0.246 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s001bo_e:U1|SMC                    ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s001bo_e:U1|SMD                    ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.398      ;
+; 0.248 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s001bo_e:U1|Q5                     ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s010bo_e:U8|BA                     ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.400      ;
+; 0.250 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s031bo_e:U10|DAT[6] ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s031bo_e:U10|DAT[5] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.402      ;
+; 0.254 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s010bo_e:U8|L_PROGRAM_COUNT[12]    ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s010bo_e:U8|STACK_DATA[15]         ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.406      ;
+; 0.256 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s010bo_e:U8|L_PROGRAM_COUNT[12]    ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s010bo_e:U8|STACK_DATA[13]         ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.408      ;
+; 0.262 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s001bo_e:U1|SMB                    ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s001bo_e:U1|SMC                    ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.414      ;
+; 0.278 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|NEWDATA               ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|TSHIFT_IN             ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.430      ;
+; 0.278 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|NEWDATA               ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s030bo_e:U9|DAT[2]  ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.430      ;
+; 0.279 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|NEWDATA               ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s030bo_e:U9|DAT[6]  ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.431      ;
+; 0.279 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|NEWDATA               ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s030bo_e:U9|DAT[5]  ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.431      ;
+; 0.281 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|NEWDATA               ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s030bo_e:U9|DAT[3]  ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.433      ;
+; 0.282 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|NEWDATA               ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s030bo_e:U9|DAT[7]  ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.434      ;
+; 0.291 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s031bo_e:U10|DAT[5] ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s031bo_e:U10|DAT[4] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.443      ;
+; 0.292 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s010bo_e:U8|L_PROGRAM_COUNT[6]     ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s010bo_e:U8|PROGRAM_ADDR[6]        ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.444      ;
+; 0.293 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s030bo_e:U9|DAT[2]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s030bo_e:U9|DAT[1]  ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.445      ;
+; 0.295 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s010bo_e:U8|L_PROGRAM_COUNT[14]    ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s010bo_e:U8|STACK_DATA[14]         ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.447      ;
+; 0.297 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s010bo_e:U8|L_PROGRAM_COUNT[2]     ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s010bo_e:U8|PROGRAM_ADDR[2]        ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.449      ;
+; 0.313 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s008bo_e:U7|RAMDI[2]               ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s010bo_e:U8|DPL[2]                 ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.024      ; 0.489      ;
+; 0.315 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s015bo_e:U9|LTCON1                 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s019bo_e:U11|PRA                   ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.467      ;
+; 0.319 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|LORCV                 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s031bo_e:U10|DAT[3] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.471      ;
+; 0.322 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s029bo_e:U2|LQ      ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s029bo_e:U1|LQ      ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.474      ;
+; 0.324 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|LORCV                 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s031bo_e:U10|DAT[2] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.476      ;
+; 0.326 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|LORCV                 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s031bo_e:U10|DAT[0] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.478      ;
+; 0.327 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s029bo_e:U2|LQ      ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|Q1                    ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.479      ;
+; 0.329 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s001bo_e:U1|SMA                    ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s001bo_e:U1|SMB                    ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.481      ;
+; 0.329 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s001bo_e:U1|SMD                    ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s001bo_e:U1|SME                    ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.481      ;
+; 0.329 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|LORCV                 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s031bo_e:U10|DAT[6] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.481      ;
+; 0.329 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|LORCV                 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s031bo_e:U10|DAT[1] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.481      ;
+; 0.330 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|TXSTOPBIT             ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|Q3                    ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.482      ;
+; 0.341 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s010bo_e:U8|L_PROGRAM_COUNT[1]     ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s010bo_e:U8|STACK_DATA[1]          ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; -0.001     ; 0.492      ;
+; 0.344 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|RX_DIN                ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|MODE0_IN              ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.496      ;
+; 0.345 ; mcu_core:inst|m8051wrap:U0|m8051:U0|IMMDAT[7]                            ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s010bo_e:U8|STACK_DATA[12]         ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.008      ; 0.505      ;
+; 0.352 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|DATAEN                ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|NEWDATA               ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.504      ;
+; 0.358 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s031bo_e:U10|DAT[7] ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s031bo_e:U10|DAT[6] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.510      ;
+; 0.360 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s030bo_e:U9|DAT[7]  ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s030bo_e:U9|DAT[6]  ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s031bo_e:U10|DAT[3] ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s031bo_e:U10|DAT[2] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s031bo_e:U10|DAT[1] ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s031bo_e:U10|DAT[0] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.512      ;
+; 0.361 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s031bo_e:U10|DAT[4] ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s031bo_e:U10|DAT[3] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.513      ;
+; 0.363 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|RSTQ1                 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|DELRST16C             ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.005      ; 0.520      ;
+; 0.363 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|BITIN                 ; mcu_core:inst|m8051wrap:U0|m8051:U0|m3s028bo_e:U15|m3s031bo_e:U10|DAT[7] ; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.515      ;
++-------+--------------------------------------------------------------------------+--------------------------------------------------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clk_50Mhz'                                                                              ;
++--------+--------------+----------------+------------------+-----------+------------+-------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock     ; Clock Edge ; Target                              ;
++--------+--------------+----------------+------------------+-----------+------------+-------------------------------------+
+; 10.000 ; 10.000       ; 0.000          ; High Pulse Width ; clk_50Mhz ; Rise       ; clk_50Mhz|combout                   ;
+; 10.000 ; 10.000       ; 0.000          ; Low Pulse Width  ; clk_50Mhz ; Rise       ; clk_50Mhz|combout                   ;
+; 10.000 ; 10.000       ; 0.000          ; High Pulse Width ; clk_50Mhz ; Rise       ; inst5|altpll_component|pll|clk[0]   ;
+; 10.000 ; 10.000       ; 0.000          ; Low Pulse Width  ; clk_50Mhz ; Rise       ; inst5|altpll_component|pll|clk[0]   ;
+; 10.000 ; 10.000       ; 0.000          ; High Pulse Width ; clk_50Mhz ; Rise       ; inst5|altpll_component|pll|inclk[0] ;
+; 10.000 ; 10.000       ; 0.000          ; Low Pulse Width  ; clk_50Mhz ; Rise       ; inst5|altpll_component|pll|inclk[0] ;
+; 17.620 ; 20.000       ; 2.380          ; Port Rate        ; clk_50Mhz ; Rise       ; clk_50Mhz                           ;
++--------+--------------+----------------+------------------+-----------+------------+-------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'inst5|altpll_component|pll|clk[0]'                                                                                                                                                                           ;
++--------+--------------+----------------+------------------+-----------------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock                             ; Clock Edge ; Target                                                                                                                           ;
++--------+--------------+----------------+------------------+-----------------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------+
+; 17.500 ; 20.000       ; 2.500          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0~porta_address_reg0    ;
+; 17.500 ; 20.000       ; 2.500          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0~porta_address_reg0    ;
+; 17.500 ; 20.000       ; 2.500          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0~porta_address_reg1    ;
+; 17.500 ; 20.000       ; 2.500          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0~porta_address_reg1    ;
+; 17.500 ; 20.000       ; 2.500          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0~porta_address_reg2    ;
+; 17.500 ; 20.000       ; 2.500          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0~porta_address_reg2    ;
+; 17.500 ; 20.000       ; 2.500          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0~porta_address_reg3    ;
+; 17.500 ; 20.000       ; 2.500          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0~porta_address_reg3    ;
+; 17.500 ; 20.000       ; 2.500          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0~porta_address_reg4    ;
+; 17.500 ; 20.000       ; 2.500          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0~porta_address_reg4    ;
+; 17.500 ; 20.000       ; 2.500          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0~porta_address_reg5    ;
+; 17.500 ; 20.000       ; 2.500          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0~porta_address_reg5    ;
+; 17.500 ; 20.000       ; 2.500          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0~porta_address_reg6    ;
+; 17.500 ; 20.000       ; 2.500          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0~porta_address_reg6    ;
+; 17.500 ; 20.000       ; 2.500          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0~porta_address_reg7    ;
+; 17.500 ; 20.000       ; 2.500          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0~porta_address_reg7    ;
+; 17.500 ; 20.000       ; 2.500          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0~porta_datain_reg0     ;
+; 17.500 ; 20.000       ; 2.500          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0~porta_datain_reg0     ;
+; 17.500 ; 20.000       ; 2.500          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0~porta_datain_reg1     ;
+; 17.500 ; 20.000       ; 2.500          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0~porta_datain_reg1     ;
+; 17.500 ; 20.000       ; 2.500          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0~porta_datain_reg2     ;
+; 17.500 ; 20.000       ; 2.500          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0~porta_datain_reg2     ;
+; 17.500 ; 20.000       ; 2.500          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0~porta_datain_reg3     ;
+; 17.500 ; 20.000       ; 2.500          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0~porta_datain_reg3     ;
+; 17.500 ; 20.000       ; 2.500          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0~porta_datain_reg4     ;
+; 17.500 ; 20.000       ; 2.500          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0~porta_datain_reg4     ;
+; 17.500 ; 20.000       ; 2.500          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0~porta_datain_reg5     ;
+; 17.500 ; 20.000       ; 2.500          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0~porta_datain_reg5     ;
+; 17.500 ; 20.000       ; 2.500          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0~porta_datain_reg6     ;
+; 17.500 ; 20.000       ; 2.500          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0~porta_datain_reg6     ;
+; 17.500 ; 20.000       ; 2.500          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0~porta_datain_reg7     ;
+; 17.500 ; 20.000       ; 2.500          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0~porta_datain_reg7     ;
+; 17.500 ; 20.000       ; 2.500          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0~porta_memory_reg0     ;
+; 17.500 ; 20.000       ; 2.500          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0~porta_memory_reg0     ;
+; 17.500 ; 20.000       ; 2.500          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0~porta_we_reg          ;
+; 17.500 ; 20.000       ; 2.500          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a0~porta_we_reg          ;
+; 17.500 ; 20.000       ; 2.500          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a1~porta_memory_reg0     ;
+; 17.500 ; 20.000       ; 2.500          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a1~porta_memory_reg0     ;
+; 17.500 ; 20.000       ; 2.500          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a2~porta_memory_reg0     ;
+; 17.500 ; 20.000       ; 2.500          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a2~porta_memory_reg0     ;
+; 17.500 ; 20.000       ; 2.500          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a3~porta_memory_reg0     ;
+; 17.500 ; 20.000       ; 2.500          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a3~porta_memory_reg0     ;
+; 17.500 ; 20.000       ; 2.500          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a4~porta_memory_reg0     ;
+; 17.500 ; 20.000       ; 2.500          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a4~porta_memory_reg0     ;
+; 17.500 ; 20.000       ; 2.500          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a5~porta_memory_reg0     ;
+; 17.500 ; 20.000       ; 2.500          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a5~porta_memory_reg0     ;
+; 17.500 ; 20.000       ; 2.500          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a6~porta_memory_reg0     ;
+; 17.500 ; 20.000       ; 2.500          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a6~porta_memory_reg0     ;
+; 17.500 ; 20.000       ; 2.500          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a7~porta_memory_reg0     ;
+; 17.500 ; 20.000       ; 2.500          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|RAM256x8:sfr_ram|altsyncram:altsyncram_component|altsyncram_gra1:auto_generated|ram_block1a7~porta_memory_reg0     ;
+; 18.077 ; 20.000       ; 1.923          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a0~porta_address_reg0   ;
+; 18.077 ; 20.000       ; 1.923          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a0~porta_address_reg0   ;
+; 18.077 ; 20.000       ; 1.923          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a0~porta_address_reg1   ;
+; 18.077 ; 20.000       ; 1.923          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a0~porta_address_reg1   ;
+; 18.077 ; 20.000       ; 1.923          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a0~porta_address_reg10  ;
+; 18.077 ; 20.000       ; 1.923          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a0~porta_address_reg10  ;
+; 18.077 ; 20.000       ; 1.923          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a0~porta_address_reg11  ;
+; 18.077 ; 20.000       ; 1.923          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a0~porta_address_reg11  ;
+; 18.077 ; 20.000       ; 1.923          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a0~porta_address_reg2   ;
+; 18.077 ; 20.000       ; 1.923          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a0~porta_address_reg2   ;
+; 18.077 ; 20.000       ; 1.923          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a0~porta_address_reg3   ;
+; 18.077 ; 20.000       ; 1.923          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a0~porta_address_reg3   ;
+; 18.077 ; 20.000       ; 1.923          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a0~porta_address_reg4   ;
+; 18.077 ; 20.000       ; 1.923          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a0~porta_address_reg4   ;
+; 18.077 ; 20.000       ; 1.923          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a0~porta_address_reg5   ;
+; 18.077 ; 20.000       ; 1.923          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a0~porta_address_reg5   ;
+; 18.077 ; 20.000       ; 1.923          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a0~porta_address_reg6   ;
+; 18.077 ; 20.000       ; 1.923          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a0~porta_address_reg6   ;
+; 18.077 ; 20.000       ; 1.923          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a0~porta_address_reg7   ;
+; 18.077 ; 20.000       ; 1.923          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a0~porta_address_reg7   ;
+; 18.077 ; 20.000       ; 1.923          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a0~porta_address_reg8   ;
+; 18.077 ; 20.000       ; 1.923          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a0~porta_address_reg8   ;
+; 18.077 ; 20.000       ; 1.923          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a0~porta_address_reg9   ;
+; 18.077 ; 20.000       ; 1.923          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a0~porta_address_reg9   ;
+; 18.077 ; 20.000       ; 1.923          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a10~porta_address_reg0  ;
+; 18.077 ; 20.000       ; 1.923          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a10~porta_address_reg0  ;
+; 18.077 ; 20.000       ; 1.923          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a10~porta_address_reg1  ;
+; 18.077 ; 20.000       ; 1.923          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a10~porta_address_reg1  ;
+; 18.077 ; 20.000       ; 1.923          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a10~porta_address_reg10 ;
+; 18.077 ; 20.000       ; 1.923          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a10~porta_address_reg10 ;
+; 18.077 ; 20.000       ; 1.923          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a10~porta_address_reg11 ;
+; 18.077 ; 20.000       ; 1.923          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a10~porta_address_reg11 ;
+; 18.077 ; 20.000       ; 1.923          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a10~porta_address_reg2  ;
+; 18.077 ; 20.000       ; 1.923          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a10~porta_address_reg2  ;
+; 18.077 ; 20.000       ; 1.923          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a10~porta_address_reg3  ;
+; 18.077 ; 20.000       ; 1.923          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a10~porta_address_reg3  ;
+; 18.077 ; 20.000       ; 1.923          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a10~porta_address_reg4  ;
+; 18.077 ; 20.000       ; 1.923          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a10~porta_address_reg4  ;
+; 18.077 ; 20.000       ; 1.923          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a10~porta_address_reg5  ;
+; 18.077 ; 20.000       ; 1.923          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a10~porta_address_reg5  ;
+; 18.077 ; 20.000       ; 1.923          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a10~porta_address_reg6  ;
+; 18.077 ; 20.000       ; 1.923          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a10~porta_address_reg6  ;
+; 18.077 ; 20.000       ; 1.923          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a10~porta_address_reg7  ;
+; 18.077 ; 20.000       ; 1.923          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a10~porta_address_reg7  ;
+; 18.077 ; 20.000       ; 1.923          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a10~porta_address_reg8  ;
+; 18.077 ; 20.000       ; 1.923          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a10~porta_address_reg8  ;
+; 18.077 ; 20.000       ; 1.923          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a10~porta_address_reg9  ;
+; 18.077 ; 20.000       ; 1.923          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a10~porta_address_reg9  ;
+; 18.077 ; 20.000       ; 1.923          ; High Pulse Width ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a11~porta_address_reg0  ;
+; 18.077 ; 20.000       ; 1.923          ; Low Pulse Width  ; inst5|altpll_component|pll|clk[0] ; Rise       ; mcu_core:inst|R0M8192x8:prg_ram|altsyncram:altsyncram_component|altsyncram_la81:auto_generated|ram_block1a11~porta_address_reg0  ;
++--------+--------------+----------------+------------------+-----------------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------+
+; Setup Times                                                                             ;
++-----------+------------+-------+-------+------------+-----------------------------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference                   ;
++-----------+------------+-------+-------+------------+-----------------------------------+
+; RXD       ; clk_50Mhz  ; 2.890 ; 2.890 ; Rise       ; inst5|altpll_component|pll|clk[0] ;
+; nRst      ; clk_50Mhz  ; 3.378 ; 3.378 ; Rise       ; inst5|altpll_component|pll|clk[0] ;
+; RXD       ; clk_50Mhz  ; 1.125 ; 1.125 ; Fall       ; inst5|altpll_component|pll|clk[0] ;
++-----------+------------+-------+-------+------------+-----------------------------------+
+
+
++-------------------------------------------------------------------------------------------+
+; Hold Times                                                                                ;
++-----------+------------+--------+--------+------------+-----------------------------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference                   ;
++-----------+------------+--------+--------+------------+-----------------------------------+
+; RXD       ; clk_50Mhz  ; -2.770 ; -2.770 ; Rise       ; inst5|altpll_component|pll|clk[0] ;
+; nRst      ; clk_50Mhz  ; -3.258 ; -3.258 ; Rise       ; inst5|altpll_component|pll|clk[0] ;
+; RXD       ; clk_50Mhz  ; -1.005 ; -1.005 ; Fall       ; inst5|altpll_component|pll|clk[0] ;
++-----------+------------+--------+--------+------------+-----------------------------------+
+
+
++-----------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                   ;
++-----------+------------+-------+-------+------------+-----------------------------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference                   ;
++-----------+------------+-------+-------+------------+-----------------------------------+
+; pin_name1 ; clk_50Mhz  ; 4.827 ; 4.827 ; Rise       ; inst5|altpll_component|pll|clk[0] ;
+; pin_name1 ; clk_50Mhz  ; 6.477 ; 6.477 ; Fall       ; inst5|altpll_component|pll|clk[0] ;
++-----------+------------+-------+-------+------------+-----------------------------------+
+
+
++-----------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------------------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference                   ;
++-----------+------------+-------+-------+------------+-----------------------------------+
+; pin_name1 ; clk_50Mhz  ; 4.595 ; 4.595 ; Rise       ; inst5|altpll_component|pll|clk[0] ;
+; pin_name1 ; clk_50Mhz  ; 6.184 ; 6.184 ; Fall       ; inst5|altpll_component|pll|clk[0] ;
++-----------+------------+-------+-------+------------+-----------------------------------+
+
+
++-----------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                           ;
++------------------------------------+-------+-------+----------+---------+---------------------+
+; Clock                              ; Setup ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------------------------+-------+-------+----------+---------+---------------------+
+; Worst-case Slack                   ; 8.200 ; 0.215 ; N/A      ; N/A     ; 10.000              ;
+;  clk_50Mhz                         ; N/A   ; N/A   ; N/A      ; N/A     ; 10.000              ;
+;  inst5|altpll_component|pll|clk[0] ; 8.200 ; 0.215 ; N/A      ; N/A     ; 17.500              ;
+; Design-wide TNS                    ; 0.0   ; 0.0   ; 0.0      ; 0.0     ; 0.0                 ;
+;  clk_50Mhz                         ; N/A   ; N/A   ; N/A      ; N/A     ; 0.000               ;
+;  inst5|altpll_component|pll|clk[0] ; 0.000 ; 0.000 ; N/A      ; N/A     ; 0.000               ;
++------------------------------------+-------+-------+----------+---------+---------------------+
+
+
++-----------------------------------------------------------------------------------------+
+; Setup Times                                                                             ;
++-----------+------------+-------+-------+------------+-----------------------------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference                   ;
++-----------+------------+-------+-------+------------+-----------------------------------+
+; RXD       ; clk_50Mhz  ; 4.778 ; 4.778 ; Rise       ; inst5|altpll_component|pll|clk[0] ;
+; nRst      ; clk_50Mhz  ; 5.900 ; 5.900 ; Rise       ; inst5|altpll_component|pll|clk[0] ;
+; RXD       ; clk_50Mhz  ; 1.594 ; 1.594 ; Fall       ; inst5|altpll_component|pll|clk[0] ;
++-----------+------------+-------+-------+------------+-----------------------------------+
+
+
++-------------------------------------------------------------------------------------------+
+; Hold Times                                                                                ;
++-----------+------------+--------+--------+------------+-----------------------------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference                   ;
++-----------+------------+--------+--------+------------+-----------------------------------+
+; RXD       ; clk_50Mhz  ; -2.770 ; -2.770 ; Rise       ; inst5|altpll_component|pll|clk[0] ;
+; nRst      ; clk_50Mhz  ; -3.258 ; -3.258 ; Rise       ; inst5|altpll_component|pll|clk[0] ;
+; RXD       ; clk_50Mhz  ; -1.005 ; -1.005 ; Fall       ; inst5|altpll_component|pll|clk[0] ;
++-----------+------------+--------+--------+------------+-----------------------------------+
+
+
++-------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                     ;
++-----------+------------+--------+--------+------------+-----------------------------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference                   ;
++-----------+------------+--------+--------+------------+-----------------------------------+
+; pin_name1 ; clk_50Mhz  ; 9.645  ; 9.645  ; Rise       ; inst5|altpll_component|pll|clk[0] ;
+; pin_name1 ; clk_50Mhz  ; 12.502 ; 12.502 ; Fall       ; inst5|altpll_component|pll|clk[0] ;
++-----------+------------+--------+--------+------------+-----------------------------------+
+
+
++-----------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------------------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference                   ;
++-----------+------------+-------+-------+------------+-----------------------------------+
+; pin_name1 ; clk_50Mhz  ; 4.595 ; 4.595 ; Rise       ; inst5|altpll_component|pll|clk[0] ;
+; pin_name1 ; clk_50Mhz  ; 6.184 ; 6.184 ; Fall       ; inst5|altpll_component|pll|clk[0] ;
++-----------+------------+-------+-------+------------+-----------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                                                   ;
++-----------------------------------+-----------------------------------+----------+----------+----------+----------+
+; From Clock                        ; To Clock                          ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-----------------------------------+-----------------------------------+----------+----------+----------+----------+
+; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 1552     ; 2446     ; 2358     ; 1729449  ;
++-----------------------------------+-----------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                                                    ;
++-----------------------------------+-----------------------------------+----------+----------+----------+----------+
+; From Clock                        ; To Clock                          ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-----------------------------------+-----------------------------------+----------+----------+----------+----------+
+; inst5|altpll_component|pll|clk[0] ; inst5|altpll_component|pll|clk[0] ; 1552     ; 2446     ; 2358     ; 1729449  ;
++-----------------------------------+-----------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 2     ; 2    ;
+; Unconstrained Input Port Paths  ; 154   ; 154  ;
+; Unconstrained Output Ports      ; 1     ; 1    ;
+; Unconstrained Output Port Paths ; 9     ; 9    ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Fri Nov 29 16:59:58 2019
+Info: Command: quartus_sta MCU_8051 -c MCU_8051
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'MCU_8051.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained generated clocks found in the design. Calling "derive_pll_clocks -create_base_clocks"
+Info (332110): Deriving PLL clocks
+    Info (332110): create_clock -period 20.000 -waveform {0.000 10.000} -name clk_50Mhz clk_50Mhz
+    Info (332110): create_generated_clock -source {inst5|altpll_component|pll|inclk[0]} -divide_by 2 -duty_cycle 50.00 -name {inst5|altpll_component|pll|clk[0]} {inst5|altpll_component|pll|clk[0]}
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Info (332146): Worst-case setup slack is 8.200
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     8.200         0.000 inst5|altpll_component|pll|clk[0] 
+Info (332146): Worst-case hold slack is 0.391
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.391         0.000 inst5|altpll_component|pll|clk[0] 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is 10.000
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    10.000         0.000 clk_50Mhz 
+    Info (332119):    17.500         0.000 inst5|altpll_component|pll|clk[0] 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Info (332146): Worst-case setup slack is 14.439
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    14.439         0.000 inst5|altpll_component|pll|clk[0] 
+Info (332146): Worst-case hold slack is 0.215
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.215         0.000 inst5|altpll_component|pll|clk[0] 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is 10.000
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    10.000         0.000 clk_50Mhz 
+    Info (332119):    17.500         0.000 inst5|altpll_component|pll|clk[0] 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4573 megabytes
+    Info: Processing ended: Fri Nov 29 17:00:00 2019
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
+
+

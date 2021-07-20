@@ -1,0 +1,251 @@
+|simpleALU
+Ai[0] => half_adder:plus0.a
+Ai[0] => fourbitor:orgate.a[0]
+Ai[0] => fourbitand:andgate.a[0]
+Ai[0] => fourbitxor:xorgate.a[0]
+Ai[1] => full_adder:plus1.a
+Ai[1] => fourbitor:orgate.a[1]
+Ai[1] => fourbitand:andgate.a[1]
+Ai[1] => fourbitxor:xorgate.a[1]
+Ai[2] => full_adder:plus2.a
+Ai[2] => fourbitor:orgate.a[2]
+Ai[2] => fourbitand:andgate.a[2]
+Ai[2] => fourbitxor:xorgate.a[2]
+Ai[3] => full_adder:plus3.a
+Ai[3] => fourbitor:orgate.a[3]
+Ai[3] => fourbitand:andgate.a[3]
+Ai[3] => fourbitxor:xorgate.a[3]
+Bi[0] => half_adder:plus0.b
+Bi[0] => fourbitor:orgate.b[0]
+Bi[0] => fourbitand:andgate.b[0]
+Bi[0] => fourbitxor:xorgate.b[0]
+Bi[1] => full_adder:plus1.b
+Bi[1] => fourbitor:orgate.b[1]
+Bi[1] => fourbitand:andgate.b[1]
+Bi[1] => fourbitxor:xorgate.b[1]
+Bi[2] => full_adder:plus2.b
+Bi[2] => fourbitor:orgate.b[2]
+Bi[2] => fourbitand:andgate.b[2]
+Bi[2] => fourbitxor:xorgate.b[2]
+Bi[3] => full_adder:plus3.b
+Bi[3] => fourbitor:orgate.b[3]
+Bi[3] => fourbitand:andgate.b[3]
+Bi[3] => fourbitxor:xorgate.b[3]
+Si[0] => fivebitand:suband.s[0]
+Si[0] => fourbitor:orgate.s[0]
+Si[0] => fourbitand:andgate.s[0]
+Si[0] => fourbitxor:xorgate.s[0]
+Si[1] => fivebitand:suband.s[1]
+Si[1] => fourbitor:orgate.s[1]
+Si[1] => fourbitand:andgate.s[1]
+Si[1] => fourbitxor:xorgate.s[1]
+Y[0] <= fouror:orfourbit0.yo
+Y[1] <= fouror:orfourbit1.yo
+Y[2] <= fouror:orfourbit2.yo
+Y[3] <= fouror:orfourbit3.yo
+Y[4] <= fivebitand:suband.yo[4]
+
+
+|simpleALU|half_adder:plus0
+a => s~0.IN0
+a => co~0.IN0
+b => s~0.IN1
+b => co~0.IN1
+s <= s~0.DB_MAX_OUTPUT_PORT_TYPE
+co <= co~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|simpleALU|full_adder:plus1
+a => half_adder:half1.a
+b => half_adder:half1.b
+ci => half_adder:half2.b
+s <= half_adder:half2.s
+co <= OR_Gate:org.c
+
+
+|simpleALU|full_adder:plus1|half_adder:half1
+a => s~0.IN0
+a => co~0.IN0
+b => s~0.IN1
+b => co~0.IN1
+s <= s~0.DB_MAX_OUTPUT_PORT_TYPE
+co <= co~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|simpleALU|full_adder:plus1|half_adder:half2
+a => s~0.IN0
+a => co~0.IN0
+b => s~0.IN1
+b => co~0.IN1
+s <= s~0.DB_MAX_OUTPUT_PORT_TYPE
+co <= co~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|simpleALU|full_adder:plus1|OR_Gate:org
+A => process_0~0.IN0
+B => process_0~0.IN1
+C <= process_0~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|simpleALU|full_adder:plus2
+a => half_adder:half1.a
+b => half_adder:half1.b
+ci => half_adder:half2.b
+s <= half_adder:half2.s
+co <= OR_Gate:org.c
+
+
+|simpleALU|full_adder:plus2|half_adder:half1
+a => s~0.IN0
+a => co~0.IN0
+b => s~0.IN1
+b => co~0.IN1
+s <= s~0.DB_MAX_OUTPUT_PORT_TYPE
+co <= co~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|simpleALU|full_adder:plus2|half_adder:half2
+a => s~0.IN0
+a => co~0.IN0
+b => s~0.IN1
+b => co~0.IN1
+s <= s~0.DB_MAX_OUTPUT_PORT_TYPE
+co <= co~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|simpleALU|full_adder:plus2|OR_Gate:org
+A => process_0~0.IN0
+B => process_0~0.IN1
+C <= process_0~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|simpleALU|full_adder:plus3
+a => half_adder:half1.a
+b => half_adder:half1.b
+ci => half_adder:half2.b
+s <= half_adder:half2.s
+co <= OR_Gate:org.c
+
+
+|simpleALU|full_adder:plus3|half_adder:half1
+a => s~0.IN0
+a => co~0.IN0
+b => s~0.IN1
+b => co~0.IN1
+s <= s~0.DB_MAX_OUTPUT_PORT_TYPE
+co <= co~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|simpleALU|full_adder:plus3|half_adder:half2
+a => s~0.IN0
+a => co~0.IN0
+b => s~0.IN1
+b => co~0.IN1
+s <= s~0.DB_MAX_OUTPUT_PORT_TYPE
+co <= co~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|simpleALU|full_adder:plus3|OR_Gate:org
+A => process_0~0.IN0
+B => process_0~0.IN1
+C <= process_0~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|simpleALU|fivebitand:suband
+a[0] => yo~0.IN1
+a[1] => yo~1.IN1
+a[2] => yo~2.IN1
+a[3] => yo~3.IN1
+a[4] => yo~5.IN1
+s[0] => yo~4.IN0
+s[1] => yo~4.IN1
+yo[0] <= yo~0.DB_MAX_OUTPUT_PORT_TYPE
+yo[1] <= yo~1.DB_MAX_OUTPUT_PORT_TYPE
+yo[2] <= yo~2.DB_MAX_OUTPUT_PORT_TYPE
+yo[3] <= yo~3.DB_MAX_OUTPUT_PORT_TYPE
+yo[4] <= yo~5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|simpleALU|fourbitor:orgate
+a[0] => yo~0.IN0
+a[1] => yo~2.IN0
+a[2] => yo~4.IN0
+a[3] => yo~6.IN0
+b[0] => yo~0.IN1
+b[1] => yo~2.IN1
+b[2] => yo~4.IN1
+b[3] => yo~6.IN1
+s[0] => yo~7.IN0
+s[1] => yo~7.IN1
+yo[0] <= yo~1.DB_MAX_OUTPUT_PORT_TYPE
+yo[1] <= yo~3.DB_MAX_OUTPUT_PORT_TYPE
+yo[2] <= yo~5.DB_MAX_OUTPUT_PORT_TYPE
+yo[3] <= yo~8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|simpleALU|fourbitand:andgate
+a[0] => yo~0.IN0
+a[1] => yo~2.IN0
+a[2] => yo~4.IN0
+a[3] => yo~6.IN0
+b[0] => yo~0.IN1
+b[1] => yo~2.IN1
+b[2] => yo~4.IN1
+b[3] => yo~6.IN1
+s[0] => yo~7.IN0
+s[1] => yo~7.IN1
+yo[0] <= yo~1.DB_MAX_OUTPUT_PORT_TYPE
+yo[1] <= yo~3.DB_MAX_OUTPUT_PORT_TYPE
+yo[2] <= yo~5.DB_MAX_OUTPUT_PORT_TYPE
+yo[3] <= yo~8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|simpleALU|fourbitxor:xorgate
+a[0] => yo~0.IN0
+a[1] => yo~2.IN0
+a[2] => yo~4.IN0
+a[3] => yo~6.IN0
+b[0] => yo~0.IN1
+b[1] => yo~2.IN1
+b[2] => yo~4.IN1
+b[3] => yo~6.IN1
+s[0] => yo~7.IN0
+s[1] => yo~7.IN1
+yo[0] <= yo~1.DB_MAX_OUTPUT_PORT_TYPE
+yo[1] <= yo~3.DB_MAX_OUTPUT_PORT_TYPE
+yo[2] <= yo~5.DB_MAX_OUTPUT_PORT_TYPE
+yo[3] <= yo~8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|simpleALU|fouror:orfourbit0
+a[0] => yo~0.IN0
+a[1] => yo~0.IN1
+a[2] => yo~1.IN1
+a[3] => yo~2.IN1
+yo <= yo~2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|simpleALU|fouror:orfourbit1
+a[0] => yo~0.IN0
+a[1] => yo~0.IN1
+a[2] => yo~1.IN1
+a[3] => yo~2.IN1
+yo <= yo~2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|simpleALU|fouror:orfourbit2
+a[0] => yo~0.IN0
+a[1] => yo~0.IN1
+a[2] => yo~1.IN1
+a[3] => yo~2.IN1
+yo <= yo~2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|simpleALU|fouror:orfourbit3
+a[0] => yo~0.IN0
+a[1] => yo~0.IN1
+a[2] => yo~1.IN1
+a[3] => yo~2.IN1
+yo <= yo~2.DB_MAX_OUTPUT_PORT_TYPE
+
+

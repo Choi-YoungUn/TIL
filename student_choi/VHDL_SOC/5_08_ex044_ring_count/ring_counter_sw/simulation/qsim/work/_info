@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\VHDL\5_08_ex044_ring_count\ring_counter_sw\simulation\qsim
+vring_counter
+Z1 I=b07;L0?85]RNQS5V[0V<2
+Z2 V`Xlb<IgID`beWkTF1l17A3
+Z3 dD:\VHDL\5_08_ex044_ring_count\ring_counter_sw\simulation\qsim
+Z4 w1557284403
+Z5 8ring_counter.vo
+Z6 Fring_counter.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 o-work work -O0
+!i10b 1
+Z9 !s100 VOd9BBU5Q4gKmTkz<BfeH0
+!s85 0
+Z10 !s108 1557284405.239000
+Z11 !s107 ring_counter.vo|
+Z12 !s90 -work|work|ring_counter.vo|
+!s101 -O0
+vring_counter_vlg_check_tst
+!i10b 1
+!s100 _n[MS9VGlT@F@Af33ChQF2
+I6?KALI[4VF:E75?VE3@Eo0
+V^OfnnkB5f7H8Vk0mz?70J0
+R3
+Z13 w1557284402
+Z14 8ring_counter.vt
+Z15 Fring_counter.vt
+L0 59
+R7
+r1
+!s85 0
+31
+Z16 !s108 1557284405.442000
+Z17 !s107 ring_counter.vt|
+Z18 !s90 -work|work|ring_counter.vt|
+!s101 -O0
+R8
+vring_counter_vlg_sample_tst
+!i10b 1
+!s100 Tz>>H4RA7OI=87Hl98=jS1
+IH<Pn8gJT?dk@VOV:lIKVl3
+VX643]5FR?E`[[f3nb3;z:3
+R3
+R13
+R14
+R15
+L0 29
+R7
+r1
+!s85 0
+31
+R16
+R17
+R18
+!s101 -O0
+R8
+vring_counter_vlg_vec_tst
+!i10b 1
+!s100 e6m@;l:;@4jX0CmO^IF[]1
+IEL1UACeddjCOJLV@IB`og0
+Va<IJ6JY@LhIV>kW]C:@K>2
+R3
+R13
+R14
+R15
+L0 207
+R7
+r1
+!s85 0
+31
+R16
+R17
+R18
+!s101 -O0
+R8

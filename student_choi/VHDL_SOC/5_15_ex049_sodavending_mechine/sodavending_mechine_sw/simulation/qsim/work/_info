@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\VHDL\5_15_ex049_sodavending_mechine\sodavending_mechine_sw\simulation\qsim
+vsodavending_mechine
+Z1 ImI^l:@^j]eLVT6?][bBc93
+Z2 VC==?Y<@Tk5aMJ8Za5FJn`3
+Z3 dD:\VHDL\5_15_ex049_sodavending_mechine\sodavending_mechine_sw\simulation\qsim
+Z4 w1558959258
+Z5 8sodavending_mechine.vo
+Z6 Fsodavending_mechine.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 !s90 -work|work|sodavending_mechine.vo|
+Z9 o-work work -O0
+!i10b 1
+Z10 !s100 6o2_5C^jE[_gH8<8WUUL]1
+!s85 0
+Z11 !s108 1558959259.213000
+Z12 !s107 sodavending_mechine.vo|
+!s101 -O0
+vsodavending_mechine_vlg_check_tst
+!i10b 1
+Z13 !s100 V9[FQTzgDEKX4FdX0T^3z2
+Z14 I8@V>KJHzVMSRA7OlnaZg61
+Z15 VTA[AH3KfJA@<JT;1la0NS2
+R3
+Z16 w1558959257
+Z17 8sodavending_mechine.vt
+Z18 Fsodavending_mechine.vt
+L0 59
+R7
+r1
+!s85 0
+31
+Z19 !s108 1558959259.501000
+Z20 !s107 sodavending_mechine.vt|
+Z21 !s90 -work|work|sodavending_mechine.vt|
+!s101 -O0
+R9
+vsodavending_mechine_vlg_sample_tst
+!i10b 1
+Z22 !s100 m`nN^9iKDIA35B:zKeQN80
+Z23 I<7?LYhDJPLD899;KFV^Ia2
+Z24 VKR?=4<O<VD4kE[2:?mjKh0
+R3
+R16
+R17
+R18
+L0 29
+R7
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R9
+vsodavending_mechine_vlg_vec_tst
+!i10b 1
+!s100 _kWP]Kei=RQU7Z`BMgk1o0
+IISb4nom<Zf>MOo[2fYXH33
+Z25 Vc_WJ5I0FQ<WM3>_k?hP271
+R3
+R16
+R17
+R18
+Z26 L0 556
+R7
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R9

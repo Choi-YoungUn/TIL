@@ -1,0 +1,29 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity hamming_decoder is
+port( ai : in std_logic_vector(6 downto 0);
+
+       syn : out std_logic_vector(2 downto 0);
+		 error : out std_logic_vector(6 downto 0);
+		 yo : out std_logic_vector(6 downto 0)
+		 );
+		 end hamming_decoder;
+		 
+		 architecture dataflow of hamming_decoder is
+		 begin
+		 
+		 syn(2) <= ai(3) xor ai(4) xor ai(6) xor ai(2);
+		 syn(1) <= ai(4) xor ai(5) xor ai(6) xor ai(1);
+		 syn(0) <= ai(3) xor ai(4) xor ai(5) xor ai(0);
+		 
+		 error <= "1000000" when syn = "111" else
+		          "0100000" when syn = "011" else
+					 "0010000" when syn = "111" else
+					 "0001000" when syn = "101" else
+					 "0000100" when syn = "100" else
+					 "0000010" when syn = "010" else
+					 "0000001" when syn = "001" else
+					 "0000000" when syn = "000" ;
+					 
+		 end dataflow;

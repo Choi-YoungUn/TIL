@@ -1,0 +1,61 @@
+D:/MO_VHDL/11_08_EX013_Register/UART_TX.vhd {1 {vcom -work work -2002 -explicit D:/MO_VHDL/11_08_EX013_Register/UART_TX.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity UART_TX
+-- Compiling architecture beh of UART_TX
+
+} {} {}} D:/MO_VHDL/11_08_EX013_Register/load_tx_data.vhd {1 {vcom -work work -2002 -explicit D:/MO_VHDL/11_08_EX013_Register/load_tx_data.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity load_tx_data
+-- Compiling architecture beh of load_tx_data
+
+} {} {}} D:/MO_VHDL/11_08_EX013_Register/UART_RX.vhd {1 {vcom -work work -2002 -explicit D:/MO_VHDL/11_08_EX013_Register/UART_RX.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity UART_RX
+-- Compiling architecture beh of UART_RX
+
+} {} {}} D:/MO_VHDL/11_08_EX013_Register/data_parsing.vhd {1 {vcom -work work -2002 -explicit D:/MO_VHDL/11_08_EX013_Register/data_parsing.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity data_parsing
+-- Compiling architecture beh of data_parsing
+
+} {} {}} D:/MO_VHDL/11_08_EX013_Register/TB_UART.vhd {1 {vcom -work work -2002 -explicit D:/MO_VHDL/11_08_EX013_Register/TB_UART.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity TB_UART
+-- Compiling architecture BEH of TB_UART
+
+} {} {}} D:/MO_VHDL/11_08_EX013_Register/register_map.vhd {1 {vcom -work work -2002 -explicit D:/MO_VHDL/11_08_EX013_Register/register_map.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity register_map
+-- Compiling architecture beh of register_map
+
+} {} {}}

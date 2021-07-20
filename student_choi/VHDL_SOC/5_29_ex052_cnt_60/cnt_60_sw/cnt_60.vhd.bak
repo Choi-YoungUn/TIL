@@ -1,0 +1,41 @@
+library ieee;
+use ieee.std_logic_1164.al;
+use ieee.std_logic_unsigned.all;
+
+entity cnt_60 is
+port( nrst : in std_logic;
+      clk : in std_logic;
+		digit_ten out std_logic_vector(3 downto 0);
+		digit_one out std_logic_vector(3 downto 0);
+		carry : out std_logic);
+		end cnt_60;
+		
+architecture behav of cnt_60;
+
+signal cnt : integer range 0 to 24999999;
+signal cnt_sixteen :integer range 0 to 59; 
+signal sig : std_logic;
+
+begin
+process(nrst, clk)
+begin
+if(nrst = '1') then
+  cnt <= 0;
+  cnt_sixteen <= 0;
+  sig <= '0';
+  elsif(clk'event and clk = '1') then
+      if(cnt = 24999999) then
+        cnt_sixteen <= cnt_sixteen + 1;
+	     cnt <= 0;
+	     else
+	     cnt <= cnt + 1;
+	   end if;
+		if(cnt_sixteen = 59) then
+		  cnt_60 <=0;
+		  sig <= not(sig);
+		  else
+		  cnt_sixteen <= cnt_sixteen + 1;
+		end if;
+end if;
+end process;
+end behav;

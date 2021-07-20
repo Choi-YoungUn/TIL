@@ -1,0 +1,14 @@
+# do DETclock.do 
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module DETclock
+# 
+# Top level modules:
+# 	DETclock
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module DETclock_vlg_sample_tst
+# -- Compiling module DETclock_vlg_check_tst
+# -- Compiling module DETclock_vlg_vec_tst
+# 
+# Top level modules:
+# 	DETclock_vlg_vec_tst
+# vsim -L cycloneii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate -c -t 1ps -novopt work.DETclock_vlg_vec_tst 

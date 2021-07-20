@@ -1,0 +1,64 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity seq_detector_four is
+port(sign_in : in std_logic;
+     clk : in std_logic;
+	  reset : in std_logic;
+	  data : out std_logic);
+	  end seq_detector_four;
+	  
+	  architecture behav of seq_detector_four is
+	  
+	  type state is (s0, s1, s2, s3, s4);
+	  signal now_state, next_state : state;
+	  
+	  p1 : process(clk)
+	  begin
+	  if(rising_edge(clk)) then
+	      if(reset = '1') then
+			   now_state <= s0;
+				else
+				now_state <= next_state;
+				end if;
+				end if;
+				end process;
+				
+				p2 : process(now_state, sign_in)
+				begin
+				data <= '0';
+				case now_state is
+				when s0 =>  if (sign_in = '1') then 
+				      next_state <= s1;
+						data = '0';
+						else
+						next_state <= s0;
+						data = '0';
+						end if;
+				when s1 =>  if (sign_in = '0') then 
+				      next_state <= s2;
+						data = '0';
+						else
+						next_state <= s1;
+						data = '0';
+						end if;
+				when s2 =>  if (sign_in = '1') then 
+				      next_state <= s3;
+						data = '0';
+						else
+						next_state <= s0;
+						data = '0';
+						end if;
+				when s3 =>  if (sign_in = '1') then 
+				      next_state <= s1;
+						data = '1';
+						else
+						next_state <= s2;
+						data = '0';
+						end if;
+				when others => next_state <= s0;
+				      data = '0';
+						end case;
+						end prosess;
+						
+						end behav;

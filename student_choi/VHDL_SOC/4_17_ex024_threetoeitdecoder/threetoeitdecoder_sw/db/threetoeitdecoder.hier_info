@@ -1,0 +1,27 @@
+|threetoeitdecoder
+A[0] => Yo~1.IN1
+A[0] => Yo~4.IN1
+A[0] => Yo~7.IN1
+A[0] => Yo~10.IN1
+A[0] => Yo~2.IN1
+A[0] => Yo~5.IN1
+A[0] => Yo~8.IN1
+A[0] => Yo~11.IN1
+A[1] => Yo~0.IN0
+A[1] => Yo~6.IN0
+A[1] => Yo~3.IN0
+A[1] => Yo~9.IN0
+A[2] => Yo~0.IN1
+A[2] => Yo~3.IN1
+A[2] => Yo~6.IN1
+A[2] => Yo~9.IN1
+Yo[0] <= Yo~11.DB_MAX_OUTPUT_PORT_TYPE
+Yo[1] <= Yo~10.DB_MAX_OUTPUT_PORT_TYPE
+Yo[2] <= Yo~8.DB_MAX_OUTPUT_PORT_TYPE
+Yo[3] <= Yo~7.DB_MAX_OUTPUT_PORT_TYPE
+Yo[4] <= Yo~5.DB_MAX_OUTPUT_PORT_TYPE
+Yo[5] <= Yo~4.DB_MAX_OUTPUT_PORT_TYPE
+Yo[6] <= Yo~2.DB_MAX_OUTPUT_PORT_TYPE
+Yo[7] <= Yo~1.DB_MAX_OUTPUT_PORT_TYPE
+
+

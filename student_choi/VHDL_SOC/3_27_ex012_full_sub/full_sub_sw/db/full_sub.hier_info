@@ -1,0 +1,32 @@
+|full_sub
+x => half_sub:half1.x
+y => half_sub:half1.y
+bi => half_sub:half2.y
+d <= half_sub:half2.d
+bo <= OR_Gate:org.c
+
+
+|full_sub|half_sub:half1
+x => D~0.IN0
+x => BO~0.IN0
+y => D~0.IN1
+y => BO~0.IN1
+D <= D~0.DB_MAX_OUTPUT_PORT_TYPE
+BO <= BO~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|full_sub|half_sub:half2
+x => D~0.IN0
+x => BO~0.IN0
+y => D~0.IN1
+y => BO~0.IN1
+D <= D~0.DB_MAX_OUTPUT_PORT_TYPE
+BO <= BO~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|full_sub|OR_Gate:org
+A => process_0~0.IN0
+B => process_0~0.IN1
+C <= process_0~0.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,117 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity sodavending_mechine is
+port (coin : in std_logic_vector(1,0);
+      coffee : out std_logic;
+		sevensgzero : out std_logic_vector(6 downto 0);
+		sevensgten : out std_logic_vector(6 downto 0);
+		sevensghund : out std_logic_vector(6 downto  0));
+		end sodavending_mechine;
+		
+		architecture behav of sodavending_mechine is
+		component FNDdecoder is
+		port map (data_in : in std_logic_vector(3 downto 0);
+      seg : out std_logic_vector(6 downto 0));
+		end component;
+
+		type state is (s0, s1, s2, s3, s4, s5, s6);
+		
+		signal zerotosg : std_logic_vector(3 downto 0);
+		signal tentosg : std_logic_vector(3 downto 0);
+		signal hundtosg : std_logic_vector(3 downto 0);
+		signal now_state : state;
+		
+		part1 : process(coin)
+		begin
+		now_state <= s0;
+		 case now_state is
+		 when s0 => if(coin= "01") then
+		          now_state <= s1;
+		          elsif(coin = "10") then
+		          now_state <= s2;
+		          elsif (coin = "00") then
+		          now_state <= s0;
+		          else 
+		          now_state <= s0; 
+					 end if;
+		 when s1 => if(coin= "01") then
+		          now_state <= s2;
+		          elsif(coin = "10") then
+		          now_state <= s3;
+		          elsif (coin = "00") then
+		          now_state <= s1;
+		          else 
+		          now_state <= s0;
+					 end if;
+		 when s2 => if(coin= "01") then
+		          now_state <= s3;
+		          elsif(coin = "10") then
+		          now_state <= s4;
+		          elsif (coin = "00") then
+		          now_state <= s2;
+		          else 
+		          now_state <= s0;
+					 end if;
+		 when s3 => if(coin= "01") then
+		          now_state <= s4;
+		          elsif(coin = "10") then
+		          now_state <= s5;
+		          elsif (coin = "00") then
+		          now_state <= s3;
+		          else 
+		          now_state <= s0;
+					 end if;
+		when s4 => if(coin= "01") then
+		          now_state <= s5;
+		          elsif(coin = "10") then
+		          now_state <= s6;
+		          elsif (coin = "00") then
+		          now_state <= s4;
+		          else 
+		          now_state <= s0;
+					 end if;
+		when s5 => now_state <= s0;
+		when s6 => now_state <= s0;
+		end case;
+		end process;
+		
+		part2 : process(now_state)
+		begin
+		case now_state is
+		when s0 => zerotosg <= "0000";
+		           tentosg <= "0000";
+					  hundtosg <= "0000" ;
+	   when s1 => zerotosg <= "0000";
+		           tentosg <= "0101";
+					  hundtosg <= "0000" ;
+		when s2 => zerotosg <= "0000";
+		           tentosg <= "0000";
+					  hundtosg <= "0001" ;
+	   when s3 => zerotosg <= "0000";
+		           tentosg <= "0101";
+					  hundtosg <= "0001" ;
+	   when s4 => zerotosg <= "0000";
+		           tentosg <= "0000";
+					  hundtosg <= "0010" ;
+		when s5 => zerotosg <= "0000";
+		           tentosg <= "0101";
+					  hundtosg <= "0010" ;
+		when s6 => zerotosg <= "0000";
+		           tentosg <= "0000";
+					  hundtosg <= "0011" ;
+					  end case;
+					  end process;
+					  
+		zero : FNDdecoder 
+		port map(data_in => zerotosg, seg => sevensgzero);
+		ten : FNDdecoder 
+		port map(data_in => tentosg, seg => sevensgten);
+		hund : FNDdecoder 
+		port map(data_in => hundtosg, seg => sevensghund);
+		
+		
+		coffee <= '1' when ((now_state = s5) or (now_state = s6)) else
+		          '0';
+					 
+					 end behav;

@@ -1,0 +1,68 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity modulo_n_updown is
+port( clk : in std_logic;
+      reset : in std_logic;
+		updown : in std_logic;
+		y : out std_logic_vector(2 downto 0));
+		end modulo_n_updown;
+		
+		architecture behav of modulo_n_updown is
+		
+		type state_type is ( s0, s1, s2, s3, s4, s5);
+		signal state : state_type;
+		
+		begin
+		process(clk, reset)
+		begin
+		if(reset = '1') then
+		state <= s0;
+		elsif(clk'event and clk = '1') then
+		
+		case state is
+		when s0 => if updown = '1' then
+		        state <= s1;
+				  else
+				  state <= s5;
+				  end if;
+		when s1 => if updown = '1' then
+		        state <= s2;
+				  else
+				  state <= s0;
+				  end if;
+				  
+		when s2 => if updown = '1' then
+		        state <= s3;
+				  else
+				  state <= s1;
+				  end if;
+				  
+	   when s3 => if updown = '1' then
+		        state <= s4;
+				  else
+				  state <= s2;
+				  end if;
+				  
+	   when s4 => if updown = '1' then
+		        state <= s5;
+				  else
+				  state <= s3;
+				  end if;
+				  
+	   when s5 => if updown = '1' then
+		        state <= s0;
+				  else
+				  state <= s4;
+				  end if;
+				  end case;
+				  
+				  end process;
+				  
+				  y <= "000" when (state = s0) else
+				       "001" when (state = s1) else
+						 "010" when (state = s2) else
+						 "011" when (state = s3) else
+						 "100" when (state = s4) else
+						 "101";
+						 end behav;

@@ -1,0 +1,9 @@
+D:/MO_VHDL/9_20_EX006_NOR_GATE/NOR_GATE.vhd {1 {vcom -work work -2002 -explicit {D:\MO_VHDL\9_20_EX006_NOR_GATE\NOR_GATE.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity NOR_VHDL
+-- Compiling architecture Behavioral of NOR_VHDL
+
+} {} {}}

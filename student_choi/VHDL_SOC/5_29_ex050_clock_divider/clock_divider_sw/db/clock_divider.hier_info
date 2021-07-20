@@ -1,0 +1,12 @@
+|clock_divider
+reset => sig.ACLR
+reset => cnt[0].ACLR
+reset => cnt[1].ACLR
+reset => cnt[2].ACLR
+clk => sig.CLK
+clk => cnt[0].CLK
+clk => cnt[1].CLK
+clk => cnt[2].CLK
+clk_div10 <= sig.DB_MAX_OUTPUT_PORT_TYPE
+
+

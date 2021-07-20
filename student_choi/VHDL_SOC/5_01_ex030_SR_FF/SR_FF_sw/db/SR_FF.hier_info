@@ -1,0 +1,15 @@
+|SR_FF
+s => process_0.IN0
+s => process_0.IN0
+s => process_0.IN0
+r => process_0.IN1
+r => process_0.IN1
+r => process_0.IN1
+clk => temp.CLK
+preset => temp.PRESET
+preset => temp.IN0
+clear => temp.IN1
+Q <= temp.DB_MAX_OUTPUT_PORT_TYPE
+Q_ber <= temp.DB_MAX_OUTPUT_PORT_TYPE
+
+

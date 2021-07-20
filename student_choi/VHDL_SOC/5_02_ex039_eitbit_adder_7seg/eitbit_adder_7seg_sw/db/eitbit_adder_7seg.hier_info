@@ -1,0 +1,590 @@
+|eitbit_adder_7seg
+x[0] => eibbit_adder_vhd:eitbit_adder.add_a[0]
+x[1] => eibbit_adder_vhd:eitbit_adder.add_a[1]
+x[2] => eibbit_adder_vhd:eitbit_adder.add_a[2]
+x[3] => eibbit_adder_vhd:eitbit_adder.add_a[3]
+x[4] => eibbit_adder_vhd:eitbit_adder.add_a[4]
+x[5] => eibbit_adder_vhd:eitbit_adder.add_a[5]
+x[6] => eibbit_adder_vhd:eitbit_adder.add_a[6]
+x[7] => eibbit_adder_vhd:eitbit_adder.add_a[7]
+y[0] => eibbit_adder_vhd:eitbit_adder.add_b[0]
+y[1] => eibbit_adder_vhd:eitbit_adder.add_b[1]
+y[2] => eibbit_adder_vhd:eitbit_adder.add_b[2]
+y[3] => eibbit_adder_vhd:eitbit_adder.add_b[3]
+y[4] => eibbit_adder_vhd:eitbit_adder.add_b[4]
+y[5] => eibbit_adder_vhd:eitbit_adder.add_b[5]
+y[6] => eibbit_adder_vhd:eitbit_adder.add_b[6]
+y[7] => eibbit_adder_vhd:eitbit_adder.add_b[7]
+segziro[0] <= FNDdecoder:seg1.seg[0]
+segziro[1] <= FNDdecoder:seg1.seg[1]
+segziro[2] <= FNDdecoder:seg1.seg[2]
+segziro[3] <= FNDdecoder:seg1.seg[3]
+segziro[4] <= FNDdecoder:seg1.seg[4]
+segziro[5] <= FNDdecoder:seg1.seg[5]
+segziro[6] <= FNDdecoder:seg1.seg[6]
+segten[0] <= FNDdecoder:seg2.seg[0]
+segten[1] <= FNDdecoder:seg2.seg[1]
+segten[2] <= FNDdecoder:seg2.seg[2]
+segten[3] <= FNDdecoder:seg2.seg[3]
+segten[4] <= FNDdecoder:seg2.seg[4]
+segten[5] <= FNDdecoder:seg2.seg[5]
+segten[6] <= FNDdecoder:seg2.seg[6]
+seghund[0] <= FNDdecoder:seg3.seg[0]
+seghund[1] <= FNDdecoder:seg3.seg[1]
+seghund[2] <= FNDdecoder:seg3.seg[2]
+seghund[3] <= FNDdecoder:seg3.seg[3]
+seghund[4] <= FNDdecoder:seg3.seg[4]
+seghund[5] <= FNDdecoder:seg3.seg[5]
+seghund[6] <= FNDdecoder:seg3.seg[6]
+
+
+|eitbit_adder_7seg|eibbit_adder_vhd:eitbit_adder
+add_a[0] => half_adder:u0.a
+add_a[1] => full_adder:u1.a
+add_a[2] => full_adder:u2.a
+add_a[3] => full_adder:u3.a
+add_a[4] => full_adder:u4.a
+add_a[5] => full_adder:u5.a
+add_a[6] => full_adder:u6.a
+add_a[7] => full_adder:u7.a
+add_b[0] => half_adder:u0.b
+add_b[1] => full_adder:u1.b
+add_b[2] => full_adder:u2.b
+add_b[3] => full_adder:u3.b
+add_b[4] => full_adder:u4.b
+add_b[5] => full_adder:u5.b
+add_b[6] => full_adder:u6.b
+add_b[7] => full_adder:u7.b
+add_sum[0] <= half_adder:u0.s
+add_sum[1] <= full_adder:u1.s
+add_sum[2] <= full_adder:u2.s
+add_sum[3] <= full_adder:u3.s
+add_sum[4] <= full_adder:u4.s
+add_sum[5] <= full_adder:u5.s
+add_sum[6] <= full_adder:u6.s
+add_sum[7] <= full_adder:u7.s
+add_sum[8] <= full_adder:u7.co
+
+
+|eitbit_adder_7seg|eibbit_adder_vhd:eitbit_adder|half_adder:u0
+a => s~0.IN0
+a => co~0.IN0
+b => s~0.IN1
+b => co~0.IN1
+s <= s~0.DB_MAX_OUTPUT_PORT_TYPE
+co <= co~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|eitbit_adder_7seg|eibbit_adder_vhd:eitbit_adder|full_adder:u1
+a => half_adder:half1.a
+b => half_adder:half1.b
+ci => half_adder:half2.b
+s <= half_adder:half2.s
+co <= OR_Gate:org.c
+
+
+|eitbit_adder_7seg|eibbit_adder_vhd:eitbit_adder|full_adder:u1|half_adder:half1
+a => s~0.IN0
+a => co~0.IN0
+b => s~0.IN1
+b => co~0.IN1
+s <= s~0.DB_MAX_OUTPUT_PORT_TYPE
+co <= co~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|eitbit_adder_7seg|eibbit_adder_vhd:eitbit_adder|full_adder:u1|half_adder:half2
+a => s~0.IN0
+a => co~0.IN0
+b => s~0.IN1
+b => co~0.IN1
+s <= s~0.DB_MAX_OUTPUT_PORT_TYPE
+co <= co~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|eitbit_adder_7seg|eibbit_adder_vhd:eitbit_adder|full_adder:u1|OR_Gate:org
+A => process_0~0.IN0
+B => process_0~0.IN1
+C <= process_0~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|eitbit_adder_7seg|eibbit_adder_vhd:eitbit_adder|full_adder:u2
+a => half_adder:half1.a
+b => half_adder:half1.b
+ci => half_adder:half2.b
+s <= half_adder:half2.s
+co <= OR_Gate:org.c
+
+
+|eitbit_adder_7seg|eibbit_adder_vhd:eitbit_adder|full_adder:u2|half_adder:half1
+a => s~0.IN0
+a => co~0.IN0
+b => s~0.IN1
+b => co~0.IN1
+s <= s~0.DB_MAX_OUTPUT_PORT_TYPE
+co <= co~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|eitbit_adder_7seg|eibbit_adder_vhd:eitbit_adder|full_adder:u2|half_adder:half2
+a => s~0.IN0
+a => co~0.IN0
+b => s~0.IN1
+b => co~0.IN1
+s <= s~0.DB_MAX_OUTPUT_PORT_TYPE
+co <= co~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|eitbit_adder_7seg|eibbit_adder_vhd:eitbit_adder|full_adder:u2|OR_Gate:org
+A => process_0~0.IN0
+B => process_0~0.IN1
+C <= process_0~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|eitbit_adder_7seg|eibbit_adder_vhd:eitbit_adder|full_adder:u3
+a => half_adder:half1.a
+b => half_adder:half1.b
+ci => half_adder:half2.b
+s <= half_adder:half2.s
+co <= OR_Gate:org.c
+
+
+|eitbit_adder_7seg|eibbit_adder_vhd:eitbit_adder|full_adder:u3|half_adder:half1
+a => s~0.IN0
+a => co~0.IN0
+b => s~0.IN1
+b => co~0.IN1
+s <= s~0.DB_MAX_OUTPUT_PORT_TYPE
+co <= co~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|eitbit_adder_7seg|eibbit_adder_vhd:eitbit_adder|full_adder:u3|half_adder:half2
+a => s~0.IN0
+a => co~0.IN0
+b => s~0.IN1
+b => co~0.IN1
+s <= s~0.DB_MAX_OUTPUT_PORT_TYPE
+co <= co~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|eitbit_adder_7seg|eibbit_adder_vhd:eitbit_adder|full_adder:u3|OR_Gate:org
+A => process_0~0.IN0
+B => process_0~0.IN1
+C <= process_0~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|eitbit_adder_7seg|eibbit_adder_vhd:eitbit_adder|full_adder:u4
+a => half_adder:half1.a
+b => half_adder:half1.b
+ci => half_adder:half2.b
+s <= half_adder:half2.s
+co <= OR_Gate:org.c
+
+
+|eitbit_adder_7seg|eibbit_adder_vhd:eitbit_adder|full_adder:u4|half_adder:half1
+a => s~0.IN0
+a => co~0.IN0
+b => s~0.IN1
+b => co~0.IN1
+s <= s~0.DB_MAX_OUTPUT_PORT_TYPE
+co <= co~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|eitbit_adder_7seg|eibbit_adder_vhd:eitbit_adder|full_adder:u4|half_adder:half2
+a => s~0.IN0
+a => co~0.IN0
+b => s~0.IN1
+b => co~0.IN1
+s <= s~0.DB_MAX_OUTPUT_PORT_TYPE
+co <= co~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|eitbit_adder_7seg|eibbit_adder_vhd:eitbit_adder|full_adder:u4|OR_Gate:org
+A => process_0~0.IN0
+B => process_0~0.IN1
+C <= process_0~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|eitbit_adder_7seg|eibbit_adder_vhd:eitbit_adder|full_adder:u5
+a => half_adder:half1.a
+b => half_adder:half1.b
+ci => half_adder:half2.b
+s <= half_adder:half2.s
+co <= OR_Gate:org.c
+
+
+|eitbit_adder_7seg|eibbit_adder_vhd:eitbit_adder|full_adder:u5|half_adder:half1
+a => s~0.IN0
+a => co~0.IN0
+b => s~0.IN1
+b => co~0.IN1
+s <= s~0.DB_MAX_OUTPUT_PORT_TYPE
+co <= co~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|eitbit_adder_7seg|eibbit_adder_vhd:eitbit_adder|full_adder:u5|half_adder:half2
+a => s~0.IN0
+a => co~0.IN0
+b => s~0.IN1
+b => co~0.IN1
+s <= s~0.DB_MAX_OUTPUT_PORT_TYPE
+co <= co~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|eitbit_adder_7seg|eibbit_adder_vhd:eitbit_adder|full_adder:u5|OR_Gate:org
+A => process_0~0.IN0
+B => process_0~0.IN1
+C <= process_0~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|eitbit_adder_7seg|eibbit_adder_vhd:eitbit_adder|full_adder:u6
+a => half_adder:half1.a
+b => half_adder:half1.b
+ci => half_adder:half2.b
+s <= half_adder:half2.s
+co <= OR_Gate:org.c
+
+
+|eitbit_adder_7seg|eibbit_adder_vhd:eitbit_adder|full_adder:u6|half_adder:half1
+a => s~0.IN0
+a => co~0.IN0
+b => s~0.IN1
+b => co~0.IN1
+s <= s~0.DB_MAX_OUTPUT_PORT_TYPE
+co <= co~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|eitbit_adder_7seg|eibbit_adder_vhd:eitbit_adder|full_adder:u6|half_adder:half2
+a => s~0.IN0
+a => co~0.IN0
+b => s~0.IN1
+b => co~0.IN1
+s <= s~0.DB_MAX_OUTPUT_PORT_TYPE
+co <= co~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|eitbit_adder_7seg|eibbit_adder_vhd:eitbit_adder|full_adder:u6|OR_Gate:org
+A => process_0~0.IN0
+B => process_0~0.IN1
+C <= process_0~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|eitbit_adder_7seg|eibbit_adder_vhd:eitbit_adder|full_adder:u7
+a => half_adder:half1.a
+b => half_adder:half1.b
+ci => half_adder:half2.b
+s <= half_adder:half2.s
+co <= OR_Gate:org.c
+
+
+|eitbit_adder_7seg|eibbit_adder_vhd:eitbit_adder|full_adder:u7|half_adder:half1
+a => s~0.IN0
+a => co~0.IN0
+b => s~0.IN1
+b => co~0.IN1
+s <= s~0.DB_MAX_OUTPUT_PORT_TYPE
+co <= co~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|eitbit_adder_7seg|eibbit_adder_vhd:eitbit_adder|full_adder:u7|half_adder:half2
+a => s~0.IN0
+a => co~0.IN0
+b => s~0.IN1
+b => co~0.IN1
+s <= s~0.DB_MAX_OUTPUT_PORT_TYPE
+co <= co~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|eitbit_adder_7seg|eibbit_adder_vhd:eitbit_adder|full_adder:u7|OR_Gate:org
+A => process_0~0.IN0
+B => process_0~0.IN1
+C <= process_0~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|eitbit_adder_7seg|nine_bcd:bi_to_bcd
+nbit[0] => LessThan0.IN18
+nbit[0] => LessThan1.IN18
+nbit[0] => LessThan2.IN18
+nbit[0] => LessThan3.IN18
+nbit[0] => LessThan4.IN18
+nbit[0] => LessThan5.IN24
+nbit[0] => LessThan6.IN24
+nbit[0] => LessThan7.IN24
+nbit[0] => LessThan8.IN24
+nbit[0] => LessThan9.IN24
+nbit[0] => LessThan10.IN24
+nbit[0] => LessThan11.IN24
+nbit[0] => LessThan12.IN24
+nbit[0] => LessThan13.IN24
+nbit[0] => LessThan14.IN14
+nbit[0] => LessThan15.IN14
+nbit[0] => LessThan16.IN14
+nbit[0] => LessThan17.IN14
+nbit[0] => LessThan18.IN14
+nbit[0] => LessThan19.IN14
+nbit[0] => LessThan20.IN14
+nbit[0] => LessThan21.IN14
+nbit[0] => LessThan22.IN14
+nbit[1] => LessThan0.IN17
+nbit[1] => LessThan1.IN17
+nbit[1] => LessThan2.IN17
+nbit[1] => LessThan3.IN17
+nbit[1] => LessThan4.IN17
+nbit[1] => LessThan5.IN23
+nbit[1] => Add5.IN22
+nbit[1] => LessThan6.IN23
+nbit[1] => LessThan7.IN23
+nbit[1] => Add7.IN22
+nbit[1] => LessThan8.IN23
+nbit[1] => LessThan9.IN23
+nbit[1] => Add9.IN22
+nbit[1] => LessThan10.IN23
+nbit[1] => LessThan11.IN23
+nbit[1] => Add11.IN22
+nbit[1] => LessThan12.IN23
+nbit[1] => LessThan13.IN23
+nbit[1] => Add13.IN22
+nbit[1] => num~51.DATAA
+nbit[1] => num~63.DATAB
+nbit[1] => num~87.DATAB
+nbit[1] => num~111.DATAB
+nbit[1] => num~135.DATAB
+nbit[2] => LessThan0.IN16
+nbit[2] => Add0.IN14
+nbit[2] => LessThan1.IN16
+nbit[2] => LessThan2.IN16
+nbit[2] => Add2.IN14
+nbit[2] => LessThan3.IN16
+nbit[2] => LessThan4.IN16
+nbit[2] => Add4.IN14
+nbit[2] => num~7.DATAA
+nbit[2] => num~15.DATAB
+nbit[2] => num~31.DATAB
+nbit[3] => LessThan0.IN15
+nbit[3] => Add0.IN13
+nbit[3] => LessThan1.IN15
+nbit[3] => LessThan2.IN15
+nbit[3] => Add2.IN13
+nbit[3] => LessThan3.IN15
+nbit[3] => Add3.IN12
+nbit[3] => LessThan4.IN15
+nbit[3] => Add4.IN13
+nbit[3] => num~6.DATAA
+nbit[3] => num~30.DATAB
+nbit[4] => LessThan0.IN14
+nbit[4] => Add0.IN12
+nbit[4] => LessThan1.IN14
+nbit[4] => Add1.IN10
+nbit[4] => LessThan2.IN14
+nbit[4] => Add2.IN12
+nbit[4] => LessThan3.IN14
+nbit[4] => Add3.IN11
+nbit[4] => LessThan4.IN14
+nbit[4] => Add4.IN12
+nbit[4] => num~5.DATAA
+nbit[5] => LessThan0.IN13
+nbit[5] => Add0.IN11
+nbit[5] => LessThan1.IN13
+nbit[5] => Add1.IN9
+nbit[5] => LessThan2.IN13
+nbit[5] => Add2.IN11
+nbit[5] => LessThan3.IN13
+nbit[5] => Add3.IN10
+nbit[5] => LessThan4.IN13
+nbit[5] => Add4.IN11
+nbit[5] => num~4.DATAA
+nbit[6] => LessThan0.IN12
+nbit[6] => Add0.IN10
+nbit[6] => LessThan1.IN12
+nbit[6] => Add1.IN8
+nbit[6] => LessThan2.IN12
+nbit[6] => Add2.IN10
+nbit[6] => LessThan3.IN12
+nbit[6] => Add3.IN9
+nbit[6] => LessThan4.IN12
+nbit[6] => Add4.IN10
+nbit[6] => num~3.DATAA
+nbit[7] => LessThan0.IN11
+nbit[7] => Add0.IN9
+nbit[7] => LessThan1.IN11
+nbit[7] => Add1.IN7
+nbit[7] => LessThan2.IN11
+nbit[7] => Add2.IN9
+nbit[7] => LessThan3.IN11
+nbit[7] => Add3.IN8
+nbit[7] => LessThan4.IN11
+nbit[7] => Add4.IN9
+nbit[7] => num~2.DATAA
+nbit[8] => LessThan0.IN10
+nbit[8] => Add0.IN8
+nbit[8] => LessThan1.IN10
+nbit[8] => Add1.IN6
+nbit[8] => LessThan2.IN10
+nbit[8] => Add2.IN8
+nbit[8] => LessThan3.IN10
+nbit[8] => Add3.IN7
+nbit[8] => LessThan4.IN10
+nbit[8] => Add4.IN8
+nbit[8] => num~1.DATAA
+bcdcord[0] <= temp~49.DB_MAX_OUTPUT_PORT_TYPE
+bcdcord[1] <= temp~48.DB_MAX_OUTPUT_PORT_TYPE
+bcdcord[2] <= temp~47.DB_MAX_OUTPUT_PORT_TYPE
+bcdcord[3] <= temp~46.DB_MAX_OUTPUT_PORT_TYPE
+bcdcord[4] <= temp~28.DB_MAX_OUTPUT_PORT_TYPE
+bcdcord[5] <= temp~27.DB_MAX_OUTPUT_PORT_TYPE
+bcdcord[6] <= temp~26.DB_MAX_OUTPUT_PORT_TYPE
+bcdcord[7] <= temp~25.DB_MAX_OUTPUT_PORT_TYPE
+bcdcord[8] <= temp~7.DB_MAX_OUTPUT_PORT_TYPE
+bcdcord[9] <= temp~6.DB_MAX_OUTPUT_PORT_TYPE
+bcdcord[10] <= temp~5.DB_MAX_OUTPUT_PORT_TYPE
+bcdcord[11] <= <GND>
+
+
+|eitbit_adder_7seg|FNDdecoder:seg1
+data_in[0] => Equal0.IN3
+data_in[0] => Equal1.IN2
+data_in[0] => Equal2.IN3
+data_in[0] => Equal3.IN1
+data_in[0] => Equal4.IN3
+data_in[0] => Equal5.IN2
+data_in[0] => Equal6.IN3
+data_in[0] => Equal7.IN2
+data_in[0] => Equal8.IN3
+data_in[0] => Equal9.IN3
+data_in[1] => Equal0.IN1
+data_in[1] => Equal1.IN1
+data_in[1] => Equal2.IN2
+data_in[1] => Equal3.IN3
+data_in[1] => Equal4.IN1
+data_in[1] => Equal5.IN1
+data_in[1] => Equal6.IN2
+data_in[1] => Equal7.IN3
+data_in[1] => Equal8.IN2
+data_in[1] => Equal9.IN2
+data_in[2] => Equal0.IN0
+data_in[2] => Equal1.IN0
+data_in[2] => Equal2.IN1
+data_in[2] => Equal3.IN2
+data_in[2] => Equal4.IN2
+data_in[2] => Equal5.IN3
+data_in[2] => Equal6.IN1
+data_in[2] => Equal7.IN1
+data_in[2] => Equal8.IN1
+data_in[2] => Equal9.IN1
+data_in[3] => Equal0.IN2
+data_in[3] => Equal1.IN3
+data_in[3] => Equal2.IN0
+data_in[3] => Equal3.IN0
+data_in[3] => Equal4.IN0
+data_in[3] => Equal5.IN0
+data_in[3] => Equal6.IN0
+data_in[3] => Equal7.IN0
+data_in[3] => Equal8.IN0
+data_in[3] => Equal9.IN0
+seg[0] <= seg~45.DB_MAX_OUTPUT_PORT_TYPE
+seg[1] <= seg~44.DB_MAX_OUTPUT_PORT_TYPE
+seg[2] <= seg~43.DB_MAX_OUTPUT_PORT_TYPE
+seg[3] <= seg~42.DB_MAX_OUTPUT_PORT_TYPE
+seg[4] <= seg~41.DB_MAX_OUTPUT_PORT_TYPE
+seg[5] <= seg~40.DB_MAX_OUTPUT_PORT_TYPE
+seg[6] <= seg~39.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|eitbit_adder_7seg|FNDdecoder:seg2
+data_in[0] => Equal0.IN3
+data_in[0] => Equal1.IN2
+data_in[0] => Equal2.IN3
+data_in[0] => Equal3.IN1
+data_in[0] => Equal4.IN3
+data_in[0] => Equal5.IN2
+data_in[0] => Equal6.IN3
+data_in[0] => Equal7.IN2
+data_in[0] => Equal8.IN3
+data_in[0] => Equal9.IN3
+data_in[1] => Equal0.IN1
+data_in[1] => Equal1.IN1
+data_in[1] => Equal2.IN2
+data_in[1] => Equal3.IN3
+data_in[1] => Equal4.IN1
+data_in[1] => Equal5.IN1
+data_in[1] => Equal6.IN2
+data_in[1] => Equal7.IN3
+data_in[1] => Equal8.IN2
+data_in[1] => Equal9.IN2
+data_in[2] => Equal0.IN0
+data_in[2] => Equal1.IN0
+data_in[2] => Equal2.IN1
+data_in[2] => Equal3.IN2
+data_in[2] => Equal4.IN2
+data_in[2] => Equal5.IN3
+data_in[2] => Equal6.IN1
+data_in[2] => Equal7.IN1
+data_in[2] => Equal8.IN1
+data_in[2] => Equal9.IN1
+data_in[3] => Equal0.IN2
+data_in[3] => Equal1.IN3
+data_in[3] => Equal2.IN0
+data_in[3] => Equal3.IN0
+data_in[3] => Equal4.IN0
+data_in[3] => Equal5.IN0
+data_in[3] => Equal6.IN0
+data_in[3] => Equal7.IN0
+data_in[3] => Equal8.IN0
+data_in[3] => Equal9.IN0
+seg[0] <= seg~45.DB_MAX_OUTPUT_PORT_TYPE
+seg[1] <= seg~44.DB_MAX_OUTPUT_PORT_TYPE
+seg[2] <= seg~43.DB_MAX_OUTPUT_PORT_TYPE
+seg[3] <= seg~42.DB_MAX_OUTPUT_PORT_TYPE
+seg[4] <= seg~41.DB_MAX_OUTPUT_PORT_TYPE
+seg[5] <= seg~40.DB_MAX_OUTPUT_PORT_TYPE
+seg[6] <= seg~39.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|eitbit_adder_7seg|FNDdecoder:seg3
+data_in[0] => Equal0.IN3
+data_in[0] => Equal1.IN2
+data_in[0] => Equal2.IN3
+data_in[0] => Equal3.IN1
+data_in[0] => Equal4.IN3
+data_in[0] => Equal5.IN2
+data_in[0] => Equal6.IN3
+data_in[0] => Equal7.IN2
+data_in[0] => Equal8.IN3
+data_in[0] => Equal9.IN3
+data_in[1] => Equal0.IN1
+data_in[1] => Equal1.IN1
+data_in[1] => Equal2.IN2
+data_in[1] => Equal3.IN3
+data_in[1] => Equal4.IN1
+data_in[1] => Equal5.IN1
+data_in[1] => Equal6.IN2
+data_in[1] => Equal7.IN3
+data_in[1] => Equal8.IN2
+data_in[1] => Equal9.IN2
+data_in[2] => Equal0.IN0
+data_in[2] => Equal1.IN0
+data_in[2] => Equal2.IN1
+data_in[2] => Equal3.IN2
+data_in[2] => Equal4.IN2
+data_in[2] => Equal5.IN3
+data_in[2] => Equal6.IN1
+data_in[2] => Equal7.IN1
+data_in[2] => Equal8.IN1
+data_in[2] => Equal9.IN1
+data_in[3] => Equal0.IN2
+data_in[3] => Equal1.IN3
+data_in[3] => Equal2.IN0
+data_in[3] => Equal3.IN0
+data_in[3] => Equal4.IN0
+data_in[3] => Equal5.IN0
+data_in[3] => Equal6.IN0
+data_in[3] => Equal7.IN0
+data_in[3] => Equal8.IN0
+data_in[3] => Equal9.IN0
+seg[0] <= seg~45.DB_MAX_OUTPUT_PORT_TYPE
+seg[1] <= seg~44.DB_MAX_OUTPUT_PORT_TYPE
+seg[2] <= seg~43.DB_MAX_OUTPUT_PORT_TYPE
+seg[3] <= seg~42.DB_MAX_OUTPUT_PORT_TYPE
+seg[4] <= seg~41.DB_MAX_OUTPUT_PORT_TYPE
+seg[5] <= seg~40.DB_MAX_OUTPUT_PORT_TYPE
+seg[6] <= seg~39.DB_MAX_OUTPUT_PORT_TYPE
+
+

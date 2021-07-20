@@ -1,0 +1,10 @@
+|onebitcomparator_beha
+A => process_0.IN0
+A => process_0.IN0
+B => process_0.IN1
+B => process_0.IN1
+XO <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+YO <= YO.DB_MAX_OUTPUT_PORT_TYPE
+ZO <= ZO.DB_MAX_OUTPUT_PORT_TYPE
+
+

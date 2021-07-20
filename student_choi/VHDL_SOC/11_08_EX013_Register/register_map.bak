@@ -1,0 +1,61 @@
+library ieee;
+   use ieee.std_logic_1164.all;
+   use ieee.std_logic_arith.all;
+   use ieee.std_logic_unsigned.all;
+   
+entity register_map is
+    port(
+        nRst              : in std_logic;
+        clk               : in std_logic;
+
+        uart_write        : in std_logic;
+        uart_read         : in std_logic;
+        uart_address      : in std_logic_vector(7 downto 0);
+        uart_data         : in std_logic_vector(7 downto 0);
+        
+        trans_write       : out std_logic;
+        trans_read        : out std_logic;
+        trans_address     : out std_logic_vector(7 downto 0);
+        trans_data        : out std_logic_vector(7 downto 0);
+        
+        reg0              : out std_logic_vector(7 downto 0);
+        reg1              : out std_logic_vector(7 downto 0);
+        reg2              : out std_logic_vector(7 downto 0);
+        
+        reg3              : in std_logic_vector(7 downto 0);
+        reg4              : in std_logic_vector(7 downto 0)
+        );
+end register_map;
+        
+architecture beh if register_map is
+
+      type state_type is(IDLE, WRN_START, WRN_DEC, WRN_END, WRN_STOP, RDN_START, RDN_DEC, RDN_END, RDN_STOP);
+      signal state : state_type;
+      
+      type mem_tb1 is array(0 to 15) of std_logic_vector(7 downto 0);
+      signal reg_tb1 : mem_tb1;
+      
+      signal temp_wr_add : std_logic_vector(7 downto 0);
+      signal temp_rd_add : std_logic_vector(7 downto 0);
+      signal temp_address : std_logic_vector(7 downto 0);
+      signal temp_data : std_logic_vector(7 downto 0);
+      signal temp_mdi : std_logic_vector(7 downto 0);
+      signal temp_mdo : std_logic_vector(7 downto 0);
+      
+      signal write_d : std_logic;
+      signal write_det : std_logic;
+      siganl read_d : std_logic;
+      siganl read_det : std_logic;
+      
+begin
+     process(nRst, clk)
+     begin
+        if(nRst = '0') then
+           write_d <= '0';
+           write_det <= '0';
+           read_d <= '0';
+           read_det <= '0';
+           temp_wr_add <= (others => '0');
+           temp_rd_add <= (others => '0');
+           temp_mdi <= (others => '0');
+           elsif(rising_edge

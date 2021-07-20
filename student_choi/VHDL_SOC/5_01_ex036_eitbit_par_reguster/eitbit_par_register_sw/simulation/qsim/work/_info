@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\VHDL\5_01_ex036_eitbit_par_reguster\eitbit_par_register_sw\simulation\qsim
+veitbit_par_register
+Z1 IVFbke?_C[]b6S6hbiTS3S1
+Z2 VC9RP?[4RYKJz6ZR;gQ]0[3
+Z3 dD:\VHDL\5_01_ex036_eitbit_par_reguster\eitbit_par_register_sw\simulation\qsim
+Z4 w1557042702
+Z5 8eitbit_par_register.vo
+Z6 Feitbit_par_register.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 o-work work -O0
+!i10b 1
+Z9 !s100 HCCPKgjCGAo`lm;Y_=CE10
+!s85 0
+Z10 !s108 1557042706.065000
+Z11 !s107 eitbit_par_register.vo|
+Z12 !s90 -work|work|eitbit_par_register.vo|
+!s101 -O0
+veitbit_par_register_vlg_check_tst
+!i10b 1
+!s100 7bc=TEjdFVdUkL<gKDVS32
+IQi;V^YgZI9@^AEEama49G3
+Va^W9Pc6PH[7@j=EE@1c2d2
+R3
+Z13 w1557042700
+Z14 8eitbit_par_register.vt
+Z15 Feitbit_par_register.vt
+L0 63
+R7
+r1
+!s85 0
+31
+Z16 !s108 1557042706.574000
+Z17 !s107 eitbit_par_register.vt|
+Z18 !s90 -work|work|eitbit_par_register.vt|
+!s101 -O0
+R8
+veitbit_par_register_vlg_sample_tst
+!i10b 1
+!s100 LJ9j[nThmf[hfZUhnMAVB1
+Io7z@7PSId>]FY5K>kmQ:<3
+V<<TRKF;8[ZW<O<zY^ldVG1
+R3
+R13
+R14
+R15
+L0 29
+R7
+r1
+!s85 0
+31
+R16
+R17
+R18
+!s101 -O0
+R8
+veitbit_par_register_vlg_vec_tst
+!i10b 1
+!s100 VUKc_Q2WhUnYeokWHOJSg3
+IMbBVH1K`oiQ6o;Bmg^fma0
+VbYRAZVYCZ7gZ59Oz@jNoT0
+R3
+R13
+R14
+R15
+L0 283
+R7
+r1
+!s85 0
+31
+R16
+R17
+R18
+!s101 -O0
+R8

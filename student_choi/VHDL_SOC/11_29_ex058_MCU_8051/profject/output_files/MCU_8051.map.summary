@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Fri Nov 29 16:59:45 2019
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+Revision Name : MCU_8051
+Top-level Entity Name : MCU_8051
+Family : Cyclone II
+Total logic elements : 1,349
+    Total combinational functions : 1,262
+    Dedicated logic registers : 417
+Total registers : 417
+Total pins : 4
+Total virtual pins : 0
+Total memory bits : 67,584
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 1

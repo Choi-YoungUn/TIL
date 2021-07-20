@@ -1,0 +1,181 @@
+|fourbit_addsub
+addsub_a[0] => full_adder:u0.a
+addsub_a[1] => full_adder:u1.a
+addsub_a[2] => full_adder:u2.a
+addsub_a[3] => full_adder:u3.a
+addsub_b[0] => XOR_Gate:b0.B
+addsub_b[1] => XOR_Gate:b1.B
+addsub_b[2] => XOR_Gate:b2.B
+addsub_b[3] => XOR_Gate:b3.B
+Msign => XOR_Gate:b0.A
+Msign => full_adder:u0.ci
+Msign => XOR_Gate:b1.A
+Msign => XOR_Gate:b2.A
+Msign => XOR_Gate:b3.A
+addsub_num[0] <= full_adder:u0.s
+addsub_num[1] <= full_adder:u1.s
+addsub_num[2] <= full_adder:u2.s
+addsub_num[3] <= full_adder:u3.s
+addsub_num[4] <= full_adder:u3.co
+
+
+|fourbit_addsub|XOR_Gate:b0
+A => process_0~0.IN0
+A => process_0~1.IN0
+B => process_0~0.IN1
+B => process_0~1.IN1
+C <= process_0~2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|fourbit_addsub|full_adder:u0
+a => half_adder:half1.a
+b => half_adder:half1.b
+ci => half_adder:half2.b
+s <= half_adder:half2.s
+co <= OR_Gate:org.c
+
+
+|fourbit_addsub|full_adder:u0|half_adder:half1
+a => s~0.IN0
+a => co~0.IN0
+b => s~0.IN1
+b => co~0.IN1
+s <= s~0.DB_MAX_OUTPUT_PORT_TYPE
+co <= co~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|fourbit_addsub|full_adder:u0|half_adder:half2
+a => s~0.IN0
+a => co~0.IN0
+b => s~0.IN1
+b => co~0.IN1
+s <= s~0.DB_MAX_OUTPUT_PORT_TYPE
+co <= co~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|fourbit_addsub|full_adder:u0|OR_Gate:org
+A => process_0~0.IN0
+B => process_0~0.IN1
+C <= process_0~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|fourbit_addsub|XOR_Gate:b1
+A => process_0~0.IN0
+A => process_0~1.IN0
+B => process_0~0.IN1
+B => process_0~1.IN1
+C <= process_0~2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|fourbit_addsub|full_adder:u1
+a => half_adder:half1.a
+b => half_adder:half1.b
+ci => half_adder:half2.b
+s <= half_adder:half2.s
+co <= OR_Gate:org.c
+
+
+|fourbit_addsub|full_adder:u1|half_adder:half1
+a => s~0.IN0
+a => co~0.IN0
+b => s~0.IN1
+b => co~0.IN1
+s <= s~0.DB_MAX_OUTPUT_PORT_TYPE
+co <= co~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|fourbit_addsub|full_adder:u1|half_adder:half2
+a => s~0.IN0
+a => co~0.IN0
+b => s~0.IN1
+b => co~0.IN1
+s <= s~0.DB_MAX_OUTPUT_PORT_TYPE
+co <= co~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|fourbit_addsub|full_adder:u1|OR_Gate:org
+A => process_0~0.IN0
+B => process_0~0.IN1
+C <= process_0~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|fourbit_addsub|XOR_Gate:b2
+A => process_0~0.IN0
+A => process_0~1.IN0
+B => process_0~0.IN1
+B => process_0~1.IN1
+C <= process_0~2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|fourbit_addsub|full_adder:u2
+a => half_adder:half1.a
+b => half_adder:half1.b
+ci => half_adder:half2.b
+s <= half_adder:half2.s
+co <= OR_Gate:org.c
+
+
+|fourbit_addsub|full_adder:u2|half_adder:half1
+a => s~0.IN0
+a => co~0.IN0
+b => s~0.IN1
+b => co~0.IN1
+s <= s~0.DB_MAX_OUTPUT_PORT_TYPE
+co <= co~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|fourbit_addsub|full_adder:u2|half_adder:half2
+a => s~0.IN0
+a => co~0.IN0
+b => s~0.IN1
+b => co~0.IN1
+s <= s~0.DB_MAX_OUTPUT_PORT_TYPE
+co <= co~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|fourbit_addsub|full_adder:u2|OR_Gate:org
+A => process_0~0.IN0
+B => process_0~0.IN1
+C <= process_0~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|fourbit_addsub|XOR_Gate:b3
+A => process_0~0.IN0
+A => process_0~1.IN0
+B => process_0~0.IN1
+B => process_0~1.IN1
+C <= process_0~2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|fourbit_addsub|full_adder:u3
+a => half_adder:half1.a
+b => half_adder:half1.b
+ci => half_adder:half2.b
+s <= half_adder:half2.s
+co <= OR_Gate:org.c
+
+
+|fourbit_addsub|full_adder:u3|half_adder:half1
+a => s~0.IN0
+a => co~0.IN0
+b => s~0.IN1
+b => co~0.IN1
+s <= s~0.DB_MAX_OUTPUT_PORT_TYPE
+co <= co~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|fourbit_addsub|full_adder:u3|half_adder:half2
+a => s~0.IN0
+a => co~0.IN0
+b => s~0.IN1
+b => co~0.IN1
+s <= s~0.DB_MAX_OUTPUT_PORT_TYPE
+co <= co~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|fourbit_addsub|full_adder:u3|OR_Gate:org
+A => process_0~0.IN0
+B => process_0~0.IN1
+C <= process_0~0.DB_MAX_OUTPUT_PORT_TYPE
+
+

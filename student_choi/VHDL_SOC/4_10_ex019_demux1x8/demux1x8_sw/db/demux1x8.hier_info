@@ -1,0 +1,43 @@
+|demux1x8_pack_proce
+I => Mux0.IN7
+I => Mux1.IN7
+I => Mux2.IN7
+I => Mux3.IN7
+I => Mux4.IN7
+I => Mux5.IN7
+I => Mux6.IN7
+I => Mux7.IN7
+S[0] => Mux0.IN10
+S[0] => Mux1.IN10
+S[0] => Mux2.IN10
+S[0] => Mux3.IN10
+S[0] => Mux4.IN10
+S[0] => Mux5.IN10
+S[0] => Mux6.IN10
+S[0] => Mux7.IN10
+S[1] => Mux0.IN9
+S[1] => Mux1.IN9
+S[1] => Mux2.IN9
+S[1] => Mux3.IN9
+S[1] => Mux4.IN9
+S[1] => Mux5.IN9
+S[1] => Mux6.IN9
+S[1] => Mux7.IN9
+S[2] => Mux0.IN8
+S[2] => Mux1.IN8
+S[2] => Mux2.IN8
+S[2] => Mux3.IN8
+S[2] => Mux4.IN8
+S[2] => Mux5.IN8
+S[2] => Mux6.IN8
+S[2] => Mux7.IN8
+Y[0] <= Mux7.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+Y[4] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+Y[5] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+Y[6] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+Y[7] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+

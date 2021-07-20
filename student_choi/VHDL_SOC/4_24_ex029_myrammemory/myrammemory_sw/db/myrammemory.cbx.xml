@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="myrammemory">
+		<CBX_INST_ENTRY INSTANCE_NAME="|myrammemory|lpm_mux:myrammemory_rtl_0" CBX_FILE_NAME="mux_3nc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|myrammemory|lpm_mux:myrammemory_rtl_2" CBX_FILE_NAME="mux_3nc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|myrammemory|lpm_mux:myrammemory_rtl_4" CBX_FILE_NAME="mux_3nc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|myrammemory|lpm_mux:myrammemory_rtl_6" CBX_FILE_NAME="mux_3nc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|myrammemory|lpm_mux:myrammemory_rtl_1" CBX_FILE_NAME="mux_3nc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|myrammemory|lpm_mux:myrammemory_rtl_3" CBX_FILE_NAME="mux_3nc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|myrammemory|lpm_mux:myrammemory_rtl_5" CBX_FILE_NAME="mux_3nc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|myrammemory|lpm_mux:myrammemory_rtl_7" CBX_FILE_NAME="mux_3nc.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

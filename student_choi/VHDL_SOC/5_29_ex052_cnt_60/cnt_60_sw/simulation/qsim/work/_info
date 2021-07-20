@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\VHDL\5_29_ex052_cnt_60\cnt_60_sw\simulation\qsim
+vcnt_60
+Z1 In50BlH;5AD>1EL1^L1?LN3
+Z2 Vh9IDi_hLTRS[D47mX?nZB1
+Z3 dD:\VHDL\5_29_ex052_cnt_60\cnt_60_sw\simulation\qsim
+Z4 w1559101305
+Z5 8cnt_60.vo
+Z6 Fcnt_60.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 !s90 -work|work|cnt_60.vo|
+Z9 o-work work -O0
+!i10b 1
+Z10 !s100 ;FNM^bAej`[Rzn9j9R53[3
+!s85 0
+Z11 !s108 1559101306.322000
+Z12 !s107 cnt_60.vo|
+!s101 -O0
+vcnt_60_vlg_check_tst
+!i10b 1
+!s100 6nYX<F;`oZgc]8?_5aEP00
+IzX0LI:0Wd^CAb_<Q;?`0K1
+Z13 VefNczK4`L]Al3_IKY?JR>2
+R3
+Z14 w1559101304
+Z15 8cnt_60.vt
+Z16 Fcnt_60.vt
+L0 59
+R7
+r1
+!s85 0
+31
+Z17 !s108 1559101306.523000
+Z18 !s107 cnt_60.vt|
+Z19 !s90 -work|work|cnt_60.vt|
+!s101 -O0
+R9
+vcnt_60_vlg_sample_tst
+!i10b 1
+Z20 !s100 ]nPJgON_OfKFIdFeNcaFi3
+Z21 I?H_ROT`b5`beNY3G^X1^21
+Z22 V]BNRDn2K9Med>04X3AeF92
+R3
+R14
+R15
+R16
+L0 29
+R7
+r1
+!s85 0
+31
+R17
+R18
+R19
+!s101 -O0
+R9
+vcnt_60_vlg_vec_tst
+!i10b 1
+!s100 5>T5Sb66=eM5Q0iNcZJU73
+IfPj3>EFQ4ilB^mem[iIbc0
+Z23 VWX1GSM?PDZn3bKdjbH;VI1
+R3
+R14
+R15
+R16
+L0 323
+R7
+r1
+!s85 0
+31
+R17
+R18
+R19
+!s101 -O0
+R9

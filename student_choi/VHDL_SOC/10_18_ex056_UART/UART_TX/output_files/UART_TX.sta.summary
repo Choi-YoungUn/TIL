@@ -1,0 +1,85 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'UART_TX:inst|pclk'
+Slack : -1.608
+TNS   : -16.309
+
+Type  : Slow Model Setup 'UART_RX:inst4|pclk'
+Slack : -1.542
+TNS   : -32.342
+
+Type  : Slow Model Setup 'inst40|altpll_component|pll|clk[0]'
+Slack : -1.074
+TNS   : -8.673
+
+Type  : Slow Model Hold 'inst40|altpll_component|pll|clk[0]'
+Slack : -2.222
+TNS   : -4.444
+
+Type  : Slow Model Hold 'UART_RX:inst4|pclk'
+Slack : 0.391
+TNS   : 0.000
+
+Type  : Slow Model Hold 'UART_TX:inst|pclk'
+Slack : 0.391
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'UART_RX:inst4|pclk'
+Slack : -0.500
+TNS   : -27.000
+
+Type  : Slow Model Minimum Pulse Width 'UART_TX:inst|pclk'
+Slack : -0.500
+TNS   : -17.000
+
+Type  : Slow Model Minimum Pulse Width 'inst40|altpll_component|pll|clk[0]'
+Slack : 4.000
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width '50Mhz_clk'
+Slack : 10.000
+TNS   : 0.000
+
+Type  : Fast Model Setup 'UART_TX:inst|pclk'
+Slack : -0.278
+TNS   : -1.946
+
+Type  : Fast Model Setup 'UART_RX:inst4|pclk'
+Slack : -0.246
+TNS   : -2.232
+
+Type  : Fast Model Setup 'inst40|altpll_component|pll|clk[0]'
+Slack : -0.200
+TNS   : -1.600
+
+Type  : Fast Model Hold 'inst40|altpll_component|pll|clk[0]'
+Slack : -1.195
+TNS   : -2.390
+
+Type  : Fast Model Hold 'UART_TX:inst|pclk'
+Slack : 0.174
+TNS   : 0.000
+
+Type  : Fast Model Hold 'UART_RX:inst4|pclk'
+Slack : 0.183
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'UART_RX:inst4|pclk'
+Slack : -0.500
+TNS   : -27.000
+
+Type  : Fast Model Minimum Pulse Width 'UART_TX:inst|pclk'
+Slack : -0.500
+TNS   : -17.000
+
+Type  : Fast Model Minimum Pulse Width 'inst40|altpll_component|pll|clk[0]'
+Slack : 4.000
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width '50Mhz_clk'
+Slack : 10.000
+TNS   : 0.000
+
+------------------------------------------------------------

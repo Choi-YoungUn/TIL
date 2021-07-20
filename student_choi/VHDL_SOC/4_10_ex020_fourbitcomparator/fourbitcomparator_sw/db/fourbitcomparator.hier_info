@@ -1,0 +1,109 @@
+|fourbitcomparator
+Ai[3] => onebitfullcomparator_vh:u3.A
+Ai[2] => onebitfullcomparator_vh:u2.A
+Ai[1] => onebitfullcomparator_vh:u1.A
+Ai[0] => onebitfullcomparator_vh:u0.A
+Bi[3] => onebitfullcomparator_vh:u3.B
+Bi[2] => onebitfullcomparator_vh:u2.B
+Bi[1] => onebitfullcomparator_vh:u1.B
+Bi[0] => onebitfullcomparator_vh:u0.B
+Xif => onebitfullcomparator_vh:u3.Xi
+Yif => onebitfullcomparator_vh:u3.Yi
+Zif => onebitfullcomparator_vh:u3.Zi
+Xof <= onebitfullcomparator_vh:u0.Xo
+Yof <= onebitfullcomparator_vh:u0.Yo
+Zof <= onebitfullcomparator_vh:u0.Zo
+
+
+|fourbitcomparator|onebitfullcomparator_vh:u3
+A => process_0~0.IN0
+A => process_0~2.IN0
+A => process_0~1.IN0
+B => process_0~1.IN1
+B => process_0~2.IN1
+B => process_0~0.IN1
+Xi => Zo~1.OUTPUTSELECT
+Xi => Xo~2.OUTPUTSELECT
+Xi => Xo~3.IN1
+Yi => Zo~2.OUTPUTSELECT
+Yi => Xo~4.OUTPUTSELECT
+Yi => Xo~5.IN1
+Yi => Yo~1.DATAA
+Zi => Zo~3.OUTPUTSELECT
+Zi => Yo~1.OUTPUTSELECT
+Zi => Xo~6.OUTPUTSELECT
+Zi => Xo~7.IN1
+Xo <= Xo$latch.DB_MAX_OUTPUT_PORT_TYPE
+Yo <= Yo$latch.DB_MAX_OUTPUT_PORT_TYPE
+Zo <= Zo$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|fourbitcomparator|onebitfullcomparator_vh:u2
+A => process_0~0.IN0
+A => process_0~2.IN0
+A => process_0~1.IN0
+B => process_0~1.IN1
+B => process_0~2.IN1
+B => process_0~0.IN1
+Xi => Zo~1.OUTPUTSELECT
+Xi => Xo~2.OUTPUTSELECT
+Xi => Xo~3.IN1
+Yi => Zo~2.OUTPUTSELECT
+Yi => Xo~4.OUTPUTSELECT
+Yi => Xo~5.IN1
+Yi => Yo~1.DATAA
+Zi => Zo~3.OUTPUTSELECT
+Zi => Yo~1.OUTPUTSELECT
+Zi => Xo~6.OUTPUTSELECT
+Zi => Xo~7.IN1
+Xo <= Xo$latch.DB_MAX_OUTPUT_PORT_TYPE
+Yo <= Yo$latch.DB_MAX_OUTPUT_PORT_TYPE
+Zo <= Zo$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|fourbitcomparator|onebitfullcomparator_vh:u1
+A => process_0~0.IN0
+A => process_0~2.IN0
+A => process_0~1.IN0
+B => process_0~1.IN1
+B => process_0~2.IN1
+B => process_0~0.IN1
+Xi => Zo~1.OUTPUTSELECT
+Xi => Xo~2.OUTPUTSELECT
+Xi => Xo~3.IN1
+Yi => Zo~2.OUTPUTSELECT
+Yi => Xo~4.OUTPUTSELECT
+Yi => Xo~5.IN1
+Yi => Yo~1.DATAA
+Zi => Zo~3.OUTPUTSELECT
+Zi => Yo~1.OUTPUTSELECT
+Zi => Xo~6.OUTPUTSELECT
+Zi => Xo~7.IN1
+Xo <= Xo$latch.DB_MAX_OUTPUT_PORT_TYPE
+Yo <= Yo$latch.DB_MAX_OUTPUT_PORT_TYPE
+Zo <= Zo$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|fourbitcomparator|onebitfullcomparator_vh:u0
+A => process_0~0.IN0
+A => process_0~2.IN0
+A => process_0~1.IN0
+B => process_0~1.IN1
+B => process_0~2.IN1
+B => process_0~0.IN1
+Xi => Zo~1.OUTPUTSELECT
+Xi => Xo~2.OUTPUTSELECT
+Xi => Xo~3.IN1
+Yi => Zo~2.OUTPUTSELECT
+Yi => Xo~4.OUTPUTSELECT
+Yi => Xo~5.IN1
+Yi => Yo~1.DATAA
+Zi => Zo~3.OUTPUTSELECT
+Zi => Yo~1.OUTPUTSELECT
+Zi => Xo~6.OUTPUTSELECT
+Zi => Xo~7.IN1
+Xo <= Xo$latch.DB_MAX_OUTPUT_PORT_TYPE
+Yo <= Yo$latch.DB_MAX_OUTPUT_PORT_TYPE
+Zo <= Zo$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+

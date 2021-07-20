@@ -1,0 +1,229 @@
+Simulator report for FNDdecoder
+Wed Apr 17 10:53:39 2019
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 67 nodes     ;
+; Simulation Coverage         ;      97.01 % ;
+; Total Number of Transitions ; 431          ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                                                                 ;
++--------------------------------------------------------------------------------------------+-----------------------------------------------------------------------+---------------+
+; Option                                                                                     ; Setting                                                               ; Default Value ;
++--------------------------------------------------------------------------------------------+-----------------------------------------------------------------------+---------------+
+; Simulation mode                                                                            ; Functional                                                            ; Timing        ;
+; Start time                                                                                 ; 0 ns                                                                  ; 0 ns          ;
+; Simulation results format                                                                  ; VWF                                                                   ;               ;
+; Vector input source                                                                        ; D:/VHDL/4_17_ex025_FNDdecoder/FNDdecoder_sw/output_files/Waveform.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                                                                    ; On            ;
+; Check outputs                                                                              ; Off                                                                   ; Off           ;
+; Report simulation coverage                                                                 ; On                                                                    ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                                                                    ; On            ;
+; Display missing 1-value coverage report                                                    ; On                                                                    ; On            ;
+; Display missing 0-value coverage report                                                    ; On                                                                    ; On            ;
+; Detect setup and hold time violations                                                      ; Off                                                                   ; Off           ;
+; Detect glitches                                                                            ; Off                                                                   ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                                                                   ; Off           ;
+; Generate Signal Activity File                                                              ; Off                                                                   ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                                                   ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                                                                   ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                                                                    ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                                                            ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                                                   ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                                                   ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                                                                  ; Auto          ;
++--------------------------------------------------------------------------------------------+-----------------------------------------------------------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      97.01 % ;
+; Total nodes checked                                 ; 67           ;
+; Total output ports checked                          ; 67           ;
+; Total output ports with complete 1/0-value coverage ; 65           ;
+; Total output ports with no 1/0-value coverage       ; 0            ;
+; Total output ports with no 1-value coverage         ; 1            ;
+; Total output ports with no 0-value coverage         ; 1            ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++--------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                        ;
++------------------------+------------------------+------------------+
+; Node Name              ; Output Port Name       ; Output Port Type ;
++------------------------+------------------------+------------------+
+; |FNDdecoder|seg~0      ; |FNDdecoder|seg~0      ; out              ;
+; |FNDdecoder|seg~1      ; |FNDdecoder|seg~1      ; out              ;
+; |FNDdecoder|seg~2      ; |FNDdecoder|seg~2      ; out              ;
+; |FNDdecoder|seg~3      ; |FNDdecoder|seg~3      ; out              ;
+; |FNDdecoder|seg~4      ; |FNDdecoder|seg~4      ; out              ;
+; |FNDdecoder|seg~5      ; |FNDdecoder|seg~5      ; out              ;
+; |FNDdecoder|seg~6      ; |FNDdecoder|seg~6      ; out              ;
+; |FNDdecoder|seg~7      ; |FNDdecoder|seg~7      ; out              ;
+; |FNDdecoder|seg~8      ; |FNDdecoder|seg~8      ; out              ;
+; |FNDdecoder|seg~9      ; |FNDdecoder|seg~9      ; out              ;
+; |FNDdecoder|seg~10     ; |FNDdecoder|seg~10     ; out              ;
+; |FNDdecoder|seg~11     ; |FNDdecoder|seg~11     ; out              ;
+; |FNDdecoder|seg~12     ; |FNDdecoder|seg~12     ; out              ;
+; |FNDdecoder|seg~13     ; |FNDdecoder|seg~13     ; out              ;
+; |FNDdecoder|seg~14     ; |FNDdecoder|seg~14     ; out              ;
+; |FNDdecoder|seg~15     ; |FNDdecoder|seg~15     ; out              ;
+; |FNDdecoder|seg~16     ; |FNDdecoder|seg~16     ; out              ;
+; |FNDdecoder|seg~17     ; |FNDdecoder|seg~17     ; out              ;
+; |FNDdecoder|seg~18     ; |FNDdecoder|seg~18     ; out              ;
+; |FNDdecoder|seg~19     ; |FNDdecoder|seg~19     ; out              ;
+; |FNDdecoder|seg~20     ; |FNDdecoder|seg~20     ; out              ;
+; |FNDdecoder|seg~21     ; |FNDdecoder|seg~21     ; out              ;
+; |FNDdecoder|seg~22     ; |FNDdecoder|seg~22     ; out              ;
+; |FNDdecoder|seg~23     ; |FNDdecoder|seg~23     ; out              ;
+; |FNDdecoder|seg~24     ; |FNDdecoder|seg~24     ; out              ;
+; |FNDdecoder|seg~25     ; |FNDdecoder|seg~25     ; out              ;
+; |FNDdecoder|seg~26     ; |FNDdecoder|seg~26     ; out              ;
+; |FNDdecoder|seg~27     ; |FNDdecoder|seg~27     ; out              ;
+; |FNDdecoder|seg~28     ; |FNDdecoder|seg~28     ; out              ;
+; |FNDdecoder|seg~29     ; |FNDdecoder|seg~29     ; out              ;
+; |FNDdecoder|seg~30     ; |FNDdecoder|seg~30     ; out              ;
+; |FNDdecoder|seg~31     ; |FNDdecoder|seg~31     ; out              ;
+; |FNDdecoder|seg~32     ; |FNDdecoder|seg~32     ; out              ;
+; |FNDdecoder|seg~33     ; |FNDdecoder|seg~33     ; out              ;
+; |FNDdecoder|seg~34     ; |FNDdecoder|seg~34     ; out              ;
+; |FNDdecoder|seg~35     ; |FNDdecoder|seg~35     ; out              ;
+; |FNDdecoder|seg~36     ; |FNDdecoder|seg~36     ; out              ;
+; |FNDdecoder|seg~37     ; |FNDdecoder|seg~37     ; out              ;
+; |FNDdecoder|seg~38     ; |FNDdecoder|seg~38     ; out              ;
+; |FNDdecoder|seg~39     ; |FNDdecoder|seg~39     ; out              ;
+; |FNDdecoder|seg~40     ; |FNDdecoder|seg~40     ; out              ;
+; |FNDdecoder|seg~41     ; |FNDdecoder|seg~41     ; out              ;
+; |FNDdecoder|seg~42     ; |FNDdecoder|seg~42     ; out              ;
+; |FNDdecoder|seg~43     ; |FNDdecoder|seg~43     ; out              ;
+; |FNDdecoder|seg~44     ; |FNDdecoder|seg~44     ; out              ;
+; |FNDdecoder|seg~45     ; |FNDdecoder|seg~45     ; out              ;
+; |FNDdecoder|data_in[0] ; |FNDdecoder|data_in[0] ; out              ;
+; |FNDdecoder|data_in[1] ; |FNDdecoder|data_in[1] ; out              ;
+; |FNDdecoder|data_in[2] ; |FNDdecoder|data_in[2] ; out              ;
+; |FNDdecoder|seg[0]     ; |FNDdecoder|seg[0]     ; pin_out          ;
+; |FNDdecoder|seg[1]     ; |FNDdecoder|seg[1]     ; pin_out          ;
+; |FNDdecoder|seg[2]     ; |FNDdecoder|seg[2]     ; pin_out          ;
+; |FNDdecoder|seg[3]     ; |FNDdecoder|seg[3]     ; pin_out          ;
+; |FNDdecoder|seg[4]     ; |FNDdecoder|seg[4]     ; pin_out          ;
+; |FNDdecoder|seg[5]     ; |FNDdecoder|seg[5]     ; pin_out          ;
+; |FNDdecoder|seg[6]     ; |FNDdecoder|seg[6]     ; pin_out          ;
+; |FNDdecoder|Equal0~0   ; |FNDdecoder|Equal0~0   ; out0             ;
+; |FNDdecoder|Equal1~0   ; |FNDdecoder|Equal1~0   ; out0             ;
+; |FNDdecoder|Equal2~0   ; |FNDdecoder|Equal2~0   ; out0             ;
+; |FNDdecoder|Equal3~0   ; |FNDdecoder|Equal3~0   ; out0             ;
+; |FNDdecoder|Equal4~0   ; |FNDdecoder|Equal4~0   ; out0             ;
+; |FNDdecoder|Equal5~0   ; |FNDdecoder|Equal5~0   ; out0             ;
+; |FNDdecoder|Equal6~0   ; |FNDdecoder|Equal6~0   ; out0             ;
+; |FNDdecoder|Equal7~0   ; |FNDdecoder|Equal7~0   ; out0             ;
+; |FNDdecoder|Equal8~0   ; |FNDdecoder|Equal8~0   ; out0             ;
++------------------------+------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++----------------------------------------------------------------+
+; Missing 1-Value Coverage                                       ;
++----------------------+----------------------+------------------+
+; Node Name            ; Output Port Name     ; Output Port Type ;
++----------------------+----------------------+------------------+
+; |FNDdecoder|Equal9~0 ; |FNDdecoder|Equal9~0 ; out0             ;
++----------------------+----------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++--------------------------------------------------------------------+
+; Missing 0-Value Coverage                                           ;
++------------------------+------------------------+------------------+
+; Node Name              ; Output Port Name       ; Output Port Type ;
++------------------------+------------------------+------------------+
+; |FNDdecoder|data_in[3] ; |FNDdecoder|data_in[3] ; out              ;
++------------------------+------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Simulator
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Wed Apr 17 10:53:39 2019
+Info: Command: quartus_sim --simulation_results_format=VWF FNDdecoder -c FNDdecoder
+Info (324025): Using vector source file "D:/VHDL/4_17_ex025_FNDdecoder/FNDdecoder_sw/output_files/Waveform.vwf"
+Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info (310002): Simulation partitioned into 1 sub-simulations
+Info (328053): Simulation coverage is      97.01 %
+Info (328052): Number of transitions in simulation is 431
+Info (324045): Vector file FNDdecoder.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II 64-Bit Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 4472 megabytes
+    Info: Processing ended: Wed Apr 17 10:53:39 2019
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
+
+

@@ -1,0 +1,103 @@
+|4bit_adder
+s[0] <= half_adder:inst.s
+s[1] <= full_adder_v:inst15.s
+s[2] <= full_adder_v:inst16.s
+s[3] <= full_adder_v:inst14.s
+s[4] <= full_adder_v:inst14.co
+a[0] => half_adder:inst.a
+a[1] => full_adder_v:inst15.a
+a[2] => full_adder_v:inst16.a
+a[3] => full_adder_v:inst14.a
+b[0] => half_adder:inst.b
+b[1] => full_adder_v:inst15.b
+b[2] => full_adder_v:inst16.b
+b[3] => full_adder_v:inst14.b
+
+
+|4bit_adder|half_adder:inst
+a => s~0.IN0
+a => co~0.IN0
+b => s~0.IN1
+b => co~0.IN1
+s <= s~0.DB_MAX_OUTPUT_PORT_TYPE
+co <= co~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|4bit_adder|full_adder_v:inst15
+s <= half_adder:inst5.s
+a => half_adder:inst.a
+b => half_adder:inst.b
+ci => half_adder:inst5.b
+co <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|4bit_adder|full_adder_v:inst15|half_adder:inst5
+a => s~0.IN0
+a => co~0.IN0
+b => s~0.IN1
+b => co~0.IN1
+s <= s~0.DB_MAX_OUTPUT_PORT_TYPE
+co <= co~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|4bit_adder|full_adder_v:inst15|half_adder:inst
+a => s~0.IN0
+a => co~0.IN0
+b => s~0.IN1
+b => co~0.IN1
+s <= s~0.DB_MAX_OUTPUT_PORT_TYPE
+co <= co~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|4bit_adder|full_adder_v:inst14
+s <= half_adder:inst5.s
+a => half_adder:inst.a
+b => half_adder:inst.b
+ci => half_adder:inst5.b
+co <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|4bit_adder|full_adder_v:inst14|half_adder:inst5
+a => s~0.IN0
+a => co~0.IN0
+b => s~0.IN1
+b => co~0.IN1
+s <= s~0.DB_MAX_OUTPUT_PORT_TYPE
+co <= co~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|4bit_adder|full_adder_v:inst14|half_adder:inst
+a => s~0.IN0
+a => co~0.IN0
+b => s~0.IN1
+b => co~0.IN1
+s <= s~0.DB_MAX_OUTPUT_PORT_TYPE
+co <= co~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|4bit_adder|full_adder_v:inst16
+s <= half_adder:inst5.s
+a => half_adder:inst.a
+b => half_adder:inst.b
+ci => half_adder:inst5.b
+co <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|4bit_adder|full_adder_v:inst16|half_adder:inst5
+a => s~0.IN0
+a => co~0.IN0
+b => s~0.IN1
+b => co~0.IN1
+s <= s~0.DB_MAX_OUTPUT_PORT_TYPE
+co <= co~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|4bit_adder|full_adder_v:inst16|half_adder:inst
+a => s~0.IN0
+a => co~0.IN0
+b => s~0.IN1
+b => co~0.IN1
+s <= s~0.DB_MAX_OUTPUT_PORT_TYPE
+co <= co~0.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,46 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity fourway_traffic is
+port ( clk : in std_logic;
+       reset : in std_logic;
+		 e_w_red : out std_logic;
+		 e_w_yellow : out std_logic;
+		 e_w_green : out std_logic;
+		 n_s_red : out std_logic;
+		 n_s_yellow : out std_logic;
+		 n_s_green : out std_logic);
+		 end fourway_traffic;
+		 
+		 architecture behav of fourway_traffic is
+		 
+		 type state is (red, red_yellow, yellow, green, green_yellow);
+		 
+		 constant time_max : std_logic <= 5;
+		 constant time_green : std_logic <= 5;
+		 constant time_red : std_logic <= 2;
+		 constant time_yellow : std_logic <= 2;
+		 constant time_end : std_logic <= 3;
+		 
+		 signal e_w_now_state, e_w_next_state, n_s_now_state, n_s_next_state : state;
+		 signal time_setting : std_logic range 0 to 5;
+		 
+		 begin  
+		 p1 : process(reset, clk)
+		   variable count : std_logic range 0 to 5;
+			begin
+			if(reset = '1')then
+			e_w_now_state <= red;
+			n_s_now_state <= red;
+			elsif(clk'event and clk = '1')then
+			count <= count +1;
+			if (count = time_setting)then
+			e_w_now_state <= e_w_next_state;
+			n_s_now_state <= n_s_next_state;
+			count <= 0;
+			end if;
+			end if;
+			end process;
+			
+			end behav;
+			

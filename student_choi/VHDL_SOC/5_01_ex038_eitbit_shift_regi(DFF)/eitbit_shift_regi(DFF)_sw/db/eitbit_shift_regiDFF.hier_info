@@ -1,0 +1,108 @@
+|eitbit_shift_regiDFF
+data => D_FF:shif0.D
+set => D_FF:shif0.preset
+set => D_FF:shif1.preset
+set => D_FF:shif2.preset
+set => D_FF:shif3.preset
+set => D_FF:shif4.preset
+set => D_FF:shif5.preset
+set => D_FF:shif6.preset
+set => D_FF:shif7.preset
+rset => D_FF:shif0.clear
+rset => D_FF:shif1.clear
+rset => D_FF:shif2.clear
+rset => D_FF:shif3.clear
+rset => D_FF:shif4.clear
+rset => D_FF:shif5.clear
+rset => D_FF:shif6.clear
+rset => D_FF:shif7.clear
+clk => D_FF:shif0.clk
+clk => D_FF:shif1.clk
+clk => D_FF:shif2.clk
+clk => D_FF:shif3.clk
+clk => D_FF:shif4.clk
+clk => D_FF:shif5.clk
+clk => D_FF:shif6.clk
+clk => D_FF:shif7.clk
+q[0] <= D_FF:shif0.Q
+q[1] <= D_FF:shif1.Q
+q[2] <= D_FF:shif2.Q
+q[3] <= D_FF:shif3.Q
+q[4] <= D_FF:shif4.Q
+q[5] <= D_FF:shif5.Q
+q[6] <= D_FF:shif6.Q
+q[7] <= D_FF:shif7.Q
+
+
+|eitbit_shift_regiDFF|D_FF:shif0
+D => temp.DATAIN
+clk => temp.CLK
+preset => temp.PRESET
+preset => temp~0.IN0
+clear => temp~0.IN1
+Q <= temp.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|eitbit_shift_regiDFF|D_FF:shif1
+D => temp.DATAIN
+clk => temp.CLK
+preset => temp.PRESET
+preset => temp~0.IN0
+clear => temp~0.IN1
+Q <= temp.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|eitbit_shift_regiDFF|D_FF:shif2
+D => temp.DATAIN
+clk => temp.CLK
+preset => temp.PRESET
+preset => temp~0.IN0
+clear => temp~0.IN1
+Q <= temp.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|eitbit_shift_regiDFF|D_FF:shif3
+D => temp.DATAIN
+clk => temp.CLK
+preset => temp.PRESET
+preset => temp~0.IN0
+clear => temp~0.IN1
+Q <= temp.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|eitbit_shift_regiDFF|D_FF:shif4
+D => temp.DATAIN
+clk => temp.CLK
+preset => temp.PRESET
+preset => temp~0.IN0
+clear => temp~0.IN1
+Q <= temp.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|eitbit_shift_regiDFF|D_FF:shif5
+D => temp.DATAIN
+clk => temp.CLK
+preset => temp.PRESET
+preset => temp~0.IN0
+clear => temp~0.IN1
+Q <= temp.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|eitbit_shift_regiDFF|D_FF:shif6
+D => temp.DATAIN
+clk => temp.CLK
+preset => temp.PRESET
+preset => temp~0.IN0
+clear => temp~0.IN1
+Q <= temp.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|eitbit_shift_regiDFF|D_FF:shif7
+D => temp.DATAIN
+clk => temp.CLK
+preset => temp.PRESET
+preset => temp~0.IN0
+clear => temp~0.IN1
+Q <= temp.DB_MAX_OUTPUT_PORT_TYPE
+
+

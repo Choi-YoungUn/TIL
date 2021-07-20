@@ -1,0 +1,40 @@
+m255
+K3
+13
+cModel Technology
+dD:\MO_VHDL\9_20_EX006_NOR_GATE
+Exnor_vhdl
+Z0 w1568962466
+Z1 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z2 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z3 dD:\MO_VHDL\9_20_EX007_XNOR_GATE
+Z4 8D:\MO_VHDL\9_20_EX007_XNOR_GATE\XNOR_GATE.vhd
+Z5 FD:\MO_VHDL\9_20_EX007_XNOR_GATE\XNOR_GATE.vhd
+l0
+L4
+VY0>bBJ@gkD0z=ZdeVYYU]0
+!s100 cY;cD<P7ETJ@LKZKA6h=n3
+Z6 OV;C;10.1d;51
+32
+!i10b 1
+Z7 !s108 1568962470.250000
+Z8 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:\MO_VHDL\9_20_EX007_XNOR_GATE\XNOR_GATE.vhd|
+Z9 !s107 D:\MO_VHDL\9_20_EX007_XNOR_GATE\XNOR_GATE.vhd|
+Z10 o-work work -2002 -explicit -O0
+Z11 tExplicit 1
+Abehavioral
+R1
+R2
+DEx4 work 9 xnor_vhdl 0 22 Y0>bBJ@gkD0z=ZdeVYYU]0
+l10
+L9
+VZ6j1oz:`f8Q[;F?A`:Iah0
+!s100 WcGCh]cN```YJcoazQ52<0
+R6
+32
+!i10b 1
+R7
+R8
+R9
+R10
+R11

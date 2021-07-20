@@ -1,0 +1,40 @@
+|cnt_24
+nrst => carry~reg0.ACLR
+nrst => timeten[0].ACLR
+nrst => timeten[1].ACLR
+nrst => timeten[2].ACLR
+nrst => timeten[3].ACLR
+nrst => timeone[0].ACLR
+nrst => timeone[1].ACLR
+nrst => timeone[2].ACLR
+nrst => timeone[3].ACLR
+nrst => cnt[0].ENA
+nrst => cnt[4].ENA
+nrst => cnt[3].ENA
+nrst => cnt[2].ENA
+nrst => cnt[1].ENA
+clk => cnt[0].CLK
+clk => cnt[1].CLK
+clk => cnt[2].CLK
+clk => cnt[3].CLK
+clk => cnt[4].CLK
+clk => carry~reg0.CLK
+clk => timeten[0].CLK
+clk => timeten[1].CLK
+clk => timeten[2].CLK
+clk => timeten[3].CLK
+clk => timeone[0].CLK
+clk => timeone[1].CLK
+clk => timeone[2].CLK
+clk => timeone[3].CLK
+digit_ten[0] <= timeten[0].DB_MAX_OUTPUT_PORT_TYPE
+digit_ten[1] <= timeten[1].DB_MAX_OUTPUT_PORT_TYPE
+digit_ten[2] <= timeten[2].DB_MAX_OUTPUT_PORT_TYPE
+digit_ten[3] <= timeten[3].DB_MAX_OUTPUT_PORT_TYPE
+digit_one[0] <= timeone[0].DB_MAX_OUTPUT_PORT_TYPE
+digit_one[1] <= timeone[1].DB_MAX_OUTPUT_PORT_TYPE
+digit_one[2] <= timeone[2].DB_MAX_OUTPUT_PORT_TYPE
+digit_one[3] <= timeone[3].DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

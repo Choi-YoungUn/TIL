@@ -1,0 +1,120 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2013 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II 64-Bit
+# Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+# Date created = 14:20:01  May 29, 2019
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		DETclock_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone II"
+set_global_assignment -name DEVICE EP2C35F672C6
+set_global_assignment -name TOP_LEVEL_ENTITY DETtime
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "14:20:00  MAY 29, 2019"
+set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name SIMULATION_MODE FUNCTIONAL
+set_global_assignment -name VECTOR_OUTPUT_FORMAT VWF
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_location_assignment PIN_N2 -to clk
+set_location_assignment PIN_T3 -to fnd_hor_one[6]
+set_location_assignment PIN_R6 -to fnd_hor_one[5]
+set_location_assignment PIN_R7 -to fnd_hor_one[4]
+set_location_assignment PIN_T4 -to fnd_hor_one[3]
+set_location_assignment PIN_U2 -to fnd_hor_one[2]
+set_location_assignment PIN_U1 -to fnd_hor_one[1]
+set_location_assignment PIN_U9 -to fnd_hor_one[0]
+set_location_assignment PIN_R3 -to fnd_hor_ten[6]
+set_location_assignment PIN_R4 -to fnd_hor_ten[5]
+set_location_assignment PIN_R5 -to fnd_hor_ten[4]
+set_location_assignment PIN_T9 -to fnd_hor_ten[3]
+set_location_assignment PIN_P7 -to fnd_hor_ten[2]
+set_location_assignment PIN_P6 -to fnd_hor_ten[1]
+set_location_assignment PIN_T2 -to fnd_hor_ten[0]
+set_location_assignment PIN_Y24 -to fnd_min_one[6]
+set_location_assignment PIN_AB25 -to fnd_min_one[5]
+set_location_assignment PIN_AB26 -to fnd_min_one[4]
+set_location_assignment PIN_AC26 -to fnd_min_one[3]
+set_location_assignment PIN_AC25 -to fnd_min_one[2]
+set_location_assignment PIN_V22 -to fnd_min_one[1]
+set_location_assignment PIN_AB23 -to fnd_min_one[0]
+set_location_assignment PIN_W24 -to fnd_min_ten[6]
+set_location_assignment PIN_U22 -to fnd_min_ten[5]
+set_location_assignment PIN_Y25 -to fnd_min_ten[4]
+set_location_assignment PIN_Y26 -to fnd_min_ten[3]
+set_location_assignment PIN_AA26 -to fnd_min_ten[2]
+set_location_assignment PIN_AA25 -to fnd_min_ten[1]
+set_location_assignment PIN_Y23 -to fnd_min_ten[0]
+set_location_assignment PIN_V13 -to fnd_sec_one[6]
+set_location_assignment PIN_V14 -to fnd_sec_one[5]
+set_location_assignment PIN_AE11 -to fnd_sec_one[4]
+set_location_assignment PIN_AD11 -to fnd_sec_one[3]
+set_location_assignment PIN_AC12 -to fnd_sec_one[2]
+set_location_assignment PIN_AB12 -to fnd_sec_one[1]
+set_location_assignment PIN_AF10 -to fnd_sec_one[0]
+set_location_assignment PIN_AB24 -to fnd_sec_ten[6]
+set_location_assignment PIN_AA23 -to fnd_sec_ten[5]
+set_location_assignment PIN_AA24 -to fnd_sec_ten[4]
+set_location_assignment PIN_Y22 -to fnd_sec_ten[3]
+set_location_assignment PIN_W21 -to fnd_sec_ten[2]
+set_location_assignment PIN_V21 -to fnd_sec_ten[1]
+set_location_assignment PIN_V20 -to fnd_sec_ten[0]
+set_location_assignment PIN_W26 -to key_hor
+set_location_assignment PIN_P23 -to key_min
+set_location_assignment PIN_N23 -to key_sec
+set_location_assignment PIN_G26 -to nrst
+set_location_assignment PIN_N25 -to sel_sw
+set_global_assignment -name VHDL_FILE sec_gen.vhd
+set_global_assignment -name VHDL_FILE mux2x1.vhd
+set_global_assignment -name VHDL_FILE FNDdecoder.vhd
+set_global_assignment -name VHDL_FILE cnt_60.vhd
+set_global_assignment -name VHDL_FILE cnt_24.vhd
+set_global_assignment -name VHDL_FILE DETclock.vhd
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE sixtime.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE twotime.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE mux2x1.vwf
+set_global_assignment -name BDF_FILE output_files/DETtime.bdf
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST ON -section_id eda_simulation
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name CDF_FILE output_files/Chain3.cdf
+set_global_assignment -name CDF_FILE output_files/Chain4.cdf
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "D:/VHDL/5_29_ex055_DETclock/DETclock_sw/Waveform.vwf"

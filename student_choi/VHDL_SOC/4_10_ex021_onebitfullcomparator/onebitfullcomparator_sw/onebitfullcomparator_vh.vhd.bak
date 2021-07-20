@@ -1,0 +1,22 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity onebitfullcomparator_vh is
+port ( A : in std_logic;
+       B : in std_logic;
+		 Xi : in std_logic;
+		 Yi : in std_logic;
+		 Zi : in std_logic;
+		 
+		 Xo : out std_logic;
+		 Yo : out std_logic;
+		 Zo : out std_logic);
+		 end onebitfullcomparator_vh;
+		 
+		 architecture Dataflow of onebitfullcomparator_vh is
+		 begin
+		  Xo <= (Xi or (A and (not B)));
+		  Yo <= (Yi and (A xor B));
+		  Zo <= (Zi or ((not A) and B));
+		  end Dataflow;
+		 

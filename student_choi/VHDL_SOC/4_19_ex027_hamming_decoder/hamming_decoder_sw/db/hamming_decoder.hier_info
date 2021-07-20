@@ -1,0 +1,67 @@
+|hamming_decoder
+aiput[0] => hamming_decoder_syn:ai_synput.ai[0]
+aiput[1] => hamming_decoder_syn:ai_synput.ai[1]
+aiput[2] => hamming_decoder_syn:ai_synput.ai[2]
+aiput[3] => hamming_decoder_syn:ai_synput.ai[3]
+aiput[4] => hamming_decoder_syn:ai_synput.ai[4]
+aiput[5] => hamming_decoder_syn:ai_synput.ai[5]
+aiput[6] => hamming_decoder_syn:ai_synput.ai[6]
+synput[0] <= hamming_decoder_syn:ai_synput.syn[0]
+synput[1] <= hamming_decoder_syn:ai_synput.syn[1]
+synput[2] <= hamming_decoder_syn:ai_synput.syn[2]
+errorput[0] <= hamming_decoder_error:syn_errorput.error[0]
+errorput[1] <= hamming_decoder_error:syn_errorput.error[1]
+errorput[2] <= hamming_decoder_error:syn_errorput.error[2]
+errorput[3] <= hamming_decoder_error:syn_errorput.error[3]
+errorput[4] <= hamming_decoder_error:syn_errorput.error[4]
+errorput[5] <= hamming_decoder_error:syn_errorput.error[5]
+errorput[6] <= hamming_decoder_error:syn_errorput.error[6]
+
+
+|hamming_decoder|hamming_decoder_syn:ai_synput
+ai[0] => syn~7.IN1
+ai[1] => syn~5.IN1
+ai[2] => syn~2.IN1
+ai[3] => syn~0.IN0
+ai[4] => syn~0.IN1
+ai[4] => syn~3.IN0
+ai[5] => syn~3.IN1
+ai[5] => syn~6.IN1
+ai[6] => syn~1.IN1
+ai[6] => syn~4.IN1
+syn[0] <= syn~7.DB_MAX_OUTPUT_PORT_TYPE
+syn[1] <= syn~5.DB_MAX_OUTPUT_PORT_TYPE
+syn[2] <= syn~2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|hamming_decoder|hamming_decoder_error:syn_errorput
+syni[0] => Equal0.IN2
+syni[0] => Equal1.IN2
+syni[0] => Equal2.IN1
+syni[0] => Equal3.IN1
+syni[0] => Equal4.IN2
+syni[0] => Equal5.IN2
+syni[0] => Equal6.IN2
+syni[1] => Equal0.IN1
+syni[1] => Equal1.IN1
+syni[1] => Equal2.IN2
+syni[1] => Equal3.IN0
+syni[1] => Equal4.IN0
+syni[1] => Equal5.IN1
+syni[1] => Equal6.IN1
+syni[2] => Equal0.IN0
+syni[2] => Equal1.IN0
+syni[2] => Equal2.IN0
+syni[2] => Equal3.IN2
+syni[2] => Equal4.IN1
+syni[2] => Equal5.IN0
+syni[2] => Equal6.IN0
+error[0] <= error[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+error[1] <= error[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+error[2] <= error[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+error[3] <= error[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+error[4] <= error[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+error[5] <= error[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+error[6] <= error[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+

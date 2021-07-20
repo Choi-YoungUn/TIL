@@ -1,0 +1,19 @@
+|eittothreeencoder
+A[0] => ~NO_FANOUT~
+A[1] => Yo~0.IN0
+A[2] => Yo~3.IN0
+A[3] => Yo~0.IN1
+A[3] => Yo~3.IN1
+A[4] => Yo~6.IN0
+A[5] => Yo~1.IN1
+A[5] => Yo~6.IN1
+A[6] => Yo~4.IN1
+A[6] => Yo~7.IN1
+A[7] => Yo~2.IN1
+A[7] => Yo~5.IN1
+A[7] => Yo~8.IN1
+Yo[0] <= Yo~2.DB_MAX_OUTPUT_PORT_TYPE
+Yo[1] <= Yo~5.DB_MAX_OUTPUT_PORT_TYPE
+Yo[2] <= Yo~8.DB_MAX_OUTPUT_PORT_TYPE
+
+

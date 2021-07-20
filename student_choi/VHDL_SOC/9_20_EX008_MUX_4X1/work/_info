@@ -1,0 +1,83 @@
+m255
+K3
+13
+cModel Technology
+dD:\MO_VHDL\9_20_EX007_XNOR_GATE
+Emux_4x1
+Z0 w1568966930
+Z1 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+Z2 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dD:\MO_VHDL\9_20_EX008_MUX_4X1
+Z6 8D:\MO_VHDL\9_20_EX008_MUX_4X1\MUX_4X1.vhd
+Z7 FD:\MO_VHDL\9_20_EX008_MUX_4X1\MUX_4X1.vhd
+l0
+L6
+VaH4_a`JDZiF0^4h;>1lO:0
+Z8 OV;C;10.1d;51
+32
+Z9 !s108 1568966930.263000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:\MO_VHDL\9_20_EX008_MUX_4X1\MUX_4X1.vhd|
+Z11 !s107 D:\MO_VHDL\9_20_EX008_MUX_4X1\MUX_4X1.vhd|
+Z12 o-work work -2002 -explicit -O0
+Z13 tExplicit 1
+!s100 KKZFGB9cZR^GE@VF<OUXO2
+!i10b 1
+Abeh
+R1
+R2
+R3
+R4
+DEx4 work 7 mux_4x1 0 22 aH4_a`JDZiF0^4h;>1lO:0
+l19
+L18
+VnK[4kBUi5E=J2CZ^LDDfE1
+!s100 7CWzCF<MkZ=kM<[UoQ_jj0
+R8
+32
+R9
+R10
+R11
+R12
+R13
+!i10b 1
+Etb_mux_4x1
+Z14 w1568966932
+R1
+R2
+R3
+R4
+R5
+Z15 8D:/MO_VHDL/9_20_EX008_MUX_4X1/tb_mux_4x1.vhd
+Z16 FD:/MO_VHDL/9_20_EX008_MUX_4X1/tb_mux_4x1.vhd
+l0
+L6
+V>_P[j6Y@>;`:mPn^8DTQY2
+!s100 Fac0Y`kGPmjJ^cPd]8hkJ3
+R8
+32
+!i10b 1
+Z17 !s108 1568966932.404000
+Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/MO_VHDL/9_20_EX008_MUX_4X1/tb_mux_4x1.vhd|
+Z19 !s107 D:/MO_VHDL/9_20_EX008_MUX_4X1/tb_mux_4x1.vhd|
+R12
+R13
+Abeh
+R1
+R2
+R3
+R4
+Z20 DEx4 work 10 tb_mux_4x1 0 22 >_P[j6Y@>;`:mPn^8DTQY2
+l26
+L8
+Z21 Vb:TPIMTlC1Vh7o9MQ?fKV3
+!s100 U^Eozbn^`Tk^o@d^KVi:i0
+R8
+32
+!i10b 1
+R17
+R18
+R19
+R12
+R13

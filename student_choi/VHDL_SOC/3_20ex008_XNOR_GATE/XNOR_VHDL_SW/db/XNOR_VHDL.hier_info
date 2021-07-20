@@ -1,0 +1,8 @@
+|XNOR_VHDL
+A => process_0~0.IN0
+A => process_0~1.IN0
+B => process_0~0.IN1
+B => process_0~1.IN1
+C <= process_0~2.DB_MAX_OUTPUT_PORT_TYPE
+
+

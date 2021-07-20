@@ -1,0 +1,242 @@
+Simulator report for simpleALU
+Sat May 04 21:32:00 2019
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 77 nodes     ;
+; Simulation Coverage         ;      90.91 % ;
+; Total Number of Transitions ; 474          ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                                                  ;
++--------------------------------------------------------------------------------------------+--------------------------------------------------------+---------------+
+; Option                                                                                     ; Setting                                                ; Default Value ;
++--------------------------------------------------------------------------------------------+--------------------------------------------------------+---------------+
+; Simulation mode                                                                            ; Functional                                             ; Timing        ;
+; Start time                                                                                 ; 0 ns                                                   ; 0 ns          ;
+; Simulation results format                                                                  ; VWF                                                    ;               ;
+; Vector input source                                                                        ; D:/VHDL/4_15_ex022_simpleALU/simpleALU.sw/Waveform.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                                                     ; On            ;
+; Check outputs                                                                              ; Off                                                    ; Off           ;
+; Report simulation coverage                                                                 ; On                                                     ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                                                     ; On            ;
+; Display missing 1-value coverage report                                                    ; On                                                     ; On            ;
+; Display missing 0-value coverage report                                                    ; On                                                     ; On            ;
+; Detect setup and hold time violations                                                      ; Off                                                    ; Off           ;
+; Detect glitches                                                                            ; Off                                                    ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                                                    ; Off           ;
+; Generate Signal Activity File                                                              ; Off                                                    ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                                    ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                                                    ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                                                     ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                                             ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                                    ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                                    ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                                                   ; Auto          ;
++--------------------------------------------------------------------------------------------+--------------------------------------------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      90.91 % ;
+; Total nodes checked                                 ; 77           ;
+; Total output ports checked                          ; 77           ;
+; Total output ports with complete 1/0-value coverage ; 70           ;
+; Total output ports with no 1/0-value coverage       ; 3            ;
+; Total output ports with no 1-value coverage         ; 6            ;
+; Total output ports with no 0-value coverage         ; 4            ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++----------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                          ;
++-------------------------------------------------+-------------------------------------------------+------------------+
+; Node Name                                       ; Output Port Name                                ; Output Port Type ;
++-------------------------------------------------+-------------------------------------------------+------------------+
+; |simpleALU|Ai[0]                                ; |simpleALU|Ai[0]                                ; out              ;
+; |simpleALU|Ai[1]                                ; |simpleALU|Ai[1]                                ; out              ;
+; |simpleALU|Ai[2]                                ; |simpleALU|Ai[2]                                ; out              ;
+; |simpleALU|Ai[3]                                ; |simpleALU|Ai[3]                                ; out              ;
+; |simpleALU|Bi[0]                                ; |simpleALU|Bi[0]                                ; out              ;
+; |simpleALU|Bi[1]                                ; |simpleALU|Bi[1]                                ; out              ;
+; |simpleALU|Bi[2]                                ; |simpleALU|Bi[2]                                ; out              ;
+; |simpleALU|Bi[3]                                ; |simpleALU|Bi[3]                                ; out              ;
+; |simpleALU|Si[0]                                ; |simpleALU|Si[0]                                ; out              ;
+; |simpleALU|Si[1]                                ; |simpleALU|Si[1]                                ; out              ;
+; |simpleALU|Y[0]                                 ; |simpleALU|Y[0]                                 ; pin_out          ;
+; |simpleALU|Y[1]                                 ; |simpleALU|Y[1]                                 ; pin_out          ;
+; |simpleALU|Y[2]                                 ; |simpleALU|Y[2]                                 ; pin_out          ;
+; |simpleALU|Y[3]                                 ; |simpleALU|Y[3]                                 ; pin_out          ;
+; |simpleALU|Y[4]                                 ; |simpleALU|Y[4]                                 ; pin_out          ;
+; |simpleALU|fouror:orfourbit3|yo~0               ; |simpleALU|fouror:orfourbit3|yo~0               ; out0             ;
+; |simpleALU|fouror:orfourbit3|yo~1               ; |simpleALU|fouror:orfourbit3|yo~1               ; out0             ;
+; |simpleALU|fouror:orfourbit3|yo                 ; |simpleALU|fouror:orfourbit3|yo                 ; out0             ;
+; |simpleALU|fouror:orfourbit2|yo~0               ; |simpleALU|fouror:orfourbit2|yo~0               ; out0             ;
+; |simpleALU|fouror:orfourbit2|yo~1               ; |simpleALU|fouror:orfourbit2|yo~1               ; out0             ;
+; |simpleALU|fouror:orfourbit2|yo                 ; |simpleALU|fouror:orfourbit2|yo                 ; out0             ;
+; |simpleALU|fouror:orfourbit1|yo~0               ; |simpleALU|fouror:orfourbit1|yo~0               ; out0             ;
+; |simpleALU|fouror:orfourbit1|yo~1               ; |simpleALU|fouror:orfourbit1|yo~1               ; out0             ;
+; |simpleALU|fouror:orfourbit1|yo                 ; |simpleALU|fouror:orfourbit1|yo                 ; out0             ;
+; |simpleALU|fouror:orfourbit0|yo~0               ; |simpleALU|fouror:orfourbit0|yo~0               ; out0             ;
+; |simpleALU|fouror:orfourbit0|yo~1               ; |simpleALU|fouror:orfourbit0|yo~1               ; out0             ;
+; |simpleALU|fouror:orfourbit0|yo                 ; |simpleALU|fouror:orfourbit0|yo                 ; out0             ;
+; |simpleALU|fourbitxor:xorgate|yo~0              ; |simpleALU|fourbitxor:xorgate|yo~0              ; out0             ;
+; |simpleALU|fourbitxor:xorgate|yo[0]             ; |simpleALU|fourbitxor:xorgate|yo[0]             ; out0             ;
+; |simpleALU|fourbitxor:xorgate|yo~2              ; |simpleALU|fourbitxor:xorgate|yo~2              ; out0             ;
+; |simpleALU|fourbitxor:xorgate|yo[1]             ; |simpleALU|fourbitxor:xorgate|yo[1]             ; out0             ;
+; |simpleALU|fourbitxor:xorgate|yo~4              ; |simpleALU|fourbitxor:xorgate|yo~4              ; out0             ;
+; |simpleALU|fourbitxor:xorgate|yo[2]             ; |simpleALU|fourbitxor:xorgate|yo[2]             ; out0             ;
+; |simpleALU|fourbitxor:xorgate|yo~6              ; |simpleALU|fourbitxor:xorgate|yo~6              ; out0             ;
+; |simpleALU|fourbitxor:xorgate|yo~7              ; |simpleALU|fourbitxor:xorgate|yo~7              ; out0             ;
+; |simpleALU|fourbitxor:xorgate|yo[3]             ; |simpleALU|fourbitxor:xorgate|yo[3]             ; out0             ;
+; |simpleALU|fourbitand:andgate|yo~0              ; |simpleALU|fourbitand:andgate|yo~0              ; out0             ;
+; |simpleALU|fourbitand:andgate|yo[0]             ; |simpleALU|fourbitand:andgate|yo[0]             ; out0             ;
+; |simpleALU|fourbitand:andgate|yo~2              ; |simpleALU|fourbitand:andgate|yo~2              ; out0             ;
+; |simpleALU|fourbitand:andgate|yo[1]             ; |simpleALU|fourbitand:andgate|yo[1]             ; out0             ;
+; |simpleALU|fourbitand:andgate|yo~4              ; |simpleALU|fourbitand:andgate|yo~4              ; out0             ;
+; |simpleALU|fourbitand:andgate|yo[2]             ; |simpleALU|fourbitand:andgate|yo[2]             ; out0             ;
+; |simpleALU|fourbitand:andgate|yo~6              ; |simpleALU|fourbitand:andgate|yo~6              ; out0             ;
+; |simpleALU|fourbitand:andgate|yo~7              ; |simpleALU|fourbitand:andgate|yo~7              ; out0             ;
+; |simpleALU|fourbitand:andgate|yo[3]             ; |simpleALU|fourbitand:andgate|yo[3]             ; out0             ;
+; |simpleALU|fourbitor:orgate|yo~0                ; |simpleALU|fourbitor:orgate|yo~0                ; out0             ;
+; |simpleALU|fourbitor:orgate|yo[0]               ; |simpleALU|fourbitor:orgate|yo[0]               ; out0             ;
+; |simpleALU|fourbitor:orgate|yo~2                ; |simpleALU|fourbitor:orgate|yo~2                ; out0             ;
+; |simpleALU|fourbitor:orgate|yo~4                ; |simpleALU|fourbitor:orgate|yo~4                ; out0             ;
+; |simpleALU|fourbitor:orgate|yo~6                ; |simpleALU|fourbitor:orgate|yo~6                ; out0             ;
+; |simpleALU|fivebitand:suband|yo[1]              ; |simpleALU|fivebitand:suband|yo[1]              ; out0             ;
+; |simpleALU|fivebitand:suband|yo[3]              ; |simpleALU|fivebitand:suband|yo[3]              ; out0             ;
+; |simpleALU|fivebitand:suband|yo~4               ; |simpleALU|fivebitand:suband|yo~4               ; out0             ;
+; |simpleALU|fivebitand:suband|yo[4]              ; |simpleALU|fivebitand:suband|yo[4]              ; out0             ;
+; |simpleALU|full_adder:plus3|OR_Gate:org|C       ; |simpleALU|full_adder:plus3|OR_Gate:org|C       ; out0             ;
+; |simpleALU|full_adder:plus3|half_adder:half2|s  ; |simpleALU|full_adder:plus3|half_adder:half2|s  ; out0             ;
+; |simpleALU|full_adder:plus3|half_adder:half1|s  ; |simpleALU|full_adder:plus3|half_adder:half1|s  ; out0             ;
+; |simpleALU|full_adder:plus3|half_adder:half1|co ; |simpleALU|full_adder:plus3|half_adder:half1|co ; out0             ;
+; |simpleALU|full_adder:plus2|OR_Gate:org|C       ; |simpleALU|full_adder:plus2|OR_Gate:org|C       ; out0             ;
+; |simpleALU|full_adder:plus2|half_adder:half2|s  ; |simpleALU|full_adder:plus2|half_adder:half2|s  ; out0             ;
+; |simpleALU|full_adder:plus2|half_adder:half2|co ; |simpleALU|full_adder:plus2|half_adder:half2|co ; out0             ;
+; |simpleALU|full_adder:plus2|half_adder:half1|s  ; |simpleALU|full_adder:plus2|half_adder:half1|s  ; out0             ;
+; |simpleALU|full_adder:plus2|half_adder:half1|co ; |simpleALU|full_adder:plus2|half_adder:half1|co ; out0             ;
+; |simpleALU|full_adder:plus1|OR_Gate:org|C       ; |simpleALU|full_adder:plus1|OR_Gate:org|C       ; out0             ;
+; |simpleALU|full_adder:plus1|half_adder:half2|s  ; |simpleALU|full_adder:plus1|half_adder:half2|s  ; out0             ;
+; |simpleALU|full_adder:plus1|half_adder:half2|co ; |simpleALU|full_adder:plus1|half_adder:half2|co ; out0             ;
+; |simpleALU|full_adder:plus1|half_adder:half1|s  ; |simpleALU|full_adder:plus1|half_adder:half1|s  ; out0             ;
+; |simpleALU|full_adder:plus1|half_adder:half1|co ; |simpleALU|full_adder:plus1|half_adder:half1|co ; out0             ;
+; |simpleALU|half_adder:plus0|s                   ; |simpleALU|half_adder:plus0|s                   ; out0             ;
+; |simpleALU|half_adder:plus0|co                  ; |simpleALU|half_adder:plus0|co                  ; out0             ;
++-------------------------------------------------+-------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++----------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                             ;
++-------------------------------------------------+-------------------------------------------------+------------------+
+; Node Name                                       ; Output Port Name                                ; Output Port Type ;
++-------------------------------------------------+-------------------------------------------------+------------------+
+; |simpleALU|fourbitor:orgate|yo[1]               ; |simpleALU|fourbitor:orgate|yo[1]               ; out0             ;
+; |simpleALU|fourbitor:orgate|yo[2]               ; |simpleALU|fourbitor:orgate|yo[2]               ; out0             ;
+; |simpleALU|fourbitor:orgate|yo~7                ; |simpleALU|fourbitor:orgate|yo~7                ; out0             ;
+; |simpleALU|fourbitor:orgate|yo[3]               ; |simpleALU|fourbitor:orgate|yo[3]               ; out0             ;
+; |simpleALU|fivebitand:suband|yo[0]              ; |simpleALU|fivebitand:suband|yo[0]              ; out0             ;
+; |simpleALU|full_adder:plus3|half_adder:half2|co ; |simpleALU|full_adder:plus3|half_adder:half2|co ; out0             ;
++-------------------------------------------------+-------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++----------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                             ;
++-------------------------------------------------+-------------------------------------------------+------------------+
+; Node Name                                       ; Output Port Name                                ; Output Port Type ;
++-------------------------------------------------+-------------------------------------------------+------------------+
+; |simpleALU|fourbitor:orgate|yo[3]               ; |simpleALU|fourbitor:orgate|yo[3]               ; out0             ;
+; |simpleALU|fivebitand:suband|yo[0]              ; |simpleALU|fivebitand:suband|yo[0]              ; out0             ;
+; |simpleALU|fivebitand:suband|yo[2]              ; |simpleALU|fivebitand:suband|yo[2]              ; out0             ;
+; |simpleALU|full_adder:plus3|half_adder:half2|co ; |simpleALU|full_adder:plus3|half_adder:half2|co ; out0             ;
++-------------------------------------------------+-------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Simulator
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sat May 04 21:31:59 2019
+Info: Command: quartus_sim --simulation_results_format=VWF simpleALU -c simpleALU
+Info (324025): Using vector source file "D:/VHDL/4_15_ex022_simpleALU/simpleALU.sw/Waveform.vwf"
+Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info (310002): Simulation partitioned into 1 sub-simulations
+Info (328053): Simulation coverage is      90.91 %
+Info (328052): Number of transitions in simulation is 474
+Info (324045): Vector file simpleALU.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II 64-Bit Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 4472 megabytes
+    Info: Processing ended: Sat May 04 21:32:00 2019
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

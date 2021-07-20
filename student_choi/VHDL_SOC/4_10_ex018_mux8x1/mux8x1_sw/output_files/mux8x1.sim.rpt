@@ -1,0 +1,223 @@
+Simulator report for mux8x1
+Sat May 04 19:02:02 2019
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 58 nodes     ;
+; Simulation Coverage         ;      84.48 % ;
+; Total Number of Transitions ; 223          ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                                            ;
++--------------------------------------------------------------------------------------------+--------------------------------------------------+---------------+
+; Option                                                                                     ; Setting                                          ; Default Value ;
++--------------------------------------------------------------------------------------------+--------------------------------------------------+---------------+
+; Simulation mode                                                                            ; Functional                                       ; Timing        ;
+; Start time                                                                                 ; 0 ns                                             ; 0 ns          ;
+; Simulation results format                                                                  ; VWF                                              ;               ;
+; Vector input source                                                                        ; D:/VHDL/4_10_ex018_mux8x1/mux8x1_sw/Waveform.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                                               ; On            ;
+; Check outputs                                                                              ; Off                                              ; Off           ;
+; Report simulation coverage                                                                 ; On                                               ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                                               ; On            ;
+; Display missing 1-value coverage report                                                    ; On                                               ; On            ;
+; Display missing 0-value coverage report                                                    ; On                                               ; On            ;
+; Detect setup and hold time violations                                                      ; Off                                              ; Off           ;
+; Detect glitches                                                                            ; Off                                              ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                                              ; Off           ;
+; Generate Signal Activity File                                                              ; Off                                              ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                              ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                                              ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                                               ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                                       ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                              ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                              ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                                             ; Auto          ;
++--------------------------------------------------------------------------------------------+--------------------------------------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      84.48 % ;
+; Total nodes checked                                 ; 58           ;
+; Total output ports checked                          ; 58           ;
+; Total output ports with complete 1/0-value coverage ; 49           ;
+; Total output ports with no 1/0-value coverage       ; 3            ;
+; Total output ports with no 1-value coverage         ; 4            ;
+; Total output ports with no 0-value coverage         ; 8            ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                                                    ;
++----------------------------------------------------------------------+----------------------------------------------------------------------+------------------+
+; Node Name                                                            ; Output Port Name                                                     ; Output Port Type ;
++----------------------------------------------------------------------+----------------------------------------------------------------------+------------------+
+; |mux8x1_package|I[1]                                                 ; |mux8x1_package|I[1]                                                 ; out              ;
+; |mux8x1_package|I[5]                                                 ; |mux8x1_package|I[5]                                                 ; out              ;
+; |mux8x1_package|I[6]                                                 ; |mux8x1_package|I[6]                                                 ; out              ;
+; |mux8x1_package|S[0]                                                 ; |mux8x1_package|S[0]                                                 ; out              ;
+; |mux8x1_package|S[1]                                                 ; |mux8x1_package|S[1]                                                 ; out              ;
+; |mux8x1_package|S[2]                                                 ; |mux8x1_package|S[2]                                                 ; out              ;
+; |mux8x1_package|Y                                                    ; |mux8x1_package|Y                                                    ; pin_out          ;
+; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~0              ; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~0              ; out0             ;
+; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~1              ; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~1              ; out0             ;
+; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~2              ; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~2              ; out0             ;
+; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~3              ; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~3              ; out0             ;
+; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~4              ; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~4              ; out0             ;
+; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~6              ; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~6              ; out0             ;
+; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~7              ; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~7              ; out0             ;
+; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~8              ; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~8              ; out0             ;
+; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~9              ; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~9              ; out0             ;
+; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~10             ; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~10             ; out0             ;
+; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~11             ; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~11             ; out0             ;
+; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~12             ; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~12             ; out0             ;
+; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~13             ; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~13             ; out0             ;
+; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~15             ; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~15             ; out0             ;
+; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~16             ; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~16             ; out0             ;
+; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~17             ; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~17             ; out0             ;
+; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~18             ; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~18             ; out0             ;
+; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~19             ; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~19             ; out0             ;
+; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~20             ; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~20             ; out0             ;
+; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|result_node[0]~0 ; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|result_node[0]~0 ; out0             ;
+; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~21             ; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~21             ; out0             ;
+; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~22             ; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~22             ; out0             ;
+; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~23             ; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~23             ; out0             ;
+; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~24             ; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~24             ; out0             ;
+; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~25             ; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~25             ; out0             ;
+; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~26             ; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~26             ; out0             ;
+; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~27             ; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~27             ; out0             ;
+; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~29             ; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~29             ; out0             ;
+; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~30             ; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~30             ; out0             ;
+; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~31             ; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~31             ; out0             ;
+; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~32             ; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~32             ; out0             ;
+; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~33             ; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~33             ; out0             ;
+; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~34             ; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~34             ; out0             ;
+; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~35             ; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~35             ; out0             ;
+; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~36             ; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~36             ; out0             ;
+; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~38             ; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~38             ; out0             ;
+; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~39             ; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~39             ; out0             ;
+; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~40             ; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~40             ; out0             ;
+; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~41             ; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~41             ; out0             ;
+; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~42             ; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~42             ; out0             ;
+; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|result_node[0]~1 ; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|result_node[0]~1 ; out0             ;
+; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|result_node[0]   ; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|result_node[0]   ; out0             ;
++----------------------------------------------------------------------+----------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                               ;
++----------------------------------------------------------+----------------------------------------------------------+------------------+
+; Node Name                                                ; Output Port Name                                         ; Output Port Type ;
++----------------------------------------------------------+----------------------------------------------------------+------------------+
+; |mux8x1_package|I[3]                                     ; |mux8x1_package|I[3]                                     ; out              ;
+; |mux8x1_package|I[4]                                     ; |mux8x1_package|I[4]                                     ; out              ;
+; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~28 ; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~28 ; out0             ;
+; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~37 ; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~37 ; out0             ;
++----------------------------------------------------------+----------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                               ;
++----------------------------------------------------------+----------------------------------------------------------+------------------+
+; Node Name                                                ; Output Port Name                                         ; Output Port Type ;
++----------------------------------------------------------+----------------------------------------------------------+------------------+
+; |mux8x1_package|I[0]                                     ; |mux8x1_package|I[0]                                     ; out              ;
+; |mux8x1_package|I[2]                                     ; |mux8x1_package|I[2]                                     ; out              ;
+; |mux8x1_package|I[3]                                     ; |mux8x1_package|I[3]                                     ; out              ;
+; |mux8x1_package|I[7]                                     ; |mux8x1_package|I[7]                                     ; out              ;
+; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~5  ; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~5  ; out0             ;
+; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~14 ; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~14 ; out0             ;
+; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~28 ; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~28 ; out0             ;
+; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~37 ; |mux8x1_package|lpm_mux:Mux0|mux_3nc:auto_generated|_~37 ; out0             ;
++----------------------------------------------------------+----------------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Simulator
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sat May 04 19:02:02 2019
+Info: Command: quartus_sim --simulation_results_format=VWF mux8x1 -c mux8x1
+Info (324025): Using vector source file "D:/VHDL/4_10_ex018_mux8x1/mux8x1_sw/Waveform.vwf"
+Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info (310002): Simulation partitioned into 1 sub-simulations
+Info (328053): Simulation coverage is      84.48 %
+Info (328052): Number of transitions in simulation is 223
+Info (324045): Vector file mux8x1.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II 64-Bit Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 4472 megabytes
+    Info: Processing ended: Sat May 04 19:02:02 2019
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
+
+

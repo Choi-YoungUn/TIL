@@ -1,0 +1,106 @@
+// 최소각 1775   최대각 1850 = 90도   1800 = (30도 정도)(최소로 내려간 상태)
+//프로그램 시작시 1825 시작
+//x축 모터 1번
+//  북서쪽 모터 2번
+//남서쪽 모터 3번
+
+// - 란 지면쪽으로 내려간 상태
+//+ 란 지면에서 멀어진 상태
+// 0 이란 수평상태
+//시작 = 1800
+
+int y_point = 0;
+int x_point = 0;
+
+int E_moter = 1825;
+int NW_moter = 1825;
+int SW_moter = 1825;
+
+int W_ever = 0;
+
+if (y_point < 0)  //N이 지면쪽으로 내려감
+{
+	if ((NW_moter >= 1850) && (SW_moter <= 1800)) // 둘다 최대라면
+	{
+		//LED점멸 하도록 하자.
+		
+	}
+	else
+	{
+		if ((1850 - NW_moter) >= (SW_moter - 1800))   // NW ,SW중 어느게 더 여유있는가.  NW가 여유OR 동일시
+		{
+			NW_moter += 5;
+		}
+		else  //SW가 여유있을 시
+		{
+			SW_moter -= 5;
+		}
+	}
+  
+
+}
+else if (y_point > 0)// N이 지면으로부터 상승시
+{
+
+	if ((SW_moter >= 1850) && (NW_moter <= 1800)) // 둘다 최대라면
+	{
+		//LED점멸 하도록 하자.
+
+	}
+	else
+	{
+		if ((NW_moter - 1800) >= (1850 - SW_moter))   // NW ,SW중 어느게 더 여유있는가.  NW가 여유OR 동일시
+		{
+			NW_moter -= 5;
+		}
+		else
+		{
+			SW_moter += 5;
+		}
+	}
+}
+
+W_ever = (NW_moter + SW_moter) / 2;    //서쪽 평균값
+
+if (x_point < 0)  //E가 하강시  
+{
+	if ((E_moter >= 1850) && ((SW_moter <= 1800) || (NW_moter <=1800))  ) // SW, NW,와 E모터 셋다 최대라면
+	{
+		//LED점멸 하도록 하자.
+
+	}
+	else
+	{
+		if ((1850 - E_moter) >= (W_ever - 1800))   // NW ,SW중 어느게 더 여유있는가.  E가 여유 OR 동일시
+		{
+			E_moter += 5;
+		}
+		else  //W가 여유있을 시
+		{
+			SW_moter -= 5;
+			NW_moter -= 5;
+		}
+	}
+
+}
+else if (x_point > 0)  //E가 하강시  
+{
+	if ((E_moter <= 1800) && ((SW_moter >= 1850) || (NW_moter >= 1850))) // (SW, NW중 하나라도 최대거나) and  E 가 최대시     => 이동 불가
+	{
+		//LED점멸 하도록 하자.
+
+	}
+	else
+	{
+		if ((E_moter - 1800) >= (1850 - W_ever))   // NW ,SW중 어느게 더 여유있는가.  E가 여유 OR 동일시
+		{
+			E_moter -= 5;
+		}
+		else  //W가 여유있을 시
+		{
+			SW_moter += 5;
+			NW_moter += 5;
+		}
+	}
+
+}

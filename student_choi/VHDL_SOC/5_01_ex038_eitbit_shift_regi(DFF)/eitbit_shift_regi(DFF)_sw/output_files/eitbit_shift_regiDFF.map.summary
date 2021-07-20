@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Wed May 01 11:40:57 2019
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+Revision Name : eitbit_shift_regiDFF
+Top-level Entity Name : eitbit_shift_regiDFF
+Family : Cyclone II
+Total logic elements : 19
+    Total combinational functions : 19
+    Dedicated logic registers : 8
+Total registers : 8
+Total pins : 12
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

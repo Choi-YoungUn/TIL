@@ -1,0 +1,16 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity twobitcomparator is
+     port ( A : in std_logic_vector (1 downto 0);
+	         B : in std_logic_vector (1 downto 0);
+				
+				XO : out std_logic;
+				yo : out std_logic;
+				zo : out std_logic);
+				end twobitcomparator;
+				
+				begin
+				
+				XO <=( A(0) and (not B(0)) and (not B(1)) ) or ( A(1) and (not B (1)) ) or ( (A(1) and A(0) and (not B(0)));
+				YO <=(

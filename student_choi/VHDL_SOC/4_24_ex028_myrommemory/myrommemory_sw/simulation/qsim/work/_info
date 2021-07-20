@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\VHDL\4_24_ex028_myrommemory\myrommemory_sw\simulation\qsim
+vmyrommemory
+Z1 IN4>AGmclKS`L`1Dm9OPm<0
+Z2 VAVQXTomfgDOC>GLhSX2X^1
+Z3 dD:\VHDL\4_24_ex028_myrommemory\myrommemory_sw\simulation\qsim
+Z4 w1556066500
+Z5 8myrommemory.vo
+Z6 Fmyrommemory.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 o-work work -O0
+!i10b 1
+Z9 !s100 E7KC?k1>0=FoQiZYzhS`J0
+!s85 0
+Z10 !s108 1556066502.184000
+Z11 !s107 myrommemory.vo|
+Z12 !s90 -work|work|myrommemory.vo|
+!s101 -O0
+vmyrommemory_vlg_check_tst
+!i10b 1
+!s100 >lP`_k3RzgQ0]XJ?@hG4Q1
+I^T6cl<djYT6G;^<miP@XV1
+VI^DQT14Pjb7LaUQ[EA;en1
+R3
+Z13 w1556066499
+Z14 8myrommemory.vt
+Z15 Fmyrommemory.vt
+L0 57
+R7
+r1
+!s85 0
+31
+Z16 !s108 1556066502.480000
+Z17 !s107 myrommemory.vt|
+Z18 !s90 -work|work|myrommemory.vt|
+!s101 -O0
+R8
+vmyrommemory_vlg_sample_tst
+!i10b 1
+!s100 beCNANoX5<fI[14g`h0ni2
+IOFYl;V4`z1`Y>j5[4ZL4n1
+VDicEGi:e=G[[DI`RmbL192
+R3
+R13
+R14
+R15
+L0 29
+R7
+r1
+!s85 0
+31
+R16
+R17
+R18
+!s101 -O0
+R8
+vmyrommemory_vlg_vec_tst
+!i10b 1
+!s100 ?@JOaoATe7OzLjWzg_mDE3
+IlzdJ@oL[LAzj3kkD3644e2
+V41`kk72Iz0@cIFa;iM53M0
+R3
+R13
+R14
+R15
+L0 277
+R7
+r1
+!s85 0
+31
+R16
+R17
+R18
+!s101 -O0
+R8

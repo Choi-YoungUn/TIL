@@ -1,0 +1,40 @@
+m255
+K3
+13
+cModel Technology
+dC:\vhdlfile
+Enot_vhdl
+Z0 w1568962272
+Z1 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z2 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z3 dD:\MO_VHDL\9_20_EX003_NOT_GATE
+Z4 8D:\MO_VHDL\9_20_EX003_NOT_GATE\NOT_GATE.vhd
+Z5 FD:\MO_VHDL\9_20_EX003_NOT_GATE\NOT_GATE.vhd
+l0
+L5
+VCf1HAA<WUTVVJTGJ3KfUi3
+!s100 `gI>ilIf[N0eD>fQkB]Ro3
+Z6 OV;C;10.1d;51
+32
+!i10b 1
+Z7 !s108 1568962276.663000
+Z8 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:\MO_VHDL\9_20_EX003_NOT_GATE\NOT_GATE.vhd|
+Z9 !s107 D:\MO_VHDL\9_20_EX003_NOT_GATE\NOT_GATE.vhd|
+Z10 o-work work -2002 -explicit -O0
+Z11 tExplicit 1
+Abehavioral
+R1
+R2
+DEx4 work 8 not_vhdl 0 22 Cf1HAA<WUTVVJTGJ3KfUi3
+l11
+L10
+VPB?1Rb3=3oVjOVaGg[4102
+!s100 :2e5oECN7OF`T2Z;OHJ1M3
+R6
+32
+!i10b 1
+R7
+R8
+R9
+R10
+R11

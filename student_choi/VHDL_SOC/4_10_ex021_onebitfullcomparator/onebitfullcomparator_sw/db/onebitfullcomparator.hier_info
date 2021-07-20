@@ -1,0 +1,23 @@
+|onebitfullcomparator_vh
+A => process_0~0.IN0
+A => process_0~2.IN0
+A => process_0~1.IN0
+B => process_0~1.IN1
+B => process_0~2.IN1
+B => process_0~0.IN1
+Xi => Zo~1.OUTPUTSELECT
+Xi => Xo~2.OUTPUTSELECT
+Xi => Xo~3.IN1
+Yi => Zo~2.OUTPUTSELECT
+Yi => Xo~4.OUTPUTSELECT
+Yi => Xo~5.IN1
+Yi => Yo~1.DATAA
+Zi => Zo~3.OUTPUTSELECT
+Zi => Yo~1.OUTPUTSELECT
+Zi => Xo~6.OUTPUTSELECT
+Zi => Xo~7.IN1
+Xo <= Xo$latch.DB_MAX_OUTPUT_PORT_TYPE
+Yo <= Yo$latch.DB_MAX_OUTPUT_PORT_TYPE
+Zo <= Zo$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+

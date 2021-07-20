@@ -1,0 +1,17 @@
+|fourway_traffic
+clk => \p1:count[0].CLK
+clk => \p1:count[1].CLK
+clk => \p1:count[2].CLK
+clk => now_state~23.DATAIN
+reset => now_state~27.DATAIN
+reset => \p1:count[2].ENA
+reset => \p1:count[1].ENA
+reset => \p1:count[0].ENA
+e_w_red <= e_w_red~0.DB_MAX_OUTPUT_PORT_TYPE
+e_w_yellow <= e_w_yellow~0.DB_MAX_OUTPUT_PORT_TYPE
+e_w_green <= e_w_green~0.DB_MAX_OUTPUT_PORT_TYPE
+n_s_red <= n_s_red~0.DB_MAX_OUTPUT_PORT_TYPE
+n_s_yellow <= n_s_yellow~0.DB_MAX_OUTPUT_PORT_TYPE
+n_s_green <= n_s_green~0.DB_MAX_OUTPUT_PORT_TYPE
+
+

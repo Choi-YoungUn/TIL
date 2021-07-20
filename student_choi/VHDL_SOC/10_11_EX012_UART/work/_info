@@ -1,0 +1,161 @@
+m255
+K3
+13
+cModel Technology
+dD:\MO_VHDL\9_27_EX010_ps2_keybord
+Eps2_parsing
+Z0 w1569744845
+Z1 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+Z2 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dD:\MO_VHDL\9_27_EX012_ps2_parsing
+Z6 8D:/MO_VHDL/9_27_EX012_ps2_parsing/ps2_parsing.vhd
+Z7 FD:/MO_VHDL/9_27_EX012_ps2_parsing/ps2_parsing.vhd
+l0
+L6
+V6zI_;=W5Wfk4k3D9c>ABN3
+Z8 OV;C;10.1d;51
+32
+Z9 !s108 1569744847.532000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/MO_VHDL/9_27_EX012_ps2_parsing/ps2_parsing.vhd|
+Z11 !s107 D:/MO_VHDL/9_27_EX012_ps2_parsing/ps2_parsing.vhd|
+Z12 o-work work -2002 -explicit -O0
+Z13 tExplicit 1
+!s100 eHhnga2TR1[Ke[2cP1jkU1
+!i10b 1
+Abeh
+R1
+R2
+R3
+R4
+DEx4 work 11 ps2_parsing 0 22 6zI_;=W5Wfk4k3D9c>ABN3
+l52
+L17
+V2oRGDD=a<6?Sf?OV`AJoh1
+R8
+32
+R9
+R10
+R11
+R12
+R13
+!s100 K?R9j;_lPO0Jc?C==ed:C2
+!i10b 1
+Etb_uart
+Z14 w1570880738
+R1
+R2
+R3
+R4
+Z15 dD:\MO_VHDL\10_11_EX012_UART
+Z16 8D:/MO_VHDL/10_11_EX012_UART/TB_UART.vhd
+Z17 FD:/MO_VHDL/10_11_EX012_UART/TB_UART.vhd
+l0
+L6
+V;_hFD:1MP`TGOViCo4Z>E3
+R8
+32
+Z18 !s108 1570880749.239000
+Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/MO_VHDL/10_11_EX012_UART/TB_UART.vhd|
+Z20 !s107 D:/MO_VHDL/10_11_EX012_UART/TB_UART.vhd|
+R12
+R13
+!s100 k8:BC2IgcI;Wna`igbR>A1
+!i10b 1
+Abeh
+R1
+R2
+R3
+R4
+DEx4 work 7 tb_uart 0 22 ;_hFD:1MP`TGOViCo4Z>E3
+l39
+L8
+Vn76NV=kd>jFAikdaJV5D31
+R8
+32
+R18
+R19
+R20
+R12
+R13
+!s100 3Q59gXEMc=QJm>XHk3Kfj1
+!i10b 1
+Euart_rx
+Z21 w1571381228
+R1
+R2
+R3
+R4
+R15
+Z22 8D:/MO_VHDL/10_11_EX012_UART/UART_RX.vhd
+Z23 FD:/MO_VHDL/10_11_EX012_UART/UART_RX.vhd
+l0
+L6
+VamA2BOc@R2d`E`Gz]_V=X1
+!s100 O3dg<;]Ke>Xn`Mhg7BfSi2
+R8
+32
+!i10b 1
+Z24 !s108 1571381236.049000
+Z25 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/MO_VHDL/10_11_EX012_UART/UART_RX.vhd|
+Z26 !s107 D:/MO_VHDL/10_11_EX012_UART/UART_RX.vhd|
+R12
+R13
+Abeh
+R1
+R2
+R3
+R4
+Z27 DEx4 work 7 uart_rx 0 22 amA2BOc@R2d`E`Gz]_V=X1
+l28
+L16
+VzP1a2L50C7OCIO^W>oan90
+!s100 =TebP_;<lRz;C`1TJY:MY2
+R8
+32
+!i10b 1
+R24
+R25
+R26
+R12
+R13
+Euart_tx
+Z28 w1571381177
+R1
+R2
+R3
+R4
+R15
+Z29 8D:/MO_VHDL/10_11_EX012_UART/UART_TX.vhd
+Z30 FD:/MO_VHDL/10_11_EX012_UART/UART_TX.vhd
+l0
+L6
+VV2N;Y^fd6[3?hbbg<2F1d3
+R8
+32
+Z31 !s108 1571381186.170000
+Z32 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/MO_VHDL/10_11_EX012_UART/UART_TX.vhd|
+Z33 !s107 D:/MO_VHDL/10_11_EX012_UART/UART_TX.vhd|
+R12
+R13
+!s100 BM2dKcTRa:NiR?ECi7Zaj2
+!i10b 1
+Abeh
+R1
+R2
+R3
+R4
+DEx4 work 7 uart_tx 0 22 V2N;Y^fd6[3?hbbg<2F1d3
+l29
+L17
+V]bbKCa=1mQY[hJSlEmk`z0
+R8
+32
+R31
+R32
+R33
+R12
+R13
+!s100 B@no=KB_F>EmdcVo=D>K71
+!i10b 1

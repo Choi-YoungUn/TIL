@@ -1,0 +1,48 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+use ieee.std_logic_arith.all;
+
+entity cnt_24 is
+port( nrst : in std_logic;
+      clk : in std_logic;
+		digit_ten : out std_logic_vector(3 downto 0);
+		digit_one : out std_logic_vector(3 downto 0);
+		carry : out std_logic);
+		end cnt_24;
+		
+architecture behav of cnt_24 is
+
+signal cnt : integer range 0 to 23;
+signal timeone, timeten : std_logic_vector(3 downto 0);
+
+begin
+ process(nrst, clk)
+ begin
+ if(nrst = '0')then
+    timeone <= "0000";
+	 timeten <= "0000";
+	 carry <= '0';
+  elsif(rising_edge(clk))then
+    if(cnt = 23)then
+	  cnt <= 0;
+	  carry <= '1';
+	  timeone <= "0000";
+	  timeten <= "0000";
+	  else
+	  carry <= '0';
+	  cnt <= cnt +1;
+	  if(timeone = 9)then
+	      timeone <= "0000";
+			timeten <= timeten + '1';
+	    else
+	      timeone <= timeone + '1';
+	    end if;
+	    
+	 end if;
+ end if;
+end process;
+digit_one <= timeone;
+digit_ten <= timeten;
+
+end behav;

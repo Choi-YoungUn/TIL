@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Fri Nov 22 16:00:38 2019
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+Revision Name : register_map
+Top-level Entity Name : ALL_regi_map
+Family : Cyclone II
+Total logic elements : 807
+    Total combinational functions : 511
+    Dedicated logic registers : 486
+Total registers : 486
+Total pins : 44
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 1

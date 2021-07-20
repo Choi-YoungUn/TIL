@@ -1,0 +1,1155 @@
+TimeQuest Timing Analyzer report for fourbitcomparator
+Sat May 04 20:41:01 2019
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'Ai[2]'
+ 12. Slow Model Setup: 'Ai[1]'
+ 13. Slow Model Setup: 'Ai[0]'
+ 14. Slow Model Setup: 'Ai[3]'
+ 15. Slow Model Hold: 'Ai[0]'
+ 16. Slow Model Hold: 'Ai[1]'
+ 17. Slow Model Hold: 'Ai[3]'
+ 18. Slow Model Hold: 'Ai[2]'
+ 19. Slow Model Minimum Pulse Width: 'Ai[0]'
+ 20. Slow Model Minimum Pulse Width: 'Ai[1]'
+ 21. Slow Model Minimum Pulse Width: 'Ai[2]'
+ 22. Slow Model Minimum Pulse Width: 'Ai[3]'
+ 23. Setup Times
+ 24. Hold Times
+ 25. Clock to Output Times
+ 26. Minimum Clock to Output Times
+ 27. Fast Model Setup Summary
+ 28. Fast Model Hold Summary
+ 29. Fast Model Recovery Summary
+ 30. Fast Model Removal Summary
+ 31. Fast Model Minimum Pulse Width Summary
+ 32. Fast Model Setup: 'Ai[2]'
+ 33. Fast Model Setup: 'Ai[1]'
+ 34. Fast Model Setup: 'Ai[3]'
+ 35. Fast Model Setup: 'Ai[0]'
+ 36. Fast Model Hold: 'Ai[0]'
+ 37. Fast Model Hold: 'Ai[1]'
+ 38. Fast Model Hold: 'Ai[3]'
+ 39. Fast Model Hold: 'Ai[2]'
+ 40. Fast Model Minimum Pulse Width: 'Ai[0]'
+ 41. Fast Model Minimum Pulse Width: 'Ai[1]'
+ 42. Fast Model Minimum Pulse Width: 'Ai[2]'
+ 43. Fast Model Minimum Pulse Width: 'Ai[3]'
+ 44. Setup Times
+ 45. Hold Times
+ 46. Clock to Output Times
+ 47. Minimum Clock to Output Times
+ 48. Multicorner Timing Analysis Summary
+ 49. Setup Times
+ 50. Hold Times
+ 51. Clock to Output Times
+ 52. Minimum Clock to Output Times
+ 53. Setup Transfers
+ 54. Hold Transfers
+ 55. Report TCCS
+ 56. Report RSKM
+ 57. Unconstrained Paths
+ 58. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; fourbitcomparator                                                 ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C35F672C6                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                            ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets   ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; Ai[0]      ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { Ai[0] } ;
+; Ai[1]      ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { Ai[1] } ;
+; Ai[2]      ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { Ai[2] } ;
+; Ai[3]      ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { Ai[3] } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Slow Model Fmax Summary                                                                                    ;
++-------------+-----------------+------------+---------------------------------------------------------------+
+; Fmax        ; Restricted Fmax ; Clock Name ; Note                                                          ;
++-------------+-----------------+------------+---------------------------------------------------------------+
+; 1265.82 MHz ; 450.05 MHz      ; Ai[1]      ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 1351.35 MHz ; 420.17 MHz      ; Ai[0]      ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 1497.01 MHz ; 450.05 MHz      ; Ai[2]      ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 1858.74 MHz ; 450.05 MHz      ; Ai[3]      ; limit due to minimum period restriction (max I/O toggle rate) ;
++-------------+-----------------+------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------+
+; Slow Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; Ai[2] ; -1.049 ; -2.736        ;
+; Ai[1] ; -0.845 ; -2.325        ;
+; Ai[0] ; 0.130  ; 0.000         ;
+; Ai[3] ; 0.231  ; 0.000         ;
++-------+--------+---------------+
+
+
++--------------------------------+
+; Slow Model Hold Summary        ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; Ai[0] ; -0.927 ; -2.760        ;
+; Ai[1] ; -0.766 ; -1.981        ;
+; Ai[3] ; -0.741 ; -2.197        ;
+; Ai[2] ; -0.710 ; -2.054        ;
++-------+--------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; Ai[0] ; -1.380 ; -1.380                ;
+; Ai[1] ; -1.222 ; -1.222                ;
+; Ai[2] ; -1.222 ; -1.222                ;
+; Ai[3] ; -1.222 ; -1.222                ;
++-------+--------+-----------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'Ai[2]'                                                                                                                    ;
++--------+-------------------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                     ; To Node                       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+; -1.049 ; onebitfullcomparator_vh:u3|Yo ; onebitfullcomparator_vh:u2|Yo ; Ai[3]        ; Ai[2]       ; 1.000        ; 0.240      ; 1.280      ;
+; -0.948 ; onebitfullcomparator_vh:u3|Yo ; onebitfullcomparator_vh:u2|Xo ; Ai[3]        ; Ai[2]       ; 1.000        ; 0.098      ; 1.101      ;
+; -0.778 ; onebitfullcomparator_vh:u3|Zo ; onebitfullcomparator_vh:u2|Yo ; Ai[3]        ; Ai[2]       ; 1.000        ; 0.242      ; 1.011      ;
+; -0.739 ; onebitfullcomparator_vh:u3|Zo ; onebitfullcomparator_vh:u2|Zo ; Ai[3]        ; Ai[2]       ; 1.000        ; 0.241      ; 1.015      ;
+; -0.678 ; onebitfullcomparator_vh:u3|Zo ; onebitfullcomparator_vh:u2|Xo ; Ai[3]        ; Ai[2]       ; 1.000        ; 0.100      ; 0.833      ;
+; 0.166  ; Ai[2]                         ; onebitfullcomparator_vh:u2|Yo ; Ai[2]        ; Ai[2]       ; 0.500        ; 3.111      ; 2.436      ;
+; 0.204  ; Ai[2]                         ; onebitfullcomparator_vh:u2|Zo ; Ai[2]        ; Ai[2]       ; 0.500        ; 3.110      ; 2.441      ;
+; 0.265  ; Ai[2]                         ; onebitfullcomparator_vh:u2|Xo ; Ai[2]        ; Ai[2]       ; 0.500        ; 2.969      ; 2.259      ;
+; 0.666  ; Ai[2]                         ; onebitfullcomparator_vh:u2|Yo ; Ai[2]        ; Ai[2]       ; 1.000        ; 3.111      ; 2.436      ;
+; 0.704  ; Ai[2]                         ; onebitfullcomparator_vh:u2|Zo ; Ai[2]        ; Ai[2]       ; 1.000        ; 3.110      ; 2.441      ;
+; 0.765  ; Ai[2]                         ; onebitfullcomparator_vh:u2|Xo ; Ai[2]        ; Ai[2]       ; 1.000        ; 2.969      ; 2.259      ;
++--------+-------------------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'Ai[1]'                                                                                                                    ;
++--------+-------------------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                     ; To Node                       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.845 ; onebitfullcomparator_vh:u2|Yo ; onebitfullcomparator_vh:u1|Xo ; Ai[2]        ; Ai[1]       ; 1.000        ; 0.117      ; 0.965      ;
+; -0.813 ; onebitfullcomparator_vh:u2|Yo ; onebitfullcomparator_vh:u1|Yo ; Ai[2]        ; Ai[1]       ; 1.000        ; 0.124      ; 0.973      ;
+; -0.700 ; onebitfullcomparator_vh:u2|Zo ; onebitfullcomparator_vh:u1|Xo ; Ai[2]        ; Ai[1]       ; 1.000        ; 0.118      ; 0.821      ;
+; -0.675 ; onebitfullcomparator_vh:u2|Zo ; onebitfullcomparator_vh:u1|Yo ; Ai[2]        ; Ai[1]       ; 1.000        ; 0.125      ; 0.836      ;
+; -0.667 ; onebitfullcomparator_vh:u2|Zo ; onebitfullcomparator_vh:u1|Zo ; Ai[2]        ; Ai[1]       ; 1.000        ; 0.118      ; 0.821      ;
+; 0.105  ; Ai[1]                         ; onebitfullcomparator_vh:u1|Xo ; Ai[1]        ; Ai[1]       ; 0.500        ; 3.228      ; 2.626      ;
+; 0.149  ; Ai[1]                         ; onebitfullcomparator_vh:u1|Yo ; Ai[1]        ; Ai[1]       ; 0.500        ; 3.235      ; 2.622      ;
+; 0.302  ; Ai[1]                         ; onebitfullcomparator_vh:u1|Zo ; Ai[1]        ; Ai[1]       ; 0.500        ; 3.228      ; 2.462      ;
+; 0.605  ; Ai[1]                         ; onebitfullcomparator_vh:u1|Xo ; Ai[1]        ; Ai[1]       ; 1.000        ; 3.228      ; 2.626      ;
+; 0.649  ; Ai[1]                         ; onebitfullcomparator_vh:u1|Yo ; Ai[1]        ; Ai[1]       ; 1.000        ; 3.235      ; 2.622      ;
+; 0.802  ; Ai[1]                         ; onebitfullcomparator_vh:u1|Zo ; Ai[1]        ; Ai[1]       ; 1.000        ; 3.228      ; 2.462      ;
++--------+-------------------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'Ai[0]'                                                                                                                   ;
++-------+-------------------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                     ; To Node                       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.130 ; Ai[0]                         ; onebitfullcomparator_vh:u0|Zo ; Ai[0]        ; Ai[0]       ; 0.500        ; 5.245      ; 4.497      ;
+; 0.408 ; Ai[0]                         ; onebitfullcomparator_vh:u0|Xo ; Ai[0]        ; Ai[0]       ; 0.500        ; 5.244      ; 4.475      ;
+; 0.570 ; Ai[0]                         ; onebitfullcomparator_vh:u0|Yo ; Ai[0]        ; Ai[0]       ; 0.500        ; 5.244      ; 4.475      ;
+; 0.630 ; Ai[0]                         ; onebitfullcomparator_vh:u0|Zo ; Ai[0]        ; Ai[0]       ; 1.000        ; 5.245      ; 4.497      ;
+; 0.781 ; onebitfullcomparator_vh:u1|Yo ; onebitfullcomparator_vh:u0|Xo ; Ai[1]        ; Ai[0]       ; 1.000        ; 2.009      ; 1.367      ;
+; 0.789 ; onebitfullcomparator_vh:u1|Zo ; onebitfullcomparator_vh:u0|Zo ; Ai[1]        ; Ai[0]       ; 1.000        ; 2.017      ; 1.110      ;
+; 0.908 ; Ai[0]                         ; onebitfullcomparator_vh:u0|Xo ; Ai[0]        ; Ai[0]       ; 1.000        ; 5.244      ; 4.475      ;
+; 0.945 ; onebitfullcomparator_vh:u1|Yo ; onebitfullcomparator_vh:u0|Yo ; Ai[1]        ; Ai[0]       ; 1.000        ; 2.009      ; 1.365      ;
+; 1.065 ; onebitfullcomparator_vh:u1|Zo ; onebitfullcomparator_vh:u0|Xo ; Ai[1]        ; Ai[0]       ; 1.000        ; 2.016      ; 1.090      ;
+; 1.070 ; Ai[0]                         ; onebitfullcomparator_vh:u0|Yo ; Ai[0]        ; Ai[0]       ; 1.000        ; 5.244      ; 4.475      ;
+; 1.228 ; onebitfullcomparator_vh:u1|Zo ; onebitfullcomparator_vh:u0|Yo ; Ai[1]        ; Ai[0]       ; 1.000        ; 2.016      ; 1.089      ;
++-------+-------------------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'Ai[3]'                                                                                               ;
++-------+-----------+-------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node ; To Node                       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------+-------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.231 ; Ai[3]     ; onebitfullcomparator_vh:u3|Zo ; Ai[3]        ; Ai[3]       ; 0.500        ; 2.869      ; 2.141      ;
+; 0.271 ; Ai[3]     ; onebitfullcomparator_vh:u3|Xo ; Ai[3]        ; Ai[3]       ; 0.500        ; 2.869      ; 2.141      ;
+; 0.276 ; Ai[3]     ; onebitfullcomparator_vh:u3|Yo ; Ai[3]        ; Ai[3]       ; 0.500        ; 2.871      ; 2.130      ;
+; 0.731 ; Ai[3]     ; onebitfullcomparator_vh:u3|Zo ; Ai[3]        ; Ai[3]       ; 1.000        ; 2.869      ; 2.141      ;
+; 0.771 ; Ai[3]     ; onebitfullcomparator_vh:u3|Xo ; Ai[3]        ; Ai[3]       ; 1.000        ; 2.869      ; 2.141      ;
+; 0.776 ; Ai[3]     ; onebitfullcomparator_vh:u3|Yo ; Ai[3]        ; Ai[3]       ; 1.000        ; 2.871      ; 2.130      ;
++-------+-----------+-------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'Ai[0]'                                                                                                                     ;
++--------+-------------------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                     ; To Node                       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.927 ; onebitfullcomparator_vh:u1|Zo ; onebitfullcomparator_vh:u0|Yo ; Ai[1]        ; Ai[0]       ; 0.000        ; 2.016      ; 1.089      ;
+; -0.926 ; onebitfullcomparator_vh:u1|Zo ; onebitfullcomparator_vh:u0|Xo ; Ai[1]        ; Ai[0]       ; 0.000        ; 2.016      ; 1.090      ;
+; -0.907 ; onebitfullcomparator_vh:u1|Zo ; onebitfullcomparator_vh:u0|Zo ; Ai[1]        ; Ai[0]       ; 0.000        ; 2.017      ; 1.110      ;
+; -0.769 ; Ai[0]                         ; onebitfullcomparator_vh:u0|Xo ; Ai[0]        ; Ai[0]       ; 0.000        ; 5.244      ; 4.475      ;
+; -0.769 ; Ai[0]                         ; onebitfullcomparator_vh:u0|Yo ; Ai[0]        ; Ai[0]       ; 0.000        ; 5.244      ; 4.475      ;
+; -0.748 ; Ai[0]                         ; onebitfullcomparator_vh:u0|Zo ; Ai[0]        ; Ai[0]       ; 0.000        ; 5.245      ; 4.497      ;
+; -0.644 ; onebitfullcomparator_vh:u1|Yo ; onebitfullcomparator_vh:u0|Yo ; Ai[1]        ; Ai[0]       ; 0.000        ; 2.009      ; 1.365      ;
+; -0.642 ; onebitfullcomparator_vh:u1|Yo ; onebitfullcomparator_vh:u0|Xo ; Ai[1]        ; Ai[0]       ; 0.000        ; 2.009      ; 1.367      ;
+; -0.269 ; Ai[0]                         ; onebitfullcomparator_vh:u0|Xo ; Ai[0]        ; Ai[0]       ; -0.500       ; 5.244      ; 4.475      ;
+; -0.269 ; Ai[0]                         ; onebitfullcomparator_vh:u0|Yo ; Ai[0]        ; Ai[0]       ; -0.500       ; 5.244      ; 4.475      ;
+; -0.248 ; Ai[0]                         ; onebitfullcomparator_vh:u0|Zo ; Ai[0]        ; Ai[0]       ; -0.500       ; 5.245      ; 4.497      ;
++--------+-------------------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'Ai[1]'                                                                                                                     ;
++--------+-------------------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                     ; To Node                       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.766 ; Ai[1]                         ; onebitfullcomparator_vh:u1|Zo ; Ai[1]        ; Ai[1]       ; 0.000        ; 3.228      ; 2.462      ;
+; -0.613 ; Ai[1]                         ; onebitfullcomparator_vh:u1|Yo ; Ai[1]        ; Ai[1]       ; 0.000        ; 3.235      ; 2.622      ;
+; -0.602 ; Ai[1]                         ; onebitfullcomparator_vh:u1|Xo ; Ai[1]        ; Ai[1]       ; 0.000        ; 3.228      ; 2.626      ;
+; -0.266 ; Ai[1]                         ; onebitfullcomparator_vh:u1|Zo ; Ai[1]        ; Ai[1]       ; -0.500       ; 3.228      ; 2.462      ;
+; -0.113 ; Ai[1]                         ; onebitfullcomparator_vh:u1|Yo ; Ai[1]        ; Ai[1]       ; -0.500       ; 3.235      ; 2.622      ;
+; -0.102 ; Ai[1]                         ; onebitfullcomparator_vh:u1|Xo ; Ai[1]        ; Ai[1]       ; -0.500       ; 3.228      ; 2.626      ;
+; 0.703  ; onebitfullcomparator_vh:u2|Zo ; onebitfullcomparator_vh:u1|Zo ; Ai[2]        ; Ai[1]       ; 0.000        ; 0.118      ; 0.821      ;
+; 0.703  ; onebitfullcomparator_vh:u2|Zo ; onebitfullcomparator_vh:u1|Xo ; Ai[2]        ; Ai[1]       ; 0.000        ; 0.118      ; 0.821      ;
+; 0.711  ; onebitfullcomparator_vh:u2|Zo ; onebitfullcomparator_vh:u1|Yo ; Ai[2]        ; Ai[1]       ; 0.000        ; 0.125      ; 0.836      ;
+; 0.848  ; onebitfullcomparator_vh:u2|Yo ; onebitfullcomparator_vh:u1|Xo ; Ai[2]        ; Ai[1]       ; 0.000        ; 0.117      ; 0.965      ;
+; 0.849  ; onebitfullcomparator_vh:u2|Yo ; onebitfullcomparator_vh:u1|Yo ; Ai[2]        ; Ai[1]       ; 0.000        ; 0.124      ; 0.973      ;
++--------+-------------------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'Ai[3]'                                                                                                 ;
++--------+-----------+-------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node ; To Node                       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------+-------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.741 ; Ai[3]     ; onebitfullcomparator_vh:u3|Yo ; Ai[3]        ; Ai[3]       ; 0.000        ; 2.871      ; 2.130      ;
+; -0.728 ; Ai[3]     ; onebitfullcomparator_vh:u3|Zo ; Ai[3]        ; Ai[3]       ; 0.000        ; 2.869      ; 2.141      ;
+; -0.728 ; Ai[3]     ; onebitfullcomparator_vh:u3|Xo ; Ai[3]        ; Ai[3]       ; 0.000        ; 2.869      ; 2.141      ;
+; -0.241 ; Ai[3]     ; onebitfullcomparator_vh:u3|Yo ; Ai[3]        ; Ai[3]       ; -0.500       ; 2.871      ; 2.130      ;
+; -0.228 ; Ai[3]     ; onebitfullcomparator_vh:u3|Zo ; Ai[3]        ; Ai[3]       ; -0.500       ; 2.869      ; 2.141      ;
+; -0.228 ; Ai[3]     ; onebitfullcomparator_vh:u3|Xo ; Ai[3]        ; Ai[3]       ; -0.500       ; 2.869      ; 2.141      ;
++--------+-----------+-------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'Ai[2]'                                                                                                                     ;
++--------+-------------------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                     ; To Node                       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.710 ; Ai[2]                         ; onebitfullcomparator_vh:u2|Xo ; Ai[2]        ; Ai[2]       ; 0.000        ; 2.969      ; 2.259      ;
+; -0.675 ; Ai[2]                         ; onebitfullcomparator_vh:u2|Yo ; Ai[2]        ; Ai[2]       ; 0.000        ; 3.111      ; 2.436      ;
+; -0.669 ; Ai[2]                         ; onebitfullcomparator_vh:u2|Zo ; Ai[2]        ; Ai[2]       ; 0.000        ; 3.110      ; 2.441      ;
+; -0.210 ; Ai[2]                         ; onebitfullcomparator_vh:u2|Xo ; Ai[2]        ; Ai[2]       ; -0.500       ; 2.969      ; 2.259      ;
+; -0.175 ; Ai[2]                         ; onebitfullcomparator_vh:u2|Yo ; Ai[2]        ; Ai[2]       ; -0.500       ; 3.111      ; 2.436      ;
+; -0.169 ; Ai[2]                         ; onebitfullcomparator_vh:u2|Zo ; Ai[2]        ; Ai[2]       ; -0.500       ; 3.110      ; 2.441      ;
+; 0.733  ; onebitfullcomparator_vh:u3|Zo ; onebitfullcomparator_vh:u2|Xo ; Ai[3]        ; Ai[2]       ; 0.000        ; 0.100      ; 0.833      ;
+; 0.769  ; onebitfullcomparator_vh:u3|Zo ; onebitfullcomparator_vh:u2|Yo ; Ai[3]        ; Ai[2]       ; 0.000        ; 0.242      ; 1.011      ;
+; 0.774  ; onebitfullcomparator_vh:u3|Zo ; onebitfullcomparator_vh:u2|Zo ; Ai[3]        ; Ai[2]       ; 0.000        ; 0.241      ; 1.015      ;
+; 1.003  ; onebitfullcomparator_vh:u3|Yo ; onebitfullcomparator_vh:u2|Xo ; Ai[3]        ; Ai[2]       ; 0.000        ; 0.098      ; 1.101      ;
+; 1.040  ; onebitfullcomparator_vh:u3|Yo ; onebitfullcomparator_vh:u2|Yo ; Ai[3]        ; Ai[2]       ; 0.000        ; 0.240      ; 1.280      ;
++--------+-------------------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'Ai[0]'                                                                        ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                        ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; Ai[0] ; Rise       ; Ai[0]                         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[0] ; Rise       ; Ai[0]|combout                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[0] ; Rise       ; Ai[0]|combout                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[0] ; Fall       ; onebitfullcomparator_vh:u0|Xo ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[0] ; Fall       ; onebitfullcomparator_vh:u0|Xo ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[0] ; Fall       ; onebitfullcomparator_vh:u0|Yo ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[0] ; Fall       ; onebitfullcomparator_vh:u0|Yo ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[0] ; Fall       ; onebitfullcomparator_vh:u0|Zo ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[0] ; Fall       ; onebitfullcomparator_vh:u0|Zo ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[0] ; Rise       ; u0|Xo|datad                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[0] ; Rise       ; u0|Xo|datad                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[0] ; Rise       ; u0|Xo~2clkctrl|inclk[0]       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[0] ; Rise       ; u0|Xo~2clkctrl|inclk[0]       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[0] ; Rise       ; u0|Xo~2clkctrl|outclk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[0] ; Rise       ; u0|Xo~2clkctrl|outclk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[0] ; Rise       ; u0|Xo~2|combout               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[0] ; Rise       ; u0|Xo~2|combout               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[0] ; Rise       ; u0|Xo~2|datad                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[0] ; Rise       ; u0|Xo~2|datad                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[0] ; Rise       ; u0|Yo|datad                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[0] ; Rise       ; u0|Yo|datad                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[0] ; Rise       ; u0|Zo|datad                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[0] ; Rise       ; u0|Zo|datad                   ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'Ai[1]'                                                                        ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                        ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------+
+; -1.222 ; 1.000        ; 2.222          ; Port Rate        ; Ai[1] ; Rise       ; Ai[1]                         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[1] ; Rise       ; Ai[1]|combout                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[1] ; Rise       ; Ai[1]|combout                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[1] ; Fall       ; onebitfullcomparator_vh:u1|Xo ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[1] ; Fall       ; onebitfullcomparator_vh:u1|Xo ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[1] ; Fall       ; onebitfullcomparator_vh:u1|Yo ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[1] ; Fall       ; onebitfullcomparator_vh:u1|Yo ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[1] ; Fall       ; onebitfullcomparator_vh:u1|Zo ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[1] ; Fall       ; onebitfullcomparator_vh:u1|Zo ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[1] ; Rise       ; u1|Xo|datac                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[1] ; Rise       ; u1|Xo|datac                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[1] ; Rise       ; u1|Xo~0|combout               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[1] ; Rise       ; u1|Xo~0|combout               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[1] ; Rise       ; u1|Xo~0|datab                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[1] ; Rise       ; u1|Xo~0|datab                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[1] ; Rise       ; u1|Xo~1|combout               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[1] ; Rise       ; u1|Xo~1|combout               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[1] ; Rise       ; u1|Xo~1|datac                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[1] ; Rise       ; u1|Xo~1|datac                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[1] ; Rise       ; u1|Yo|datac                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[1] ; Rise       ; u1|Yo|datac                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[1] ; Rise       ; u1|Zo|datac                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[1] ; Rise       ; u1|Zo|datac                   ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'Ai[2]'                                                                        ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                        ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------+
+; -1.222 ; 1.000        ; 2.222          ; Port Rate        ; Ai[2] ; Rise       ; Ai[2]                         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[2] ; Rise       ; Ai[2]|combout                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[2] ; Rise       ; Ai[2]|combout                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[2] ; Fall       ; onebitfullcomparator_vh:u2|Xo ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[2] ; Fall       ; onebitfullcomparator_vh:u2|Xo ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[2] ; Fall       ; onebitfullcomparator_vh:u2|Yo ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[2] ; Fall       ; onebitfullcomparator_vh:u2|Yo ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[2] ; Fall       ; onebitfullcomparator_vh:u2|Zo ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[2] ; Fall       ; onebitfullcomparator_vh:u2|Zo ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[2] ; Rise       ; u2|Xo|datac                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[2] ; Rise       ; u2|Xo|datac                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[2] ; Rise       ; u2|Xo~0|combout               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[2] ; Rise       ; u2|Xo~0|combout               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[2] ; Rise       ; u2|Xo~0|datac                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[2] ; Rise       ; u2|Xo~0|datac                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[2] ; Rise       ; u2|Xo~1|combout               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[2] ; Rise       ; u2|Xo~1|combout               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[2] ; Rise       ; u2|Xo~1|datad                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[2] ; Rise       ; u2|Xo~1|datad                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[2] ; Rise       ; u2|Yo|datac                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[2] ; Rise       ; u2|Yo|datac                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[2] ; Rise       ; u2|Zo|datac                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[2] ; Rise       ; u2|Zo|datac                   ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'Ai[3]'                                                                        ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                        ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------+
+; -1.222 ; 1.000        ; 2.222          ; Port Rate        ; Ai[3] ; Rise       ; Ai[3]                         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[3] ; Rise       ; Ai[3]|combout                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[3] ; Rise       ; Ai[3]|combout                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[3] ; Fall       ; onebitfullcomparator_vh:u3|Xo ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[3] ; Fall       ; onebitfullcomparator_vh:u3|Xo ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[3] ; Fall       ; onebitfullcomparator_vh:u3|Yo ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[3] ; Fall       ; onebitfullcomparator_vh:u3|Yo ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[3] ; Fall       ; onebitfullcomparator_vh:u3|Zo ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[3] ; Fall       ; onebitfullcomparator_vh:u3|Zo ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[3] ; Rise       ; u3|Xo|datac                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[3] ; Rise       ; u3|Xo|datac                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[3] ; Rise       ; u3|Xo~0|combout               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[3] ; Rise       ; u3|Xo~0|combout               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[3] ; Rise       ; u3|Xo~0|datad                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[3] ; Rise       ; u3|Xo~0|datad                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[3] ; Rise       ; u3|Xo~1|combout               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[3] ; Rise       ; u3|Xo~1|combout               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[3] ; Rise       ; u3|Xo~1|datad                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[3] ; Rise       ; u3|Xo~1|datad                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[3] ; Rise       ; u3|Yo|datac                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[3] ; Rise       ; u3|Yo|datac                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[3] ; Rise       ; u3|Zo|datac                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[3] ; Rise       ; u3|Zo|datac                   ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; Ai[*]     ; Ai[0]      ; 0.370 ; 0.370 ; Fall       ; Ai[0]           ;
+;  Ai[0]    ; Ai[0]      ; 0.370 ; 0.370 ; Fall       ; Ai[0]           ;
+; Bi[*]     ; Ai[0]      ; 0.658 ; 0.658 ; Fall       ; Ai[0]           ;
+;  Bi[0]    ; Ai[0]      ; 0.658 ; 0.658 ; Fall       ; Ai[0]           ;
+; Ai[*]     ; Ai[1]      ; 0.395 ; 0.395 ; Fall       ; Ai[1]           ;
+;  Ai[1]    ; Ai[1]      ; 0.395 ; 0.395 ; Fall       ; Ai[1]           ;
+; Bi[*]     ; Ai[1]      ; 4.212 ; 4.212 ; Fall       ; Ai[1]           ;
+;  Bi[1]    ; Ai[1]      ; 4.212 ; 4.212 ; Fall       ; Ai[1]           ;
+; Ai[*]     ; Ai[2]      ; 0.334 ; 0.334 ; Fall       ; Ai[2]           ;
+;  Ai[2]    ; Ai[2]      ; 0.334 ; 0.334 ; Fall       ; Ai[2]           ;
+; Bi[*]     ; Ai[2]      ; 4.801 ; 4.801 ; Fall       ; Ai[2]           ;
+;  Bi[2]    ; Ai[2]      ; 4.801 ; 4.801 ; Fall       ; Ai[2]           ;
+; Ai[*]     ; Ai[3]      ; 0.269 ; 0.269 ; Fall       ; Ai[3]           ;
+;  Ai[3]    ; Ai[3]      ; 0.269 ; 0.269 ; Fall       ; Ai[3]           ;
+; Bi[*]     ; Ai[3]      ; 4.690 ; 4.690 ; Fall       ; Ai[3]           ;
+;  Bi[3]    ; Ai[3]      ; 4.690 ; 4.690 ; Fall       ; Ai[3]           ;
+; Yif       ; Ai[3]      ; 4.769 ; 4.769 ; Fall       ; Ai[3]           ;
+; Zif       ; Ai[3]      ; 4.505 ; 4.505 ; Fall       ; Ai[3]           ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; Ai[*]     ; Ai[0]      ; 0.769  ; 0.769  ; Fall       ; Ai[0]           ;
+;  Ai[0]    ; Ai[0]      ; 0.769  ; 0.769  ; Fall       ; Ai[0]           ;
+; Bi[*]     ; Ai[0]      ; 0.477  ; 0.477  ; Fall       ; Ai[0]           ;
+;  Bi[0]    ; Ai[0]      ; 0.477  ; 0.477  ; Fall       ; Ai[0]           ;
+; Ai[*]     ; Ai[1]      ; 0.766  ; 0.766  ; Fall       ; Ai[1]           ;
+;  Ai[1]    ; Ai[1]      ; 0.766  ; 0.766  ; Fall       ; Ai[1]           ;
+; Bi[*]     ; Ai[1]      ; -3.169 ; -3.169 ; Fall       ; Ai[1]           ;
+;  Bi[1]    ; Ai[1]      ; -3.169 ; -3.169 ; Fall       ; Ai[1]           ;
+; Ai[*]     ; Ai[2]      ; 0.710  ; 0.710  ; Fall       ; Ai[2]           ;
+;  Ai[2]    ; Ai[2]      ; 0.710  ; 0.710  ; Fall       ; Ai[2]           ;
+; Bi[*]     ; Ai[2]      ; -3.543 ; -3.543 ; Fall       ; Ai[2]           ;
+;  Bi[2]    ; Ai[2]      ; -3.543 ; -3.543 ; Fall       ; Ai[2]           ;
+; Ai[*]     ; Ai[3]      ; 0.741  ; 0.741  ; Fall       ; Ai[3]           ;
+;  Ai[3]    ; Ai[3]      ; 0.741  ; 0.741  ; Fall       ; Ai[3]           ;
+; Bi[*]     ; Ai[3]      ; -3.648 ; -3.648 ; Fall       ; Ai[3]           ;
+;  Bi[3]    ; Ai[3]      ; -3.648 ; -3.648 ; Fall       ; Ai[3]           ;
+; Yif       ; Ai[3]      ; -3.789 ; -3.789 ; Fall       ; Ai[3]           ;
+; Zif       ; Ai[3]      ; -3.494 ; -3.494 ; Fall       ; Ai[3]           ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; Xof       ; Ai[0]      ; 8.757 ; 8.757 ; Fall       ; Ai[0]           ;
+; Yof       ; Ai[0]      ; 8.805 ; 8.805 ; Fall       ; Ai[0]           ;
+; Zof       ; Ai[0]      ; 8.806 ; 8.806 ; Fall       ; Ai[0]           ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; Xof       ; Ai[0]      ; 8.757 ; 8.757 ; Fall       ; Ai[0]           ;
+; Yof       ; Ai[0]      ; 8.805 ; 8.805 ; Fall       ; Ai[0]           ;
+; Zof       ; Ai[0]      ; 8.806 ; 8.806 ; Fall       ; Ai[0]           ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------+
+; Fast Model Setup Summary      ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; Ai[2] ; 0.119 ; 0.000         ;
+; Ai[1] ; 0.237 ; 0.000         ;
+; Ai[3] ; 0.396 ; 0.000         ;
+; Ai[0] ; 0.588 ; 0.000         ;
++-------+-------+---------------+
+
+
++--------------------------------+
+; Fast Model Hold Summary        ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; Ai[0] ; -0.863 ; -2.567        ;
+; Ai[1] ; -0.338 ; -0.853        ;
+; Ai[3] ; -0.318 ; -0.936        ;
+; Ai[2] ; -0.296 ; -0.870        ;
++-------+--------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; Ai[0] ; -1.380 ; -1.380                ;
+; Ai[1] ; -1.222 ; -1.222                ;
+; Ai[2] ; -1.222 ; -1.222                ;
+; Ai[3] ; -1.222 ; -1.222                ;
++-------+--------+-----------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'Ai[2]'                                                                                                                   ;
++-------+-------------------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                     ; To Node                       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.119 ; onebitfullcomparator_vh:u3|Yo ; onebitfullcomparator_vh:u2|Yo ; Ai[3]        ; Ai[2]       ; 1.000        ; 0.089      ; 0.550      ;
+; 0.161 ; onebitfullcomparator_vh:u3|Yo ; onebitfullcomparator_vh:u2|Xo ; Ai[3]        ; Ai[2]       ; 1.000        ; 0.020      ; 0.470      ;
+; 0.238 ; onebitfullcomparator_vh:u3|Zo ; onebitfullcomparator_vh:u2|Yo ; Ai[3]        ; Ai[2]       ; 1.000        ; 0.091      ; 0.433      ;
+; 0.252 ; onebitfullcomparator_vh:u3|Zo ; onebitfullcomparator_vh:u2|Zo ; Ai[3]        ; Ai[2]       ; 1.000        ; 0.090      ; 0.437      ;
+; 0.277 ; onebitfullcomparator_vh:u3|Zo ; onebitfullcomparator_vh:u2|Xo ; Ai[3]        ; Ai[2]       ; 1.000        ; 0.022      ; 0.356      ;
+; 0.368 ; Ai[2]                         ; onebitfullcomparator_vh:u2|Yo ; Ai[2]        ; Ai[2]       ; 0.500        ; 1.487      ; 1.199      ;
+; 0.385 ; Ai[2]                         ; onebitfullcomparator_vh:u2|Zo ; Ai[2]        ; Ai[2]       ; 0.500        ; 1.486      ; 1.200      ;
+; 0.407 ; Ai[2]                         ; onebitfullcomparator_vh:u2|Xo ; Ai[2]        ; Ai[2]       ; 0.500        ; 1.418      ; 1.122      ;
+; 0.868 ; Ai[2]                         ; onebitfullcomparator_vh:u2|Yo ; Ai[2]        ; Ai[2]       ; 1.000        ; 1.487      ; 1.199      ;
+; 0.885 ; Ai[2]                         ; onebitfullcomparator_vh:u2|Zo ; Ai[2]        ; Ai[2]       ; 1.000        ; 1.486      ; 1.200      ;
+; 0.907 ; Ai[2]                         ; onebitfullcomparator_vh:u2|Xo ; Ai[2]        ; Ai[2]       ; 1.000        ; 1.418      ; 1.122      ;
++-------+-------------------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'Ai[1]'                                                                                                                   ;
++-------+-------------------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                     ; To Node                       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.237 ; onebitfullcomparator_vh:u2|Yo ; onebitfullcomparator_vh:u1|Yo ; Ai[2]        ; Ai[1]       ; 1.000        ; 0.073      ; 0.435      ;
+; 0.248 ; onebitfullcomparator_vh:u2|Yo ; onebitfullcomparator_vh:u1|Xo ; Ai[2]        ; Ai[1]       ; 1.000        ; 0.066      ; 0.404      ;
+; 0.306 ; onebitfullcomparator_vh:u2|Zo ; onebitfullcomparator_vh:u1|Xo ; Ai[2]        ; Ai[1]       ; 1.000        ; 0.067      ; 0.347      ;
+; 0.316 ; onebitfullcomparator_vh:u2|Zo ; onebitfullcomparator_vh:u1|Yo ; Ai[2]        ; Ai[1]       ; 1.000        ; 0.074      ; 0.357      ;
+; 0.319 ; onebitfullcomparator_vh:u2|Zo ; onebitfullcomparator_vh:u1|Zo ; Ai[2]        ; Ai[1]       ; 1.000        ; 0.067      ; 0.346      ;
+; 0.338 ; Ai[1]                         ; onebitfullcomparator_vh:u1|Xo ; Ai[1]        ; Ai[1]       ; 0.500        ; 1.553      ; 1.301      ;
+; 0.362 ; Ai[1]                         ; onebitfullcomparator_vh:u1|Yo ; Ai[1]        ; Ai[1]       ; 0.500        ; 1.560      ; 1.297      ;
+; 0.436 ; Ai[1]                         ; onebitfullcomparator_vh:u1|Zo ; Ai[1]        ; Ai[1]       ; 0.500        ; 1.553      ; 1.215      ;
+; 0.838 ; Ai[1]                         ; onebitfullcomparator_vh:u1|Xo ; Ai[1]        ; Ai[1]       ; 1.000        ; 1.553      ; 1.301      ;
+; 0.862 ; Ai[1]                         ; onebitfullcomparator_vh:u1|Yo ; Ai[1]        ; Ai[1]       ; 1.000        ; 1.560      ; 1.297      ;
+; 0.936 ; Ai[1]                         ; onebitfullcomparator_vh:u1|Zo ; Ai[1]        ; Ai[1]       ; 1.000        ; 1.553      ; 1.215      ;
++-------+-------------------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'Ai[3]'                                                                                               ;
++-------+-----------+-------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node ; To Node                       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------+-------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.396 ; Ai[3]     ; onebitfullcomparator_vh:u3|Zo ; Ai[3]        ; Ai[3]       ; 0.500        ; 1.396      ; 1.088      ;
+; 0.411 ; Ai[3]     ; onebitfullcomparator_vh:u3|Xo ; Ai[3]        ; Ai[3]       ; 0.500        ; 1.396      ; 1.086      ;
+; 0.416 ; Ai[3]     ; onebitfullcomparator_vh:u3|Yo ; Ai[3]        ; Ai[3]       ; 0.500        ; 1.398      ; 1.080      ;
+; 0.896 ; Ai[3]     ; onebitfullcomparator_vh:u3|Zo ; Ai[3]        ; Ai[3]       ; 1.000        ; 1.396      ; 1.088      ;
+; 0.911 ; Ai[3]     ; onebitfullcomparator_vh:u3|Xo ; Ai[3]        ; Ai[3]       ; 1.000        ; 1.396      ; 1.086      ;
+; 0.916 ; Ai[3]     ; onebitfullcomparator_vh:u3|Yo ; Ai[3]        ; Ai[3]       ; 1.000        ; 1.398      ; 1.080      ;
++-------+-----------+-------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'Ai[0]'                                                                                                                   ;
++-------+-------------------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                     ; To Node                       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.588 ; Ai[0]                         ; onebitfullcomparator_vh:u0|Zo ; Ai[0]        ; Ai[0]       ; 0.500        ; 2.880      ; 2.320      ;
+; 0.722 ; Ai[0]                         ; onebitfullcomparator_vh:u0|Xo ; Ai[0]        ; Ai[0]       ; 0.500        ; 2.879      ; 2.303      ;
+; 0.784 ; Ai[0]                         ; onebitfullcomparator_vh:u0|Yo ; Ai[0]        ; Ai[0]       ; 0.500        ; 2.879      ; 2.312      ;
+; 1.088 ; Ai[0]                         ; onebitfullcomparator_vh:u0|Zo ; Ai[0]        ; Ai[0]       ; 1.000        ; 2.880      ; 2.320      ;
+; 1.222 ; Ai[0]                         ; onebitfullcomparator_vh:u0|Xo ; Ai[0]        ; Ai[0]       ; 1.000        ; 2.879      ; 2.303      ;
+; 1.284 ; Ai[0]                         ; onebitfullcomparator_vh:u0|Yo ; Ai[0]        ; Ai[0]       ; 1.000        ; 2.879      ; 2.312      ;
+; 1.374 ; onebitfullcomparator_vh:u1|Zo ; onebitfullcomparator_vh:u0|Zo ; Ai[1]        ; Ai[0]       ; 1.000        ; 1.327      ; 0.481      ;
+; 1.384 ; onebitfullcomparator_vh:u1|Yo ; onebitfullcomparator_vh:u0|Xo ; Ai[1]        ; Ai[0]       ; 1.000        ; 1.319      ; 0.581      ;
+; 1.445 ; onebitfullcomparator_vh:u1|Yo ; onebitfullcomparator_vh:u0|Yo ; Ai[1]        ; Ai[0]       ; 1.000        ; 1.319      ; 0.591      ;
+; 1.509 ; onebitfullcomparator_vh:u1|Zo ; onebitfullcomparator_vh:u0|Xo ; Ai[1]        ; Ai[0]       ; 1.000        ; 1.326      ; 0.463      ;
+; 1.575 ; onebitfullcomparator_vh:u1|Zo ; onebitfullcomparator_vh:u0|Yo ; Ai[1]        ; Ai[0]       ; 1.000        ; 1.326      ; 0.468      ;
++-------+-------------------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'Ai[0]'                                                                                                                     ;
++--------+-------------------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                     ; To Node                       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.863 ; onebitfullcomparator_vh:u1|Zo ; onebitfullcomparator_vh:u0|Xo ; Ai[1]        ; Ai[0]       ; 0.000        ; 1.326      ; 0.463      ;
+; -0.858 ; onebitfullcomparator_vh:u1|Zo ; onebitfullcomparator_vh:u0|Yo ; Ai[1]        ; Ai[0]       ; 0.000        ; 1.326      ; 0.468      ;
+; -0.846 ; onebitfullcomparator_vh:u1|Zo ; onebitfullcomparator_vh:u0|Zo ; Ai[1]        ; Ai[0]       ; 0.000        ; 1.327      ; 0.481      ;
+; -0.738 ; onebitfullcomparator_vh:u1|Yo ; onebitfullcomparator_vh:u0|Xo ; Ai[1]        ; Ai[0]       ; 0.000        ; 1.319      ; 0.581      ;
+; -0.728 ; onebitfullcomparator_vh:u1|Yo ; onebitfullcomparator_vh:u0|Yo ; Ai[1]        ; Ai[0]       ; 0.000        ; 1.319      ; 0.591      ;
+; -0.576 ; Ai[0]                         ; onebitfullcomparator_vh:u0|Xo ; Ai[0]        ; Ai[0]       ; 0.000        ; 2.879      ; 2.303      ;
+; -0.567 ; Ai[0]                         ; onebitfullcomparator_vh:u0|Yo ; Ai[0]        ; Ai[0]       ; 0.000        ; 2.879      ; 2.312      ;
+; -0.560 ; Ai[0]                         ; onebitfullcomparator_vh:u0|Zo ; Ai[0]        ; Ai[0]       ; 0.000        ; 2.880      ; 2.320      ;
+; -0.076 ; Ai[0]                         ; onebitfullcomparator_vh:u0|Xo ; Ai[0]        ; Ai[0]       ; -0.500       ; 2.879      ; 2.303      ;
+; -0.067 ; Ai[0]                         ; onebitfullcomparator_vh:u0|Yo ; Ai[0]        ; Ai[0]       ; -0.500       ; 2.879      ; 2.312      ;
+; -0.060 ; Ai[0]                         ; onebitfullcomparator_vh:u0|Zo ; Ai[0]        ; Ai[0]       ; -0.500       ; 2.880      ; 2.320      ;
++--------+-------------------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'Ai[1]'                                                                                                                     ;
++--------+-------------------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                     ; To Node                       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.338 ; Ai[1]                         ; onebitfullcomparator_vh:u1|Zo ; Ai[1]        ; Ai[1]       ; 0.000        ; 1.553      ; 1.215      ;
+; -0.263 ; Ai[1]                         ; onebitfullcomparator_vh:u1|Yo ; Ai[1]        ; Ai[1]       ; 0.000        ; 1.560      ; 1.297      ;
+; -0.252 ; Ai[1]                         ; onebitfullcomparator_vh:u1|Xo ; Ai[1]        ; Ai[1]       ; 0.000        ; 1.553      ; 1.301      ;
+; 0.162  ; Ai[1]                         ; onebitfullcomparator_vh:u1|Zo ; Ai[1]        ; Ai[1]       ; -0.500       ; 1.553      ; 1.215      ;
+; 0.237  ; Ai[1]                         ; onebitfullcomparator_vh:u1|Yo ; Ai[1]        ; Ai[1]       ; -0.500       ; 1.560      ; 1.297      ;
+; 0.248  ; Ai[1]                         ; onebitfullcomparator_vh:u1|Xo ; Ai[1]        ; Ai[1]       ; -0.500       ; 1.553      ; 1.301      ;
+; 0.279  ; onebitfullcomparator_vh:u2|Zo ; onebitfullcomparator_vh:u1|Zo ; Ai[2]        ; Ai[1]       ; 0.000        ; 0.067      ; 0.346      ;
+; 0.280  ; onebitfullcomparator_vh:u2|Zo ; onebitfullcomparator_vh:u1|Xo ; Ai[2]        ; Ai[1]       ; 0.000        ; 0.067      ; 0.347      ;
+; 0.283  ; onebitfullcomparator_vh:u2|Zo ; onebitfullcomparator_vh:u1|Yo ; Ai[2]        ; Ai[1]       ; 0.000        ; 0.074      ; 0.357      ;
+; 0.338  ; onebitfullcomparator_vh:u2|Yo ; onebitfullcomparator_vh:u1|Xo ; Ai[2]        ; Ai[1]       ; 0.000        ; 0.066      ; 0.404      ;
+; 0.362  ; onebitfullcomparator_vh:u2|Yo ; onebitfullcomparator_vh:u1|Yo ; Ai[2]        ; Ai[1]       ; 0.000        ; 0.073      ; 0.435      ;
++--------+-------------------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'Ai[3]'                                                                                                 ;
++--------+-----------+-------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node ; To Node                       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------+-------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.318 ; Ai[3]     ; onebitfullcomparator_vh:u3|Yo ; Ai[3]        ; Ai[3]       ; 0.000        ; 1.398      ; 1.080      ;
+; -0.310 ; Ai[3]     ; onebitfullcomparator_vh:u3|Xo ; Ai[3]        ; Ai[3]       ; 0.000        ; 1.396      ; 1.086      ;
+; -0.308 ; Ai[3]     ; onebitfullcomparator_vh:u3|Zo ; Ai[3]        ; Ai[3]       ; 0.000        ; 1.396      ; 1.088      ;
+; 0.182  ; Ai[3]     ; onebitfullcomparator_vh:u3|Yo ; Ai[3]        ; Ai[3]       ; -0.500       ; 1.398      ; 1.080      ;
+; 0.190  ; Ai[3]     ; onebitfullcomparator_vh:u3|Xo ; Ai[3]        ; Ai[3]       ; -0.500       ; 1.396      ; 1.086      ;
+; 0.192  ; Ai[3]     ; onebitfullcomparator_vh:u3|Zo ; Ai[3]        ; Ai[3]       ; -0.500       ; 1.396      ; 1.088      ;
++--------+-----------+-------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'Ai[2]'                                                                                                                     ;
++--------+-------------------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                     ; To Node                       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.296 ; Ai[2]                         ; onebitfullcomparator_vh:u2|Xo ; Ai[2]        ; Ai[2]       ; 0.000        ; 1.418      ; 1.122      ;
+; -0.288 ; Ai[2]                         ; onebitfullcomparator_vh:u2|Yo ; Ai[2]        ; Ai[2]       ; 0.000        ; 1.487      ; 1.199      ;
+; -0.286 ; Ai[2]                         ; onebitfullcomparator_vh:u2|Zo ; Ai[2]        ; Ai[2]       ; 0.000        ; 1.486      ; 1.200      ;
+; 0.204  ; Ai[2]                         ; onebitfullcomparator_vh:u2|Xo ; Ai[2]        ; Ai[2]       ; -0.500       ; 1.418      ; 1.122      ;
+; 0.212  ; Ai[2]                         ; onebitfullcomparator_vh:u2|Yo ; Ai[2]        ; Ai[2]       ; -0.500       ; 1.487      ; 1.199      ;
+; 0.214  ; Ai[2]                         ; onebitfullcomparator_vh:u2|Zo ; Ai[2]        ; Ai[2]       ; -0.500       ; 1.486      ; 1.200      ;
+; 0.334  ; onebitfullcomparator_vh:u3|Zo ; onebitfullcomparator_vh:u2|Xo ; Ai[3]        ; Ai[2]       ; 0.000        ; 0.022      ; 0.356      ;
+; 0.342  ; onebitfullcomparator_vh:u3|Zo ; onebitfullcomparator_vh:u2|Yo ; Ai[3]        ; Ai[2]       ; 0.000        ; 0.091      ; 0.433      ;
+; 0.347  ; onebitfullcomparator_vh:u3|Zo ; onebitfullcomparator_vh:u2|Zo ; Ai[3]        ; Ai[2]       ; 0.000        ; 0.090      ; 0.437      ;
+; 0.450  ; onebitfullcomparator_vh:u3|Yo ; onebitfullcomparator_vh:u2|Xo ; Ai[3]        ; Ai[2]       ; 0.000        ; 0.020      ; 0.470      ;
+; 0.461  ; onebitfullcomparator_vh:u3|Yo ; onebitfullcomparator_vh:u2|Yo ; Ai[3]        ; Ai[2]       ; 0.000        ; 0.089      ; 0.550      ;
++--------+-------------------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'Ai[0]'                                                                        ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                        ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; Ai[0] ; Rise       ; Ai[0]                         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[0] ; Rise       ; Ai[0]|combout                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[0] ; Rise       ; Ai[0]|combout                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[0] ; Fall       ; onebitfullcomparator_vh:u0|Xo ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[0] ; Fall       ; onebitfullcomparator_vh:u0|Xo ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[0] ; Fall       ; onebitfullcomparator_vh:u0|Yo ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[0] ; Fall       ; onebitfullcomparator_vh:u0|Yo ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[0] ; Fall       ; onebitfullcomparator_vh:u0|Zo ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[0] ; Fall       ; onebitfullcomparator_vh:u0|Zo ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[0] ; Rise       ; u0|Xo|datad                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[0] ; Rise       ; u0|Xo|datad                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[0] ; Rise       ; u0|Xo~2clkctrl|inclk[0]       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[0] ; Rise       ; u0|Xo~2clkctrl|inclk[0]       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[0] ; Rise       ; u0|Xo~2clkctrl|outclk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[0] ; Rise       ; u0|Xo~2clkctrl|outclk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[0] ; Rise       ; u0|Xo~2|combout               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[0] ; Rise       ; u0|Xo~2|combout               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[0] ; Rise       ; u0|Xo~2|datad                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[0] ; Rise       ; u0|Xo~2|datad                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[0] ; Rise       ; u0|Yo|datad                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[0] ; Rise       ; u0|Yo|datad                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[0] ; Rise       ; u0|Zo|datad                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[0] ; Rise       ; u0|Zo|datad                   ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'Ai[1]'                                                                        ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                        ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------+
+; -1.222 ; 1.000        ; 2.222          ; Port Rate        ; Ai[1] ; Rise       ; Ai[1]                         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[1] ; Rise       ; Ai[1]|combout                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[1] ; Rise       ; Ai[1]|combout                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[1] ; Fall       ; onebitfullcomparator_vh:u1|Xo ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[1] ; Fall       ; onebitfullcomparator_vh:u1|Xo ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[1] ; Fall       ; onebitfullcomparator_vh:u1|Yo ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[1] ; Fall       ; onebitfullcomparator_vh:u1|Yo ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[1] ; Fall       ; onebitfullcomparator_vh:u1|Zo ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[1] ; Fall       ; onebitfullcomparator_vh:u1|Zo ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[1] ; Rise       ; u1|Xo|datac                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[1] ; Rise       ; u1|Xo|datac                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[1] ; Rise       ; u1|Xo~0|combout               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[1] ; Rise       ; u1|Xo~0|combout               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[1] ; Rise       ; u1|Xo~0|datab                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[1] ; Rise       ; u1|Xo~0|datab                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[1] ; Rise       ; u1|Xo~1|combout               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[1] ; Rise       ; u1|Xo~1|combout               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[1] ; Rise       ; u1|Xo~1|datac                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[1] ; Rise       ; u1|Xo~1|datac                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[1] ; Rise       ; u1|Yo|datac                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[1] ; Rise       ; u1|Yo|datac                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[1] ; Rise       ; u1|Zo|datac                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[1] ; Rise       ; u1|Zo|datac                   ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'Ai[2]'                                                                        ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                        ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------+
+; -1.222 ; 1.000        ; 2.222          ; Port Rate        ; Ai[2] ; Rise       ; Ai[2]                         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[2] ; Rise       ; Ai[2]|combout                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[2] ; Rise       ; Ai[2]|combout                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[2] ; Fall       ; onebitfullcomparator_vh:u2|Xo ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[2] ; Fall       ; onebitfullcomparator_vh:u2|Xo ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[2] ; Fall       ; onebitfullcomparator_vh:u2|Yo ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[2] ; Fall       ; onebitfullcomparator_vh:u2|Yo ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[2] ; Fall       ; onebitfullcomparator_vh:u2|Zo ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[2] ; Fall       ; onebitfullcomparator_vh:u2|Zo ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[2] ; Rise       ; u2|Xo|datac                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[2] ; Rise       ; u2|Xo|datac                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[2] ; Rise       ; u2|Xo~0|combout               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[2] ; Rise       ; u2|Xo~0|combout               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[2] ; Rise       ; u2|Xo~0|datac                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[2] ; Rise       ; u2|Xo~0|datac                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[2] ; Rise       ; u2|Xo~1|combout               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[2] ; Rise       ; u2|Xo~1|combout               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[2] ; Rise       ; u2|Xo~1|datad                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[2] ; Rise       ; u2|Xo~1|datad                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[2] ; Rise       ; u2|Yo|datac                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[2] ; Rise       ; u2|Yo|datac                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[2] ; Rise       ; u2|Zo|datac                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[2] ; Rise       ; u2|Zo|datac                   ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'Ai[3]'                                                                        ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                        ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------+
+; -1.222 ; 1.000        ; 2.222          ; Port Rate        ; Ai[3] ; Rise       ; Ai[3]                         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[3] ; Rise       ; Ai[3]|combout                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[3] ; Rise       ; Ai[3]|combout                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[3] ; Fall       ; onebitfullcomparator_vh:u3|Xo ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[3] ; Fall       ; onebitfullcomparator_vh:u3|Xo ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[3] ; Fall       ; onebitfullcomparator_vh:u3|Yo ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[3] ; Fall       ; onebitfullcomparator_vh:u3|Yo ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[3] ; Fall       ; onebitfullcomparator_vh:u3|Zo ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[3] ; Fall       ; onebitfullcomparator_vh:u3|Zo ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[3] ; Rise       ; u3|Xo|datac                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[3] ; Rise       ; u3|Xo|datac                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[3] ; Rise       ; u3|Xo~0|combout               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[3] ; Rise       ; u3|Xo~0|combout               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[3] ; Rise       ; u3|Xo~0|datad                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[3] ; Rise       ; u3|Xo~0|datad                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[3] ; Rise       ; u3|Xo~1|combout               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[3] ; Rise       ; u3|Xo~1|combout               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[3] ; Rise       ; u3|Xo~1|datad                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[3] ; Rise       ; u3|Xo~1|datad                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[3] ; Rise       ; u3|Yo|datac                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[3] ; Rise       ; u3|Yo|datac                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ai[3] ; Rise       ; u3|Zo|datac                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ai[3] ; Rise       ; u3|Zo|datac                   ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; Ai[*]     ; Ai[0]      ; -0.088 ; -0.088 ; Fall       ; Ai[0]           ;
+;  Ai[0]    ; Ai[0]      ; -0.088 ; -0.088 ; Fall       ; Ai[0]           ;
+; Bi[*]     ; Ai[0]      ; 0.065  ; 0.065  ; Fall       ; Ai[0]           ;
+;  Bi[0]    ; Ai[0]      ; 0.065  ; 0.065  ; Fall       ; Ai[0]           ;
+; Ai[*]     ; Ai[1]      ; 0.162  ; 0.162  ; Fall       ; Ai[1]           ;
+;  Ai[1]    ; Ai[1]      ; 0.162  ; 0.162  ; Fall       ; Ai[1]           ;
+; Bi[*]     ; Ai[1]      ; 2.524  ; 2.524  ; Fall       ; Ai[1]           ;
+;  Bi[1]    ; Ai[1]      ; 2.524  ; 2.524  ; Fall       ; Ai[1]           ;
+; Ai[*]     ; Ai[2]      ; 0.132  ; 0.132  ; Fall       ; Ai[2]           ;
+;  Ai[2]    ; Ai[2]      ; 0.132  ; 0.132  ; Fall       ; Ai[2]           ;
+; Bi[*]     ; Ai[2]      ; 2.825  ; 2.825  ; Fall       ; Ai[2]           ;
+;  Bi[2]    ; Ai[2]      ; 2.825  ; 2.825  ; Fall       ; Ai[2]           ;
+; Ai[*]     ; Ai[3]      ; 0.104  ; 0.104  ; Fall       ; Ai[3]           ;
+;  Ai[3]    ; Ai[3]      ; 0.104  ; 0.104  ; Fall       ; Ai[3]           ;
+; Bi[*]     ; Ai[3]      ; 2.748  ; 2.748  ; Fall       ; Ai[3]           ;
+;  Bi[3]    ; Ai[3]      ; 2.748  ; 2.748  ; Fall       ; Ai[3]           ;
+; Yif       ; Ai[3]      ; 2.773  ; 2.773  ; Fall       ; Ai[3]           ;
+; Zif       ; Ai[3]      ; 2.661  ; 2.661  ; Fall       ; Ai[3]           ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; Ai[*]     ; Ai[0]      ; 0.576  ; 0.576  ; Fall       ; Ai[0]           ;
+;  Ai[0]    ; Ai[0]      ; 0.576  ; 0.576  ; Fall       ; Ai[0]           ;
+; Bi[*]     ; Ai[0]      ; 0.421  ; 0.421  ; Fall       ; Ai[0]           ;
+;  Bi[0]    ; Ai[0]      ; 0.421  ; 0.421  ; Fall       ; Ai[0]           ;
+; Ai[*]     ; Ai[1]      ; 0.338  ; 0.338  ; Fall       ; Ai[1]           ;
+;  Ai[1]    ; Ai[1]      ; 0.338  ; 0.338  ; Fall       ; Ai[1]           ;
+; Bi[*]     ; Ai[1]      ; -2.091 ; -2.091 ; Fall       ; Ai[1]           ;
+;  Bi[1]    ; Ai[1]      ; -2.091 ; -2.091 ; Fall       ; Ai[1]           ;
+; Ai[*]     ; Ai[2]      ; 0.296  ; 0.296  ; Fall       ; Ai[2]           ;
+;  Ai[2]    ; Ai[2]      ; 0.296  ; 0.296  ; Fall       ; Ai[2]           ;
+; Bi[*]     ; Ai[2]      ; -2.281 ; -2.281 ; Fall       ; Ai[2]           ;
+;  Bi[2]    ; Ai[2]      ; -2.281 ; -2.281 ; Fall       ; Ai[2]           ;
+; Ai[*]     ; Ai[3]      ; 0.318  ; 0.318  ; Fall       ; Ai[3]           ;
+;  Ai[3]    ; Ai[3]      ; 0.318  ; 0.318  ; Fall       ; Ai[3]           ;
+; Bi[*]     ; Ai[3]      ; -2.327 ; -2.327 ; Fall       ; Ai[3]           ;
+;  Bi[3]    ; Ai[3]      ; -2.327 ; -2.327 ; Fall       ; Ai[3]           ;
+; Yif       ; Ai[3]      ; -2.371 ; -2.371 ; Fall       ; Ai[3]           ;
+; Zif       ; Ai[3]      ; -2.238 ; -2.238 ; Fall       ; Ai[3]           ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; Xof       ; Ai[0]      ; 4.675 ; 4.675 ; Fall       ; Ai[0]           ;
+; Yof       ; Ai[0]      ; 4.710 ; 4.710 ; Fall       ; Ai[0]           ;
+; Zof       ; Ai[0]      ; 4.722 ; 4.722 ; Fall       ; Ai[0]           ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; Xof       ; Ai[0]      ; 4.675 ; 4.675 ; Fall       ; Ai[0]           ;
+; Yof       ; Ai[0]      ; 4.710 ; 4.710 ; Fall       ; Ai[0]           ;
+; Zof       ; Ai[0]      ; 4.722 ; 4.722 ; Fall       ; Ai[0]           ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                           ;
++------------------+--------+--------+----------+---------+---------------------+
+; Clock            ; Setup  ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+--------+--------+----------+---------+---------------------+
+; Worst-case Slack ; -1.049 ; -0.927 ; N/A      ; N/A     ; -1.380              ;
+;  Ai[0]           ; 0.130  ; -0.927 ; N/A      ; N/A     ; -1.380              ;
+;  Ai[1]           ; -0.845 ; -0.766 ; N/A      ; N/A     ; -1.222              ;
+;  Ai[2]           ; -1.049 ; -0.710 ; N/A      ; N/A     ; -1.222              ;
+;  Ai[3]           ; 0.231  ; -0.741 ; N/A      ; N/A     ; -1.222              ;
+; Design-wide TNS  ; -5.061 ; -8.992 ; 0.0      ; 0.0     ; -5.046              ;
+;  Ai[0]           ; 0.000  ; -2.760 ; N/A      ; N/A     ; -1.380              ;
+;  Ai[1]           ; -2.325 ; -1.981 ; N/A      ; N/A     ; -1.222              ;
+;  Ai[2]           ; -2.736 ; -2.054 ; N/A      ; N/A     ; -1.222              ;
+;  Ai[3]           ; 0.000  ; -2.197 ; N/A      ; N/A     ; -1.222              ;
++------------------+--------+--------+----------+---------+---------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; Ai[*]     ; Ai[0]      ; 0.370 ; 0.370 ; Fall       ; Ai[0]           ;
+;  Ai[0]    ; Ai[0]      ; 0.370 ; 0.370 ; Fall       ; Ai[0]           ;
+; Bi[*]     ; Ai[0]      ; 0.658 ; 0.658 ; Fall       ; Ai[0]           ;
+;  Bi[0]    ; Ai[0]      ; 0.658 ; 0.658 ; Fall       ; Ai[0]           ;
+; Ai[*]     ; Ai[1]      ; 0.395 ; 0.395 ; Fall       ; Ai[1]           ;
+;  Ai[1]    ; Ai[1]      ; 0.395 ; 0.395 ; Fall       ; Ai[1]           ;
+; Bi[*]     ; Ai[1]      ; 4.212 ; 4.212 ; Fall       ; Ai[1]           ;
+;  Bi[1]    ; Ai[1]      ; 4.212 ; 4.212 ; Fall       ; Ai[1]           ;
+; Ai[*]     ; Ai[2]      ; 0.334 ; 0.334 ; Fall       ; Ai[2]           ;
+;  Ai[2]    ; Ai[2]      ; 0.334 ; 0.334 ; Fall       ; Ai[2]           ;
+; Bi[*]     ; Ai[2]      ; 4.801 ; 4.801 ; Fall       ; Ai[2]           ;
+;  Bi[2]    ; Ai[2]      ; 4.801 ; 4.801 ; Fall       ; Ai[2]           ;
+; Ai[*]     ; Ai[3]      ; 0.269 ; 0.269 ; Fall       ; Ai[3]           ;
+;  Ai[3]    ; Ai[3]      ; 0.269 ; 0.269 ; Fall       ; Ai[3]           ;
+; Bi[*]     ; Ai[3]      ; 4.690 ; 4.690 ; Fall       ; Ai[3]           ;
+;  Bi[3]    ; Ai[3]      ; 4.690 ; 4.690 ; Fall       ; Ai[3]           ;
+; Yif       ; Ai[3]      ; 4.769 ; 4.769 ; Fall       ; Ai[3]           ;
+; Zif       ; Ai[3]      ; 4.505 ; 4.505 ; Fall       ; Ai[3]           ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; Ai[*]     ; Ai[0]      ; 0.769  ; 0.769  ; Fall       ; Ai[0]           ;
+;  Ai[0]    ; Ai[0]      ; 0.769  ; 0.769  ; Fall       ; Ai[0]           ;
+; Bi[*]     ; Ai[0]      ; 0.477  ; 0.477  ; Fall       ; Ai[0]           ;
+;  Bi[0]    ; Ai[0]      ; 0.477  ; 0.477  ; Fall       ; Ai[0]           ;
+; Ai[*]     ; Ai[1]      ; 0.766  ; 0.766  ; Fall       ; Ai[1]           ;
+;  Ai[1]    ; Ai[1]      ; 0.766  ; 0.766  ; Fall       ; Ai[1]           ;
+; Bi[*]     ; Ai[1]      ; -2.091 ; -2.091 ; Fall       ; Ai[1]           ;
+;  Bi[1]    ; Ai[1]      ; -2.091 ; -2.091 ; Fall       ; Ai[1]           ;
+; Ai[*]     ; Ai[2]      ; 0.710  ; 0.710  ; Fall       ; Ai[2]           ;
+;  Ai[2]    ; Ai[2]      ; 0.710  ; 0.710  ; Fall       ; Ai[2]           ;
+; Bi[*]     ; Ai[2]      ; -2.281 ; -2.281 ; Fall       ; Ai[2]           ;
+;  Bi[2]    ; Ai[2]      ; -2.281 ; -2.281 ; Fall       ; Ai[2]           ;
+; Ai[*]     ; Ai[3]      ; 0.741  ; 0.741  ; Fall       ; Ai[3]           ;
+;  Ai[3]    ; Ai[3]      ; 0.741  ; 0.741  ; Fall       ; Ai[3]           ;
+; Bi[*]     ; Ai[3]      ; -2.327 ; -2.327 ; Fall       ; Ai[3]           ;
+;  Bi[3]    ; Ai[3]      ; -2.327 ; -2.327 ; Fall       ; Ai[3]           ;
+; Yif       ; Ai[3]      ; -2.371 ; -2.371 ; Fall       ; Ai[3]           ;
+; Zif       ; Ai[3]      ; -2.238 ; -2.238 ; Fall       ; Ai[3]           ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; Xof       ; Ai[0]      ; 8.757 ; 8.757 ; Fall       ; Ai[0]           ;
+; Yof       ; Ai[0]      ; 8.805 ; 8.805 ; Fall       ; Ai[0]           ;
+; Zof       ; Ai[0]      ; 8.806 ; 8.806 ; Fall       ; Ai[0]           ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; Xof       ; Ai[0]      ; 4.675 ; 4.675 ; Fall       ; Ai[0]           ;
+; Yof       ; Ai[0]      ; 4.710 ; 4.710 ; Fall       ; Ai[0]           ;
+; Zof       ; Ai[0]      ; 4.722 ; 4.722 ; Fall       ; Ai[0]           ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; Ai[0]      ; Ai[0]    ; 0        ; 0        ; 3        ; 3        ;
+; Ai[1]      ; Ai[0]    ; 0        ; 0        ; 0        ; 5        ;
+; Ai[1]      ; Ai[1]    ; 0        ; 0        ; 3        ; 3        ;
+; Ai[2]      ; Ai[1]    ; 0        ; 0        ; 0        ; 5        ;
+; Ai[2]      ; Ai[2]    ; 0        ; 0        ; 3        ; 3        ;
+; Ai[3]      ; Ai[2]    ; 0        ; 0        ; 0        ; 5        ;
+; Ai[3]      ; Ai[3]    ; 0        ; 0        ; 3        ; 3        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; Ai[0]      ; Ai[0]    ; 0        ; 0        ; 3        ; 3        ;
+; Ai[1]      ; Ai[0]    ; 0        ; 0        ; 0        ; 5        ;
+; Ai[1]      ; Ai[1]    ; 0        ; 0        ; 3        ; 3        ;
+; Ai[2]      ; Ai[1]    ; 0        ; 0        ; 0        ; 5        ;
+; Ai[2]      ; Ai[2]    ; 0        ; 0        ; 3        ; 3        ;
+; Ai[3]      ; Ai[2]    ; 0        ; 0        ; 0        ; 5        ;
+; Ai[3]      ; Ai[3]    ; 0        ; 0        ; 3        ; 3        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 6     ; 6    ;
+; Unconstrained Input Port Paths  ; 17    ; 17   ;
+; Unconstrained Output Ports      ; 3     ; 3    ;
+; Unconstrained Output Port Paths ; 3     ; 3    ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sat May 04 20:41:00 2019
+Info: Command: quartus_sta fourbitcomparator -c fourbitcomparator
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Warning (335093): TimeQuest Timing Analyzer is analyzing 12 combinational loops as latches.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'fourbitcomparator.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name Ai[2] Ai[2]
+    Info (332105): create_clock -period 1.000 -name Ai[3] Ai[3]
+    Info (332105): create_clock -period 1.000 -name Ai[1] Ai[1]
+    Info (332105): create_clock -period 1.000 -name Ai[0] Ai[0]
+Info (332097): The following timing edges are non-unate.  TimeQuest will assume pos-unate behavior for these edges in the clock network.
+    Info (332098): Cell: u0|Xo~2  from: datad  to: combout
+    Info (332098): Cell: u1|Xo~0  from: datab  to: combout
+    Info (332098): Cell: u2|Xo~0  from: datac  to: combout
+    Info (332098): Cell: u3|Xo~0  from: datad  to: combout
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -1.049
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.049        -2.736 Ai[2] 
+    Info (332119):    -0.845        -2.325 Ai[1] 
+    Info (332119):     0.130         0.000 Ai[0] 
+    Info (332119):     0.231         0.000 Ai[3] 
+Info (332146): Worst-case hold slack is -0.927
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.927        -2.760 Ai[0] 
+    Info (332119):    -0.766        -1.981 Ai[1] 
+    Info (332119):    -0.741        -2.197 Ai[3] 
+    Info (332119):    -0.710        -2.054 Ai[2] 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380        -1.380 Ai[0] 
+    Info (332119):    -1.222        -1.222 Ai[1] 
+    Info (332119):    -1.222        -1.222 Ai[2] 
+    Info (332119):    -1.222        -1.222 Ai[3] 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Info (332097): The following timing edges are non-unate.  TimeQuest will assume pos-unate behavior for these edges in the clock network.
+    Info (332098): Cell: u0|Xo~2  from: datad  to: combout
+    Info (332098): Cell: u1|Xo~0  from: datab  to: combout
+    Info (332098): Cell: u2|Xo~0  from: datac  to: combout
+    Info (332098): Cell: u3|Xo~0  from: datad  to: combout
+Info (332146): Worst-case setup slack is 0.119
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.119         0.000 Ai[2] 
+    Info (332119):     0.237         0.000 Ai[1] 
+    Info (332119):     0.396         0.000 Ai[3] 
+    Info (332119):     0.588         0.000 Ai[0] 
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case hold slack is -0.863
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.863        -2.567 Ai[0] 
+    Info (332119):    -0.338        -0.853 Ai[1] 
+    Info (332119):    -0.318        -0.936 Ai[3] 
+    Info (332119):    -0.296        -0.870 Ai[2] 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380        -1.380 Ai[0] 
+    Info (332119):    -1.222        -1.222 Ai[1] 
+    Info (332119):    -1.222        -1.222 Ai[2] 
+    Info (332119):    -1.222        -1.222 Ai[3] 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4567 megabytes
+    Info: Processing ended: Sat May 04 20:41:01 2019
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

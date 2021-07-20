@@ -1,0 +1,312 @@
+Simulator report for sec_gen
+Wed May 29 15:14:13 2019
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 100.0 us     ;
+; Simulation Netlist Size     ; 102 nodes    ;
+; Simulation Coverage         ;      49.50 % ;
+; Total Number of Transitions ; 70542        ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                                              ;
++--------------------------------------------------------------------------------------------+----------------------------------------------------+---------------+
+; Option                                                                                     ; Setting                                            ; Default Value ;
++--------------------------------------------------------------------------------------------+----------------------------------------------------+---------------+
+; Simulation mode                                                                            ; Functional                                         ; Timing        ;
+; Start time                                                                                 ; 0 ns                                               ; 0 ns          ;
+; Simulation results format                                                                  ; VWF                                                ;               ;
+; Vector input source                                                                        ; D:/VHDL/5_29_ex051_sec_gen/sec_gen_sw/Waveform.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                                                 ; On            ;
+; Check outputs                                                                              ; Off                                                ; Off           ;
+; Report simulation coverage                                                                 ; On                                                 ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                                                 ; On            ;
+; Display missing 1-value coverage report                                                    ; On                                                 ; On            ;
+; Display missing 0-value coverage report                                                    ; On                                                 ; On            ;
+; Detect setup and hold time violations                                                      ; Off                                                ; Off           ;
+; Detect glitches                                                                            ; Off                                                ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                                                ; Off           ;
+; Generate Signal Activity File                                                              ; Off                                                ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                                ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                                                ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                                                 ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                                         ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                                ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                                ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                                               ; Auto          ;
++--------------------------------------------------------------------------------------------+----------------------------------------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      49.50 % ;
+; Total nodes checked                                 ; 102          ;
+; Total output ports checked                          ; 101          ;
+; Total output ports with complete 1/0-value coverage ; 50           ;
+; Total output ports with no 1/0-value coverage       ; 49           ;
+; Total output ports with no 1-value coverage         ; 49           ;
+; Total output ports with no 0-value coverage         ; 51           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++----------------------------------------------------------+
+; Complete 1/0-Value Coverage                              ;
++-------------------+-------------------+------------------+
+; Node Name         ; Output Port Name  ; Output Port Type ;
++-------------------+-------------------+------------------+
+; |sec_gen|cnt~12   ; |sec_gen|cnt~12   ; out              ;
+; |sec_gen|cnt~13   ; |sec_gen|cnt~13   ; out              ;
+; |sec_gen|cnt~14   ; |sec_gen|cnt~14   ; out              ;
+; |sec_gen|cnt~15   ; |sec_gen|cnt~15   ; out              ;
+; |sec_gen|cnt~16   ; |sec_gen|cnt~16   ; out              ;
+; |sec_gen|cnt~17   ; |sec_gen|cnt~17   ; out              ;
+; |sec_gen|cnt~18   ; |sec_gen|cnt~18   ; out              ;
+; |sec_gen|cnt~19   ; |sec_gen|cnt~19   ; out              ;
+; |sec_gen|cnt~20   ; |sec_gen|cnt~20   ; out              ;
+; |sec_gen|cnt~21   ; |sec_gen|cnt~21   ; out              ;
+; |sec_gen|cnt~22   ; |sec_gen|cnt~22   ; out              ;
+; |sec_gen|cnt~23   ; |sec_gen|cnt~23   ; out              ;
+; |sec_gen|cnt~24   ; |sec_gen|cnt~24   ; out              ;
+; |sec_gen|cnt[11]  ; |sec_gen|cnt[11]  ; regout           ;
+; |sec_gen|cnt[10]  ; |sec_gen|cnt[10]  ; regout           ;
+; |sec_gen|cnt[9]   ; |sec_gen|cnt[9]   ; regout           ;
+; |sec_gen|cnt[8]   ; |sec_gen|cnt[8]   ; regout           ;
+; |sec_gen|cnt[7]   ; |sec_gen|cnt[7]   ; regout           ;
+; |sec_gen|cnt[6]   ; |sec_gen|cnt[6]   ; regout           ;
+; |sec_gen|cnt[5]   ; |sec_gen|cnt[5]   ; regout           ;
+; |sec_gen|cnt[4]   ; |sec_gen|cnt[4]   ; regout           ;
+; |sec_gen|cnt[3]   ; |sec_gen|cnt[3]   ; regout           ;
+; |sec_gen|cnt[2]   ; |sec_gen|cnt[2]   ; regout           ;
+; |sec_gen|cnt[1]   ; |sec_gen|cnt[1]   ; regout           ;
+; |sec_gen|cnt[0]   ; |sec_gen|cnt[0]   ; regout           ;
+; |sec_gen|clk      ; |sec_gen|clk      ; out              ;
+; |sec_gen|Add0~0   ; |sec_gen|Add0~0   ; out0             ;
+; |sec_gen|Add0~1   ; |sec_gen|Add0~1   ; out0             ;
+; |sec_gen|Add0~2   ; |sec_gen|Add0~2   ; out0             ;
+; |sec_gen|Add0~3   ; |sec_gen|Add0~3   ; out0             ;
+; |sec_gen|Add0~4   ; |sec_gen|Add0~4   ; out0             ;
+; |sec_gen|Add0~5   ; |sec_gen|Add0~5   ; out0             ;
+; |sec_gen|Add0~6   ; |sec_gen|Add0~6   ; out0             ;
+; |sec_gen|Add0~7   ; |sec_gen|Add0~7   ; out0             ;
+; |sec_gen|Add0~8   ; |sec_gen|Add0~8   ; out0             ;
+; |sec_gen|Add0~9   ; |sec_gen|Add0~9   ; out0             ;
+; |sec_gen|Add0~10  ; |sec_gen|Add0~10  ; out0             ;
+; |sec_gen|Add0~11  ; |sec_gen|Add0~11  ; out0             ;
+; |sec_gen|Add0~12  ; |sec_gen|Add0~12  ; out0             ;
+; |sec_gen|Add0~13  ; |sec_gen|Add0~13  ; out0             ;
+; |sec_gen|Add0~14  ; |sec_gen|Add0~14  ; out0             ;
+; |sec_gen|Add0~15  ; |sec_gen|Add0~15  ; out0             ;
+; |sec_gen|Add0~16  ; |sec_gen|Add0~16  ; out0             ;
+; |sec_gen|Add0~17  ; |sec_gen|Add0~17  ; out0             ;
+; |sec_gen|Add0~18  ; |sec_gen|Add0~18  ; out0             ;
+; |sec_gen|Add0~19  ; |sec_gen|Add0~19  ; out0             ;
+; |sec_gen|Add0~20  ; |sec_gen|Add0~20  ; out0             ;
+; |sec_gen|Add0~21  ; |sec_gen|Add0~21  ; out0             ;
+; |sec_gen|Add0~22  ; |sec_gen|Add0~22  ; out0             ;
+; |sec_gen|Equal0~0 ; |sec_gen|Equal0~0 ; out0             ;
++-------------------+-------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++--------------------------------------------------------+
+; Missing 1-Value Coverage                               ;
++------------------+------------------+------------------+
+; Node Name        ; Output Port Name ; Output Port Type ;
++------------------+------------------+------------------+
+; |sec_gen|cnt~0   ; |sec_gen|cnt~0   ; out              ;
+; |sec_gen|cnt~1   ; |sec_gen|cnt~1   ; out              ;
+; |sec_gen|cnt~2   ; |sec_gen|cnt~2   ; out              ;
+; |sec_gen|cnt~3   ; |sec_gen|cnt~3   ; out              ;
+; |sec_gen|cnt~4   ; |sec_gen|cnt~4   ; out              ;
+; |sec_gen|cnt~5   ; |sec_gen|cnt~5   ; out              ;
+; |sec_gen|cnt~6   ; |sec_gen|cnt~6   ; out              ;
+; |sec_gen|cnt~7   ; |sec_gen|cnt~7   ; out              ;
+; |sec_gen|cnt~8   ; |sec_gen|cnt~8   ; out              ;
+; |sec_gen|cnt~9   ; |sec_gen|cnt~9   ; out              ;
+; |sec_gen|cnt~10  ; |sec_gen|cnt~10  ; out              ;
+; |sec_gen|cnt~11  ; |sec_gen|cnt~11  ; out              ;
+; |sec_gen|cnt[24] ; |sec_gen|cnt[24] ; regout           ;
+; |sec_gen|cnt[23] ; |sec_gen|cnt[23] ; regout           ;
+; |sec_gen|cnt[22] ; |sec_gen|cnt[22] ; regout           ;
+; |sec_gen|cnt[21] ; |sec_gen|cnt[21] ; regout           ;
+; |sec_gen|cnt[20] ; |sec_gen|cnt[20] ; regout           ;
+; |sec_gen|cnt[19] ; |sec_gen|cnt[19] ; regout           ;
+; |sec_gen|cnt[18] ; |sec_gen|cnt[18] ; regout           ;
+; |sec_gen|cnt[17] ; |sec_gen|cnt[17] ; regout           ;
+; |sec_gen|cnt[16] ; |sec_gen|cnt[16] ; regout           ;
+; |sec_gen|cnt[15] ; |sec_gen|cnt[15] ; regout           ;
+; |sec_gen|cnt[14] ; |sec_gen|cnt[14] ; regout           ;
+; |sec_gen|cnt[13] ; |sec_gen|cnt[13] ; regout           ;
+; |sec_gen|cnt[12] ; |sec_gen|cnt[12] ; regout           ;
+; |sec_gen|Add0~23 ; |sec_gen|Add0~23 ; out0             ;
+; |sec_gen|Add0~24 ; |sec_gen|Add0~24 ; out0             ;
+; |sec_gen|Add0~25 ; |sec_gen|Add0~25 ; out0             ;
+; |sec_gen|Add0~26 ; |sec_gen|Add0~26 ; out0             ;
+; |sec_gen|Add0~27 ; |sec_gen|Add0~27 ; out0             ;
+; |sec_gen|Add0~28 ; |sec_gen|Add0~28 ; out0             ;
+; |sec_gen|Add0~29 ; |sec_gen|Add0~29 ; out0             ;
+; |sec_gen|Add0~30 ; |sec_gen|Add0~30 ; out0             ;
+; |sec_gen|Add0~31 ; |sec_gen|Add0~31 ; out0             ;
+; |sec_gen|Add0~32 ; |sec_gen|Add0~32 ; out0             ;
+; |sec_gen|Add0~33 ; |sec_gen|Add0~33 ; out0             ;
+; |sec_gen|Add0~34 ; |sec_gen|Add0~34 ; out0             ;
+; |sec_gen|Add0~35 ; |sec_gen|Add0~35 ; out0             ;
+; |sec_gen|Add0~36 ; |sec_gen|Add0~36 ; out0             ;
+; |sec_gen|Add0~37 ; |sec_gen|Add0~37 ; out0             ;
+; |sec_gen|Add0~38 ; |sec_gen|Add0~38 ; out0             ;
+; |sec_gen|Add0~39 ; |sec_gen|Add0~39 ; out0             ;
+; |sec_gen|Add0~40 ; |sec_gen|Add0~40 ; out0             ;
+; |sec_gen|Add0~41 ; |sec_gen|Add0~41 ; out0             ;
+; |sec_gen|Add0~42 ; |sec_gen|Add0~42 ; out0             ;
+; |sec_gen|Add0~43 ; |sec_gen|Add0~43 ; out0             ;
+; |sec_gen|Add0~44 ; |sec_gen|Add0~44 ; out0             ;
+; |sec_gen|Add0~45 ; |sec_gen|Add0~45 ; out0             ;
+; |sec_gen|Add0~46 ; |sec_gen|Add0~46 ; out0             ;
++------------------+------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++--------------------------------------------------------+
+; Missing 0-Value Coverage                               ;
++------------------+------------------+------------------+
+; Node Name        ; Output Port Name ; Output Port Type ;
++------------------+------------------+------------------+
+; |sec_gen|cnt~0   ; |sec_gen|cnt~0   ; out              ;
+; |sec_gen|cnt~1   ; |sec_gen|cnt~1   ; out              ;
+; |sec_gen|cnt~2   ; |sec_gen|cnt~2   ; out              ;
+; |sec_gen|cnt~3   ; |sec_gen|cnt~3   ; out              ;
+; |sec_gen|cnt~4   ; |sec_gen|cnt~4   ; out              ;
+; |sec_gen|cnt~5   ; |sec_gen|cnt~5   ; out              ;
+; |sec_gen|cnt~6   ; |sec_gen|cnt~6   ; out              ;
+; |sec_gen|cnt~7   ; |sec_gen|cnt~7   ; out              ;
+; |sec_gen|cnt~8   ; |sec_gen|cnt~8   ; out              ;
+; |sec_gen|cnt~9   ; |sec_gen|cnt~9   ; out              ;
+; |sec_gen|cnt~10  ; |sec_gen|cnt~10  ; out              ;
+; |sec_gen|cnt~11  ; |sec_gen|cnt~11  ; out              ;
+; |sec_gen|cnt[24] ; |sec_gen|cnt[24] ; regout           ;
+; |sec_gen|cnt[23] ; |sec_gen|cnt[23] ; regout           ;
+; |sec_gen|cnt[22] ; |sec_gen|cnt[22] ; regout           ;
+; |sec_gen|cnt[21] ; |sec_gen|cnt[21] ; regout           ;
+; |sec_gen|cnt[20] ; |sec_gen|cnt[20] ; regout           ;
+; |sec_gen|cnt[19] ; |sec_gen|cnt[19] ; regout           ;
+; |sec_gen|cnt[18] ; |sec_gen|cnt[18] ; regout           ;
+; |sec_gen|cnt[17] ; |sec_gen|cnt[17] ; regout           ;
+; |sec_gen|cnt[16] ; |sec_gen|cnt[16] ; regout           ;
+; |sec_gen|cnt[15] ; |sec_gen|cnt[15] ; regout           ;
+; |sec_gen|cnt[14] ; |sec_gen|cnt[14] ; regout           ;
+; |sec_gen|cnt[13] ; |sec_gen|cnt[13] ; regout           ;
+; |sec_gen|cnt[12] ; |sec_gen|cnt[12] ; regout           ;
+; |sec_gen|nrst    ; |sec_gen|nrst    ; out              ;
+; |sec_gen|sec_sig ; |sec_gen|sec_sig ; pin_out          ;
+; |sec_gen|Add0~23 ; |sec_gen|Add0~23 ; out0             ;
+; |sec_gen|Add0~24 ; |sec_gen|Add0~24 ; out0             ;
+; |sec_gen|Add0~25 ; |sec_gen|Add0~25 ; out0             ;
+; |sec_gen|Add0~26 ; |sec_gen|Add0~26 ; out0             ;
+; |sec_gen|Add0~27 ; |sec_gen|Add0~27 ; out0             ;
+; |sec_gen|Add0~28 ; |sec_gen|Add0~28 ; out0             ;
+; |sec_gen|Add0~29 ; |sec_gen|Add0~29 ; out0             ;
+; |sec_gen|Add0~30 ; |sec_gen|Add0~30 ; out0             ;
+; |sec_gen|Add0~31 ; |sec_gen|Add0~31 ; out0             ;
+; |sec_gen|Add0~32 ; |sec_gen|Add0~32 ; out0             ;
+; |sec_gen|Add0~33 ; |sec_gen|Add0~33 ; out0             ;
+; |sec_gen|Add0~34 ; |sec_gen|Add0~34 ; out0             ;
+; |sec_gen|Add0~35 ; |sec_gen|Add0~35 ; out0             ;
+; |sec_gen|Add0~36 ; |sec_gen|Add0~36 ; out0             ;
+; |sec_gen|Add0~37 ; |sec_gen|Add0~37 ; out0             ;
+; |sec_gen|Add0~38 ; |sec_gen|Add0~38 ; out0             ;
+; |sec_gen|Add0~39 ; |sec_gen|Add0~39 ; out0             ;
+; |sec_gen|Add0~40 ; |sec_gen|Add0~40 ; out0             ;
+; |sec_gen|Add0~41 ; |sec_gen|Add0~41 ; out0             ;
+; |sec_gen|Add0~42 ; |sec_gen|Add0~42 ; out0             ;
+; |sec_gen|Add0~43 ; |sec_gen|Add0~43 ; out0             ;
+; |sec_gen|Add0~44 ; |sec_gen|Add0~44 ; out0             ;
+; |sec_gen|Add0~45 ; |sec_gen|Add0~45 ; out0             ;
+; |sec_gen|Add0~46 ; |sec_gen|Add0~46 ; out0             ;
++------------------+------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Simulator
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Wed May 29 15:14:13 2019
+Info: Command: quartus_sim --simulation_results_format=VWF sec_gen -c sec_gen
+Info (324025): Using vector source file "D:/VHDL/5_29_ex051_sec_gen/sec_gen_sw/Waveform.vwf"
+Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info (310002): Simulation partitioned into 1 sub-simulations
+Info (328053): Simulation coverage is      49.50 %
+Info (328052): Number of transitions in simulation is 70542
+Info (324045): Vector file sec_gen.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II 64-Bit Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 4472 megabytes
+    Info: Processing ended: Wed May 29 15:14:13 2019
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
+
+

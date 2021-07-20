@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Dec 10 13:51:19 2019
+# Process ID: 32200
+# Current directory: D:/VHDL/project_1/project_1.runs/synth_1
+# Command line: vivado.exe -log UART_RX.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source UART_RX.tcl
+# Log file: D:/VHDL/project_1/project_1.runs/synth_1/UART_RX.vds
+# Journal file: D:/VHDL/project_1/project_1.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source UART_RX.tcl -notrace

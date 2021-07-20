@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\VHDL\5_29_ex055_DETclock\DETclock_sw\simulation\qsim
+vDETclock
+Z1 IR2CaN@cZN4nM^Z@Tmgm?10
+Z2 VVb3@fS9DF3O<BiPO<BlZ62
+Z3 dD:\VHDL\5_29_ex055_DETclock\DETclock_sw\simulation\qsim
+Z4 w1559695180
+Z5 8DETclock.vo
+Z6 FDETclock.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 o-work work -O0
+Z9 n@d@e@tclock
+!i10b 1
+Z10 !s100 [8h=h@G9e^3NoDcG2ZJQQ0
+!s85 0
+Z11 !s108 1559695182.120000
+Z12 !s107 DETclock.vo|
+Z13 !s90 -work|work|DETclock.vo|
+!s101 -O0
+vDETclock_vlg_check_tst
+!i10b 1
+!s100 i><A=JEn;<3zID`U_REO^2
+I3Qmm6IMKkHogzmee]1z`_2
+V<Z^H5jJW9Z2S;E7WW_fYi2
+R3
+Z14 w1559695179
+Z15 8DETclock.vt
+Z16 FDETclock.vt
+L0 67
+R7
+r1
+!s85 0
+31
+Z17 !s108 1559695182.525000
+Z18 !s107 DETclock.vt|
+Z19 !s90 -work|work|DETclock.vt|
+!s101 -O0
+R8
+n@d@e@tclock_vlg_check_tst
+vDETclock_vlg_sample_tst
+!i10b 1
+!s100 JgS;Q@1]HRLjWML3Si`IP2
+Id6OYY@kW@69<FNPAMP]`V2
+V<<WJJg?m`jg=AE3hJBf;U0
+R3
+R14
+R15
+R16
+L0 29
+R7
+r1
+!s85 0
+31
+R17
+R18
+R19
+!s101 -O0
+R8
+n@d@e@tclock_vlg_sample_tst
+vDETclock_vlg_vec_tst
+!i10b 1
+!s100 FLk^K8?<TXfSca9c=?iEz2
+I:RV[b`AJ:;FXO2nS_9@dI0
+VnU<UPRc9XSdIXDPUQbS?k1
+R3
+R14
+R15
+R16
+L0 981
+R7
+r1
+!s85 0
+31
+R17
+R18
+R19
+!s101 -O0
+R8
+n@d@e@tclock_vlg_vec_tst

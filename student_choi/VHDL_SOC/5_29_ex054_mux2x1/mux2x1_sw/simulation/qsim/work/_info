@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\VHDL\5_29_ex054_mux2x1\mux2x1_sw\simulation\qsim
+vmux2x1
+Z1 IYNjN:NMn`dZKR:z^oWbVk2
+Z2 VmSHeJl=0U<81?_YSno;dA0
+Z3 dD:\VHDL\5_29_ex054_mux2x1\mux2x1_sw\simulation\qsim
+Z4 w1559106003
+Z5 8mux2x1.vo
+Z6 Fmux2x1.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 o-work work -O0
+!i10b 1
+Z9 !s100 ERG]Cl_]EA8<Qb4KlPQ3H1
+!s85 0
+Z10 !s108 1559106004.084000
+Z11 !s107 mux2x1.vo|
+Z12 !s90 -work|work|mux2x1.vo|
+!s101 -O0
+vmux2x1_vlg_check_tst
+!i10b 1
+!s100 YPIS3[j9@<5R=A5@Kf^TM1
+Ih_W51F]<<oo[mVa@ci]H93
+VECo[IiF8;6UQ?hS`JZA<j3
+R3
+Z13 w1559106002
+Z14 8mux2x1.vt
+Z15 Fmux2x1.vt
+L0 61
+R7
+r1
+!s85 0
+31
+Z16 !s108 1559106004.287000
+Z17 !s107 mux2x1.vt|
+Z18 !s90 -work|work|mux2x1.vt|
+!s101 -O0
+R8
+vmux2x1_vlg_sample_tst
+!i10b 1
+!s100 LeJ@:<AmDjnb0LoCL`l5c3
+IQ<>^L:Oz@d9lSaDY0<FHh1
+VAcON[aQoJlK]=Re61o4Bg1
+R3
+R13
+R14
+R15
+L0 29
+R7
+r1
+!s85 0
+31
+R16
+R17
+R18
+!s101 -O0
+R8
+vmux2x1_vlg_vec_tst
+!i10b 1
+!s100 cc>Q8:mk3CfY8M=R351L]2
+IiGZYR0:iZ00I4M@AOHZd=3
+Vj6>zkY9kZ_Kn<_oGbJ?^11
+R3
+R13
+R14
+R15
+L0 156
+R7
+r1
+!s85 0
+31
+R16
+R17
+R18
+!s101 -O0
+R8

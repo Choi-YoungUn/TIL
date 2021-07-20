@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\VHDL\4_04_ex015_fourbit_addsub\fourbit_addsub_sw\simulation\qsim
+vfourbit_addsub
+Z1 II?iB6H1[:<bRK=5ofdG:`0
+Z2 VzH=F[OZg8f;EKd17NBVi:1
+Z3 dD:\VHDL\4_04_ex015_fourbit_addsub\fourbit_addsub_sw\simulation\qsim
+Z4 w1554692216
+Z5 8fourbit_addsub.vo
+Z6 Ffourbit_addsub.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 o-work work -O0
+!i10b 1
+Z9 !s100 cRLAAhE?[GKmEacI1@3Zc2
+!s85 0
+Z10 !s108 1554692218.635000
+Z11 !s107 fourbit_addsub.vo|
+Z12 !s90 -work|work|fourbit_addsub.vo|
+!s101 -O0
+vfourbit_addsub_vlg_check_tst
+!i10b 1
+!s100 G_ll;^4@XlVC@Ffi=CzeE1
+I;b2mbeX;;zE83bTcIW`iK3
+VZ@@h9PIn]BH1i2zJ[_5<B1
+R3
+Z13 w1554692215
+Z14 8fourbit_addsub.vt
+Z15 Ffourbit_addsub.vt
+L0 61
+R7
+r1
+!s85 0
+31
+Z16 !s108 1554692219.303000
+Z17 !s107 fourbit_addsub.vt|
+Z18 !s90 -work|work|fourbit_addsub.vt|
+!s101 -O0
+R8
+vfourbit_addsub_vlg_sample_tst
+!i10b 1
+!s100 0lYnH?Sj]XIC;0l6IU5h53
+Io;>MkG;ACXBFzA^:5c98N2
+VAPN4@58CNG8bF60GL=l>Q1
+R3
+R13
+R14
+R15
+L0 29
+R7
+r1
+!s85 0
+31
+R16
+R17
+R18
+!s101 -O0
+R8
+vfourbit_addsub_vlg_vec_tst
+!i10b 1
+!s100 ;`g<WFjIJ;>:Mm;OVAz783
+IX0M]FA1^`@1^nbZlo]bfX1
+VV1I2ZS53bON4:T8]^oQ293
+R3
+R13
+R14
+R15
+L0 227
+R7
+r1
+!s85 0
+31
+R16
+R17
+R18
+!s101 -O0
+R8

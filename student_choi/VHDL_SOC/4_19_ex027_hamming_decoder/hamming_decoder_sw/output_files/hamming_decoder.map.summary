@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Thu May 02 11:42:45 2019
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+Revision Name : hamming_decoder
+Top-level Entity Name : hamming_decoder
+Family : Cyclone II
+Total logic elements : 21
+    Total combinational functions : 21
+    Dedicated logic registers : 0
+Total registers : 0
+Total pins : 17
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

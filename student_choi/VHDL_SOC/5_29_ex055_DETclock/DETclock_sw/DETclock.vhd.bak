@@ -1,0 +1,103 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity DETclock is
+port( nrst : in std_logic;
+      clk : in std_logic;
+		key_sec : in std_logic;
+		key_min : in std_logic;
+		key_hor : in std_logic;
+		sel_sw : in std_logic;
+		
+		fnd_sec_ten : out std_logic_vector(6 downto 0);
+		fnd_sec_one : out std_logic_vector(6 downto 0);
+		fnd_min_ten : out std_logic_vector(6 downto 0);
+		fnd_min_one : out std_logic_vector(6 downto 0);
+		fnd_hor_ten : out std_logic_vector(6 downto 0);
+		fnd_hor_one : out std_logic_vector(6 downto 0));
+		end DETclock;
+		
+		architecture struc of DETclock is
+		
+	component sec_gen is
+port( nrst : in std_logic;
+      clk : in std_logic;
+		sec_sig : out std_logic);
+		end component;
+		
+	component	FNDdecoder is
+port (data_in : in std_logic_vector(3 downto 0);
+      seg : out std_logic_vector(6 downto 0));
+		end component;
+		
+	component	mux2x1 is
+port (a : in std_logic;
+      b : in std_logic;
+		sel : in std_logic;
+		y : out std_logic);
+		end component;
+		
+	component cnt_60 is
+port( nrst : in std_logic;   --리셋 신호 입력
+      clk : in std_logic;     --클럭 신호 입력
+		digit_ten : out std_logic_vector(3 downto 0); --십의자리 7segment
+		digit_one : out std_logic_vector(3 downto 0); --일의자리 7segment
+		carry : out std_logic);
+		end component;
+		
+	component	cnt_24 is
+port( nrst : in std_logic;   --리셋 신호 입력
+      clk : in std_logic;     --클럭 신호 입력
+		digit_ten : out std_logic_vector(3 downto 0); --십의자리 7segment
+		digit_one : out std_logic_vector(3 downto 0); --일의자리 7segment
+		carry : out std_logic);
+		end component;
+		
+		signal sec_sign : std_logic := '0';
+		signal sec_clk : std_logic := '0';
+		signal min_clk : std_logic := '0';
+		signal hor_clk : std_logic := '0';
+		signal sec_carry : std_logic := '0';
+		signal min_carry : std_logic := '0';
+		signal sec_cnt_ten : std_logic_vector(3 downto 0) := "0000";
+		signal sec_cnt_one : std_logic_vector(3 downto 0) := "0000";
+		signal min_cnt_ten : std_logic_vector(3 downto 0) := "0000";
+		signal min_cnt_one : std_logic_vector(3 downto 0) := "0000";
+		signal hor_cnt_ten : std_logic_vector(3 downto 0) := "0000";
+		signal hor_cnt_one : std_logic_vector(3 downto 0) := "0000";
+		
+		begin
+		--클럭 밑 신호 분주
+		s_sec_gen : sec_gen
+		port map(nrst => nrst, clk => clk, sec_sig => sec_sig);
+		m_sec_mux : mux2x1
+		port map(a => sec_sig, b => key_sec, sel => sel_sw, y => sec_clk);
+		m_min_mux : mux2x1
+		port map(a => sec_carry, b => key_min, sel => sel_sw, y => min_clk);
+		m_hor_mux : mux2x1
+		port map(a => min_sig, b => key_hor, sel => sel_sw, y => hor_clk);
+		--시간으로 변환
+		six_cnt_sec : cnt_60
+		port map(nrst => nrst, clk => sec_clk, digit_ten => sec_cnt_ten,
+		         digit_ten => sec_cnt_ten, carry => sec_carry);
+		six_cnt_min : cnt_60
+		port map(nrst => nrst, clk => min_clk, digit_ten => min_cnt_ten,
+		         digit_ten => min_cnt_ten, carry => min_carry);
+		six_cnt_hor : cnt_24
+		port map(nrst => nrst, clk => hor_clk, digit_ten => hor_cnt_ten,
+		         digit_ten => hor_cnt_ten, carry => hor_carry);
+					
+		f_fnd_sec_one : FNDdecoder
+		port map(data_in => sec_cnt_one, seg => fnd_sec_one);
+		f_fnd_sec_ten : FNDdecoder
+		port map(data_in => sec_cnt_ten, seg => fnd_sec_ten);
+		f_fnd_min_one : FNDdecoder
+		port map(data_in => min_cnt_one, seg => fnd_min_one);
+		f_fnd_min_ten : FNDdecoder
+		port map(data_in => min_cnt_ten, seg => fnd_min_ten);
+		f_fnd_hor_one : FNDdecoder
+		port map(data_in => hor_cnt_one, seg => fnd_hor_one);
+		f_fnd_hor_ten : FNDdecoder
+		port map(data_in => hor_cnt_ten, seg => fnd_hor_ten);
+		
+		end struc;

@@ -1,0 +1,27 @@
+D:/MO_VHDL/9_20_EX008_MUX_4X1/MUX_4X1.vhd {1 {vcom -work work -2002 -explicit {D:\MO_VHDL\9_20_EX008_MUX_4X1\MUX_4X1.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity mux_4x1
+-- Compiling architecture BEH of mux_4x1
+
+} {} {}} D:/MO_VHDL/9_20_EX008_MUX_4X1/tb_mux_4x1.vhd {2 {vcom -work work -2002 -explicit D:/MO_VHDL/9_20_EX008_MUX_4X1/tb_mux_4x1.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity tb_mux_4x1
+-- Compiling architecture BEH of tb_mux_4x1
+** Warning: [4] D:/MO_VHDL/9_20_EX008_MUX_4X1/tb_mux_4x1.vhd(31): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+** Warning: [4] D:/MO_VHDL/9_20_EX008_MUX_4X1/tb_mux_4x1.vhd(37): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+** Warning: [4] D:/MO_VHDL/9_20_EX008_MUX_4X1/tb_mux_4x1.vhd(43): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+** Warning: [4] D:/MO_VHDL/9_20_EX008_MUX_4X1/tb_mux_4x1.vhd(49): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+** Warning: [4] D:/MO_VHDL/9_20_EX008_MUX_4X1/tb_mux_4x1.vhd(55): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+** Warning: [4] D:/MO_VHDL/9_20_EX008_MUX_4X1/tb_mux_4x1.vhd(61): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+
+} {} {}}

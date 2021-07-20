@@ -1,0 +1,40 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity JK_FF is
+port( j : in std_logic;
+      k : in std_logic;
+		clk : in std_logic;
+		pr : in std_logic;
+		clr : in std_logic;
+		q :out std_logic;
+		q_ber : out std_logic);
+		end JK_FF;
+		
+		architecture behav of JK_FF is
+		 signal temp : std_logic;
+		 
+		 begin
+		 process(pr, clk, clr)
+		 begin
+		 if(pr = '1') then
+		 temp <= '1';
+		 elsif(clr = '1') then
+		 temp <= '0';
+		 elsif(clk'event and clk = '1') then
+		 if(j = '0' and k = '0') then
+		 temp <= temp;
+		 elsif(j = '1' and k = '0') then
+		 temp <= '1';
+		 elsif(j = '0' and k = '1') then
+		 temp <= '0';
+		 elsif(j = '1' and k = '1') then
+		 temp <= 'not temp;
+		 end if;
+		 end if;
+		 end process;
+		 
+		 q <= temp;
+		 q_ber <= not temp;
+		 
+		 end behav;

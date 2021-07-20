@@ -1,0 +1,16 @@
+vendor_name = ModelSim
+source_file = 1, D:/VHDL/5_08_ex044_ring_count/ring_counter_sw/D_FF.vhd
+source_file = 1, D:/VHDL/5_08_ex044_ring_count/ring_counter_sw/ring_counter.vhd
+source_file = 1, D:/VHDL/5_08_ex044_ring_count/ring_counter_sw/Waveform.vwf
+source_file = 1, D:/VHDL/5_08_ex044_ring_count/ring_counter_sw/db/ring_counter.cbx.xml
+source_file = 1, c:/vhdlfile/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, c:/vhdlfile/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, c:/vhdlfile/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, c:/vhdlfile/quartus/libraries/vhdl/ieee/timing_p.vhd
+design_name = ring_counter
+instance = comp, \reset~I , reset, ring_counter, 1
+instance = comp, \clk~I , clk, ring_counter, 1
+instance = comp, \q[0]~I , q[0], ring_counter, 1
+instance = comp, \q[1]~I , q[1], ring_counter, 1
+instance = comp, \q[2]~I , q[2], ring_counter, 1
+instance = comp, \q[3]~I , q[3], ring_counter, 1

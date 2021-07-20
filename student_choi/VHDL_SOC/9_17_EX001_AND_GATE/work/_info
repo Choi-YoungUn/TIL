@@ -1,0 +1,40 @@
+m255
+K3
+13
+cModel Technology
+dC:\vhdlfile
+Eand_gate_vhdl
+Z0 w1568961037
+Z1 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z2 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z3 dD:\MO_VHDL\9_17EX001_AND_GATE
+Z4 8D:/MO_VHDL/9_17EX001_AND_GATE/and_gate.vhd
+Z5 FD:/MO_VHDL/9_17EX001_AND_GATE/and_gate.vhd
+l0
+L5
+VgW7Xn1b9B_Gk7iMGiobjb0
+!s100 iQn[J00mEe;8zcI7NkN:b0
+Z6 OV;C;10.1d;51
+32
+!i10b 1
+Z7 !s108 1568961041.815000
+Z8 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/MO_VHDL/9_17EX001_AND_GATE/and_gate.vhd|
+Z9 !s107 D:/MO_VHDL/9_17EX001_AND_GATE/and_gate.vhd|
+Z10 o-work work -2002 -explicit -O0
+Z11 tExplicit 1
+Abehavioral
+R1
+R2
+DEx4 work 13 and_gate_vhdl 0 22 gW7Xn1b9B_Gk7iMGiobjb0
+l11
+L10
+VX`_HCm`kdagcz:S[I4IRm3
+!s100 `K:60z7c:[cfI8fHV@mEV0
+R6
+32
+!i10b 1
+R7
+R8
+R9
+R10
+R11

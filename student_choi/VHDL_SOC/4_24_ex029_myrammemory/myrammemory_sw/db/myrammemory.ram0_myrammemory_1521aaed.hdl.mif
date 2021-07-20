@@ -1,0 +1,19 @@
+-- begin_signature
+-- myrammemory
+-- end_signature
+WIDTH=8;
+DEPTH=8;
+
+ADDRESS_RADIX=UNS;
+DATA_RADIX=BIN;
+
+CONTENT BEGIN
+	7 :	10000000;
+	6 :	01000000;
+	5 :	00100000;
+	4 :	00010000;
+	3 :	00001000;
+	2 :	00000100;
+	1 :	00000010;
+	0 :	00000001;
+END;

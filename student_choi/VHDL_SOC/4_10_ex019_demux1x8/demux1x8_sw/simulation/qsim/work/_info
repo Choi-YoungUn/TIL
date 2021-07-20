@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\VHDL\4_10_ex019_demux1x8\demux1x8_sw\simulation\qsim
+vdemux1x8_pack_proce
+Z1 I6@6Aj1LYQXhFB10IzOofB1
+Z2 VMaWgUf@FKn^nebn3[`B1P0
+Z3 dD:\VHDL\4_10_ex019_demux1x8\demux1x8_sw\simulation\qsim
+Z4 w1556965333
+Z5 8demux1x8.vo
+Z6 Fdemux1x8.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 o-work work -O0
+!i10b 1
+Z9 !s100 X8;kkW`BieShkDOGM1JFg1
+!s85 0
+Z10 !s108 1556965335.557000
+Z11 !s107 demux1x8.vo|
+Z12 !s90 -work|work|demux1x8.vo|
+!s101 -O0
+vdemux1x8_pack_proce_vlg_check_tst
+!i10b 1
+!s100 nAi5C@NjhjYZI@7TmQgJH2
+I=_W[c;[oCR_J>OX1oadgA3
+Vb;`HoEzk0D@TA557Co^jK0
+R3
+Z13 w1556965332
+Z14 8demux1x8.vt
+Z15 Fdemux1x8.vt
+L0 59
+R7
+r1
+!s85 0
+31
+Z16 !s108 1556965335.886000
+Z17 !s107 demux1x8.vt|
+Z18 !s90 -work|work|demux1x8.vt|
+!s101 -O0
+R8
+vdemux1x8_pack_proce_vlg_sample_tst
+!i10b 1
+!s100 648a_oRc_jQID]X@G2NK11
+IJ5nOi74^oA0HROQF6A7l@2
+ViHe35G;EzE96Tn:@LJed?0
+R3
+R13
+R14
+R15
+L0 29
+R7
+r1
+!s85 0
+31
+R16
+R17
+R18
+!s101 -O0
+R8
+vdemux1x8_pack_proce_vlg_vec_tst
+!i10b 1
+!s100 V09@`ekBn8gLRZ@Bn7iWE0
+IGGljL4[XFh^kSFFLb7ZZ23
+V2zNke8B`hNce>iNB_Z_nQ2
+R3
+R13
+R14
+R15
+L0 279
+R7
+r1
+!s85 0
+31
+R16
+R17
+R18
+!s101 -O0
+R8

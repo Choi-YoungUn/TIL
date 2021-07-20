@@ -1,0 +1,261 @@
+|eibbit_adder_vhd
+add_a[0] => half_adder:u0.a
+add_a[1] => full_adder:u1.a
+add_a[2] => full_adder:u2.a
+add_a[3] => full_adder:u3.a
+add_a[4] => full_adder:u4.a
+add_a[5] => full_adder:u5.a
+add_a[6] => full_adder:u6.a
+add_a[7] => full_adder:u7.a
+add_b[0] => half_adder:u0.b
+add_b[1] => full_adder:u1.b
+add_b[2] => full_adder:u2.b
+add_b[3] => full_adder:u3.b
+add_b[4] => full_adder:u4.b
+add_b[5] => full_adder:u5.b
+add_b[6] => full_adder:u6.b
+add_b[7] => full_adder:u7.b
+add_sum[0] <= half_adder:u0.s
+add_sum[1] <= full_adder:u1.s
+add_sum[2] <= full_adder:u2.s
+add_sum[3] <= full_adder:u3.s
+add_sum[4] <= full_adder:u4.s
+add_sum[5] <= full_adder:u5.s
+add_sum[6] <= full_adder:u6.s
+add_sum[7] <= full_adder:u7.s
+add_sum[8] <= full_adder:u7.co
+
+
+|eibbit_adder_vhd|half_adder:u0
+a => s~0.IN0
+a => co~0.IN0
+b => s~0.IN1
+b => co~0.IN1
+s <= s~0.DB_MAX_OUTPUT_PORT_TYPE
+co <= co~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|eibbit_adder_vhd|full_adder:u1
+a => half_adder:half1.a
+b => half_adder:half1.b
+ci => half_adder:half2.b
+s <= half_adder:half2.s
+co <= OR_Gate:org.c
+
+
+|eibbit_adder_vhd|full_adder:u1|half_adder:half1
+a => s~0.IN0
+a => co~0.IN0
+b => s~0.IN1
+b => co~0.IN1
+s <= s~0.DB_MAX_OUTPUT_PORT_TYPE
+co <= co~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|eibbit_adder_vhd|full_adder:u1|half_adder:half2
+a => s~0.IN0
+a => co~0.IN0
+b => s~0.IN1
+b => co~0.IN1
+s <= s~0.DB_MAX_OUTPUT_PORT_TYPE
+co <= co~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|eibbit_adder_vhd|full_adder:u1|OR_Gate:org
+A => process_0~0.IN0
+B => process_0~0.IN1
+C <= process_0~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|eibbit_adder_vhd|full_adder:u2
+a => half_adder:half1.a
+b => half_adder:half1.b
+ci => half_adder:half2.b
+s <= half_adder:half2.s
+co <= OR_Gate:org.c
+
+
+|eibbit_adder_vhd|full_adder:u2|half_adder:half1
+a => s~0.IN0
+a => co~0.IN0
+b => s~0.IN1
+b => co~0.IN1
+s <= s~0.DB_MAX_OUTPUT_PORT_TYPE
+co <= co~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|eibbit_adder_vhd|full_adder:u2|half_adder:half2
+a => s~0.IN0
+a => co~0.IN0
+b => s~0.IN1
+b => co~0.IN1
+s <= s~0.DB_MAX_OUTPUT_PORT_TYPE
+co <= co~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|eibbit_adder_vhd|full_adder:u2|OR_Gate:org
+A => process_0~0.IN0
+B => process_0~0.IN1
+C <= process_0~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|eibbit_adder_vhd|full_adder:u3
+a => half_adder:half1.a
+b => half_adder:half1.b
+ci => half_adder:half2.b
+s <= half_adder:half2.s
+co <= OR_Gate:org.c
+
+
+|eibbit_adder_vhd|full_adder:u3|half_adder:half1
+a => s~0.IN0
+a => co~0.IN0
+b => s~0.IN1
+b => co~0.IN1
+s <= s~0.DB_MAX_OUTPUT_PORT_TYPE
+co <= co~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|eibbit_adder_vhd|full_adder:u3|half_adder:half2
+a => s~0.IN0
+a => co~0.IN0
+b => s~0.IN1
+b => co~0.IN1
+s <= s~0.DB_MAX_OUTPUT_PORT_TYPE
+co <= co~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|eibbit_adder_vhd|full_adder:u3|OR_Gate:org
+A => process_0~0.IN0
+B => process_0~0.IN1
+C <= process_0~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|eibbit_adder_vhd|full_adder:u4
+a => half_adder:half1.a
+b => half_adder:half1.b
+ci => half_adder:half2.b
+s <= half_adder:half2.s
+co <= OR_Gate:org.c
+
+
+|eibbit_adder_vhd|full_adder:u4|half_adder:half1
+a => s~0.IN0
+a => co~0.IN0
+b => s~0.IN1
+b => co~0.IN1
+s <= s~0.DB_MAX_OUTPUT_PORT_TYPE
+co <= co~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|eibbit_adder_vhd|full_adder:u4|half_adder:half2
+a => s~0.IN0
+a => co~0.IN0
+b => s~0.IN1
+b => co~0.IN1
+s <= s~0.DB_MAX_OUTPUT_PORT_TYPE
+co <= co~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|eibbit_adder_vhd|full_adder:u4|OR_Gate:org
+A => process_0~0.IN0
+B => process_0~0.IN1
+C <= process_0~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|eibbit_adder_vhd|full_adder:u5
+a => half_adder:half1.a
+b => half_adder:half1.b
+ci => half_adder:half2.b
+s <= half_adder:half2.s
+co <= OR_Gate:org.c
+
+
+|eibbit_adder_vhd|full_adder:u5|half_adder:half1
+a => s~0.IN0
+a => co~0.IN0
+b => s~0.IN1
+b => co~0.IN1
+s <= s~0.DB_MAX_OUTPUT_PORT_TYPE
+co <= co~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|eibbit_adder_vhd|full_adder:u5|half_adder:half2
+a => s~0.IN0
+a => co~0.IN0
+b => s~0.IN1
+b => co~0.IN1
+s <= s~0.DB_MAX_OUTPUT_PORT_TYPE
+co <= co~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|eibbit_adder_vhd|full_adder:u5|OR_Gate:org
+A => process_0~0.IN0
+B => process_0~0.IN1
+C <= process_0~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|eibbit_adder_vhd|full_adder:u6
+a => half_adder:half1.a
+b => half_adder:half1.b
+ci => half_adder:half2.b
+s <= half_adder:half2.s
+co <= OR_Gate:org.c
+
+
+|eibbit_adder_vhd|full_adder:u6|half_adder:half1
+a => s~0.IN0
+a => co~0.IN0
+b => s~0.IN1
+b => co~0.IN1
+s <= s~0.DB_MAX_OUTPUT_PORT_TYPE
+co <= co~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|eibbit_adder_vhd|full_adder:u6|half_adder:half2
+a => s~0.IN0
+a => co~0.IN0
+b => s~0.IN1
+b => co~0.IN1
+s <= s~0.DB_MAX_OUTPUT_PORT_TYPE
+co <= co~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|eibbit_adder_vhd|full_adder:u6|OR_Gate:org
+A => process_0~0.IN0
+B => process_0~0.IN1
+C <= process_0~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|eibbit_adder_vhd|full_adder:u7
+a => half_adder:half1.a
+b => half_adder:half1.b
+ci => half_adder:half2.b
+s <= half_adder:half2.s
+co <= OR_Gate:org.c
+
+
+|eibbit_adder_vhd|full_adder:u7|half_adder:half1
+a => s~0.IN0
+a => co~0.IN0
+b => s~0.IN1
+b => co~0.IN1
+s <= s~0.DB_MAX_OUTPUT_PORT_TYPE
+co <= co~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|eibbit_adder_vhd|full_adder:u7|half_adder:half2
+a => s~0.IN0
+a => co~0.IN0
+b => s~0.IN1
+b => co~0.IN1
+s <= s~0.DB_MAX_OUTPUT_PORT_TYPE
+co <= co~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|eibbit_adder_vhd|full_adder:u7|OR_Gate:org
+A => process_0~0.IN0
+B => process_0~0.IN1
+C <= process_0~0.DB_MAX_OUTPUT_PORT_TYPE
+
+

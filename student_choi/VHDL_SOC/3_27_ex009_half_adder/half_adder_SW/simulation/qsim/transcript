@@ -1,0 +1,14 @@
+# do half_adder.do 
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module half_adder
+# 
+# Top level modules:
+# 	half_adder
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module half_adder_vlg_sample_tst
+# -- Compiling module half_adder_vlg_check_tst
+# -- Compiling module half_adder_vlg_vec_tst
+# 
+# Top level modules:
+# 	half_adder_vlg_vec_tst
+# vsim -L cycloneii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate -c -t 1ps -novopt work.half_adder_vlg_vec_tst 

@@ -1,0 +1,38 @@
+
+State Machine - |ALL_regi_map|UART_RX:inst2|state
+Name state.STOP state.PARITY state.RECEIVE state.START state.IDLE 
+state.IDLE 0 0 0 0 0 
+state.START 0 0 0 1 1 
+state.RECEIVE 0 0 1 0 1 
+state.PARITY 0 1 0 0 1 
+state.STOP 1 0 0 0 1 
+
+State Machine - |ALL_regi_map|register_map:inst4|state
+Name state.RDN_STOP state.RDN_END state.RDN_DEC state.RDN_START state.WRN_STOP state.WRN_END state.WRN_DEC state.WRN_START state.IDLE 
+state.IDLE 0 0 0 0 0 0 0 0 0 
+state.WRN_START 0 0 0 0 0 0 0 1 1 
+state.WRN_DEC 0 0 0 0 0 0 1 0 1 
+state.WRN_END 0 0 0 0 0 1 0 0 1 
+state.WRN_STOP 0 0 0 0 1 0 0 0 1 
+state.RDN_START 0 0 0 1 0 0 0 0 1 
+state.RDN_DEC 0 0 1 0 0 0 0 0 1 
+state.RDN_END 0 1 0 0 0 0 0 0 1 
+state.RDN_STOP 1 0 0 0 0 0 0 0 1 
+
+State Machine - |ALL_regi_map|load_tx_data:inst5|state
+Name state.RDN_WAIT state.RDN_SEND state.RDN_LOAD state.WRN_WAIT state.WRN_SEND state.WRN_LOAD state.IDLE 
+state.IDLE 0 0 0 0 0 0 0 
+state.WRN_LOAD 0 0 0 0 0 1 1 
+state.WRN_SEND 0 0 0 0 1 0 1 
+state.WRN_WAIT 0 0 0 1 0 0 1 
+state.RDN_LOAD 0 0 1 0 0 0 1 
+state.RDN_SEND 0 1 0 0 0 0 1 
+state.RDN_WAIT 1 0 0 0 0 0 1 
+
+State Machine - |ALL_regi_map|UART_TX:inst6|state
+Name state.STOP state.PARITY state.SEND state.START state.IDLE 
+state.IDLE 0 0 0 0 0 
+state.START 0 0 0 1 1 
+state.SEND 0 0 1 0 1 
+state.PARITY 0 1 0 0 1 
+state.STOP 1 0 0 0 1 

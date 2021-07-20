@@ -1,0 +1,330 @@
+Analysis & Synthesis report for fourbitcomparator
+Sat May 04 20:40:49 2019
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sat May 04 20:40:49 2019           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; fourbitcomparator                               ;
+; Top-level Entity Name              ; fourbitcomparator                               ;
+; Family                             ; Cyclone II                                      ;
+; Total logic elements               ; 32                                              ;
+;     Total combinational functions  ; 32                                              ;
+;     Dedicated logic registers      ; 0                                               ;
+; Total registers                    ; 0                                               ;
+; Total pins                         ; 14                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C35F672C6       ;                    ;
+; Top-level entity name                                                      ; fourbitcomparator  ; fourbitcomparator  ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                 ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                          ; Library ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------+---------+
+; onebitfullcomparator_vh.vhd      ; yes             ; User VHDL File  ; D:/VHDL/4_10_ex020_fourbitcomparator/fourbitcomparator_sw/onebitfullcomparator_vh.vhd ;         ;
+; fourbitcomparator.vhd            ; yes             ; User VHDL File  ; D:/VHDL/4_10_ex020_fourbitcomparator/fourbitcomparator_sw/fourbitcomparator.vhd       ;         ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                 ;
++---------------------------------------------+-------------------------------+
+; Resource                                    ; Usage                         ;
++---------------------------------------------+-------------------------------+
+; Estimated Total logic elements              ; 32                            ;
+;                                             ;                               ;
+; Total combinational functions               ; 32                            ;
+; Logic element usage by number of LUT inputs ;                               ;
+;     -- 4 input functions                    ; 11                            ;
+;     -- 3 input functions                    ; 18                            ;
+;     -- <=2 input functions                  ; 3                             ;
+;                                             ;                               ;
+; Logic elements by mode                      ;                               ;
+;     -- normal mode                          ; 32                            ;
+;     -- arithmetic mode                      ; 0                             ;
+;                                             ;                               ;
+; Total registers                             ; 0                             ;
+;     -- Dedicated logic registers            ; 0                             ;
+;     -- I/O registers                        ; 0                             ;
+;                                             ;                               ;
+; I/O pins                                    ; 14                            ;
+; Embedded Multiplier 9-bit elements          ; 0                             ;
+; Maximum fan-out node                        ; onebitfullcomparator_vh:u1|Zo ;
+; Maximum fan-out                             ; 5                             ;
+; Total fan-out                               ; 107                           ;
+; Average fan-out                             ; 2.33                          ;
++---------------------------------------------+-------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                        ;
++---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------+--------------+
+; Compilation Hierarchy Node      ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                           ; Library Name ;
++---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------+--------------+
+; |fourbitcomparator              ; 32 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 14   ; 0            ; |fourbitcomparator                            ; work         ;
+;    |onebitfullcomparator_vh:u0| ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fourbitcomparator|onebitfullcomparator_vh:u0 ; work         ;
+;    |onebitfullcomparator_vh:u1| ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fourbitcomparator|onebitfullcomparator_vh:u1 ; work         ;
+;    |onebitfullcomparator_vh:u2| ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fourbitcomparator|onebitfullcomparator_vh:u2 ; work         ;
+;    |onebitfullcomparator_vh:u3| ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fourbitcomparator|onebitfullcomparator_vh:u3 ; work         ;
++---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                          ;
++-----------------------------------------------------+-------------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal           ; Free of Timing Hazards ;
++-----------------------------------------------------+-------------------------------+------------------------+
+; onebitfullcomparator_vh:u0|Xo                       ; onebitfullcomparator_vh:u0|Xo ; yes                    ;
+; onebitfullcomparator_vh:u0|Yo                       ; onebitfullcomparator_vh:u0|Xo ; yes                    ;
+; onebitfullcomparator_vh:u0|Zo                       ; onebitfullcomparator_vh:u0|Xo ; yes                    ;
+; onebitfullcomparator_vh:u1|Zo                       ; onebitfullcomparator_vh:u1|Xo ; yes                    ;
+; onebitfullcomparator_vh:u1|Yo                       ; onebitfullcomparator_vh:u1|Xo ; yes                    ;
+; onebitfullcomparator_vh:u1|Xo                       ; onebitfullcomparator_vh:u1|Xo ; yes                    ;
+; onebitfullcomparator_vh:u2|Zo                       ; onebitfullcomparator_vh:u2|Xo ; yes                    ;
+; onebitfullcomparator_vh:u2|Xo                       ; onebitfullcomparator_vh:u2|Xo ; yes                    ;
+; onebitfullcomparator_vh:u2|Yo                       ; onebitfullcomparator_vh:u2|Xo ; yes                    ;
+; onebitfullcomparator_vh:u3|Zo                       ; onebitfullcomparator_vh:u3|Xo ; yes                    ;
+; onebitfullcomparator_vh:u3|Xo                       ; onebitfullcomparator_vh:u3|Xo ; yes                    ;
+; onebitfullcomparator_vh:u3|Yo                       ; onebitfullcomparator_vh:u3|Xo ; yes                    ;
+; Number of user-specified and inferred latches = 12  ;                               ;                        ;
++-----------------------------------------------------+-------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |fourbitcomparator|onebitfullcomparator_vh:u0|Xo ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |fourbitcomparator|onebitfullcomparator_vh:u1|Xo ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |fourbitcomparator|onebitfullcomparator_vh:u2|Xo ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |fourbitcomparator|onebitfullcomparator_vh:u3|Xo ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sat May 04 20:40:47 2019
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off fourbitcomparator -c fourbitcomparator
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file onebitfullcomparator_vh.vhd
+    Info (12022): Found design unit 1: onebitfullcomparator_vh-behav
+    Info (12023): Found entity 1: onebitfullcomparator_vh
+Info (12021): Found 2 design units, including 1 entities, in source file fourbitcomparator.vhd
+    Info (12022): Found design unit 1: fourbitcomparator-sample
+    Info (12023): Found entity 1: fourbitcomparator
+Info (12127): Elaborating entity "fourbitcomparator" for the top level hierarchy
+Info (12128): Elaborating entity "onebitfullcomparator_vh" for hierarchy "onebitfullcomparator_vh:u3"
+Warning (10631): VHDL Process Statement warning at onebitfullcomparator_vh.vhd(19): inferring latch(es) for signal or variable "Xo", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at onebitfullcomparator_vh.vhd(19): inferring latch(es) for signal or variable "Yo", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at onebitfullcomparator_vh.vhd(19): inferring latch(es) for signal or variable "Zo", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "Zo" at onebitfullcomparator_vh.vhd(19)
+Info (10041): Inferred latch for "Yo" at onebitfullcomparator_vh.vhd(19)
+Info (10041): Inferred latch for "Xo" at onebitfullcomparator_vh.vhd(19)
+Warning (13012): Latch onebitfullcomparator_vh:u0|Xo has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal onebitfullcomparator_vh:u1|Zo
+Warning (13012): Latch onebitfullcomparator_vh:u0|Yo has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal onebitfullcomparator_vh:u1|Zo
+Warning (13012): Latch onebitfullcomparator_vh:u0|Zo has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal onebitfullcomparator_vh:u1|Zo
+Warning (13012): Latch onebitfullcomparator_vh:u1|Zo has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal onebitfullcomparator_vh:u2|Zo
+Warning (13012): Latch onebitfullcomparator_vh:u1|Yo has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal onebitfullcomparator_vh:u2|Zo
+Warning (13012): Latch onebitfullcomparator_vh:u1|Xo has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal onebitfullcomparator_vh:u2|Zo
+Warning (13012): Latch onebitfullcomparator_vh:u2|Zo has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal onebitfullcomparator_vh:u3|Zo
+Warning (13012): Latch onebitfullcomparator_vh:u2|Xo has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal onebitfullcomparator_vh:u3|Zo
+Warning (13012): Latch onebitfullcomparator_vh:u2|Yo has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal onebitfullcomparator_vh:u3|Zo
+Warning (13012): Latch onebitfullcomparator_vh:u3|Zo has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Zif
+Warning (13012): Latch onebitfullcomparator_vh:u3|Xo has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Yif
+Warning (13012): Latch onebitfullcomparator_vh:u3|Yo has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Yif
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 46 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 11 input pins
+    Info (21059): Implemented 3 output pins
+    Info (21061): Implemented 32 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 28 warnings
+    Info: Peak virtual memory: 4663 megabytes
+    Info: Processing ended: Sat May 04 20:40:49 2019
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+

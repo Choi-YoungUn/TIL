@@ -1,0 +1,120 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_match.all;
+
+entity nine_bcd is
+port ( nbit : in std_logic_vector(8 downto 0);
+       bcdcorde : out std_logic_vector(11 downto 0));
+		 end nine_bcd;
+		 
+		 architecture behav of nine_bcd is
+		 
+		 variable temp : std_logic_vector(11 downto 0);
+		 variable num : integer;
+		 
+		 begin
+		 num := 0;
+		 if(nbit(0) =1) then
+num := num + 1;
+    if(nbit(1) = 1) then
+    num := num + 2;
+       if(nbit(2) =1) then
+       num := num + 4;
+          if(nbit(3) =1) then
+          num := num + 8;
+             if(nbit(4) =1) then
+             num := num + 16;
+                  if(nbit(5) =1) then
+                  num := num + 32;
+                      if(nbit(6) =1) then
+                      num := num + 64;
+                          if(nbit(7) =1) then
+                          num := num + 128;
+                             if(nbit(8) =1) then
+                             num := num + 256;
+                             end if;
+                          end if;
+                      end if;
+                  end if;
+              end if;
+           end if;
+      end if;
+   end if;
+end if;
+
+if(num >= 500)then
+  temp(11 downto 8) <= "0101";
+  num := num - 500;
+elsif(num >= 400) then
+ temp(11 downto 8) <= "0100";
+  num := num - 400;
+elsif(num >= 300) then
+ temp(11 downto 8) <= "0011";
+  num := num - 300;
+elsif(num >= 200) then
+ temp(11 downto 8) <= "0010";
+  num := num - 200;
+elsif(num >= 100) then
+ temp(11 downto 8) <= "0001";
+  num := num - 100;
+else
+ temp(11 downto 8) <= "0000";
+end if;
+
+if(num >= 90) then
+temp(7 downto 4) <= "1001";
+num := num-90;
+elsif(num >= 80) then
+temp(7 downto 4) <= "1000";
+num := num-80;
+elsif(num >= 70) then
+temp(7 downto 4) <= "0111";
+num := num-70;
+elsif(num >= 60) then
+temp(7 downto 4) <= "0110";
+num := num-60;
+elsif(num >= 50) then
+temp(7 downto 4) <= "0101";
+num := num-50;
+elsif(num >= 40) then
+temp(7 downto 4) <= "0100";
+num := num-40;
+elsif(num >= 30) then
+temp(7 downto 4) <= "0011";
+num := num-30;
+elsif(num >= 20) then
+temp(7 downto 4) <= "0010";
+num := num-20;
+elsif(num >= 10) then
+temp(7 downto 4) <= "0001";
+num := num-10;
+else
+temp(7 downto 4) <= "0000";
+end if;
+
+if(num >= 9) then
+temp(7 downto 4) <= "1001";
+elsif(num >= 8) then
+temp(7 downto 4) <= "1000";
+elsif(num >= 7) then
+temp(7 downto 4) <= "0111";
+elsif(num >= 6) then
+temp(7 downto 4) <= "0110";
+elsif(num >= 5) then
+temp(7 downto 4) <= "0101";
+elsif(num >= 4) then
+temp(7 downto 4) <= "0100";
+elsif(num >= 3) then
+temp(7 downto 4) <= "0011";
+elsif(num >= 2) then
+temp(7 downto 4) <= "0010";
+elsif(num >= 1) then
+temp(7 downto 4) <= "0001";
+else
+temp(7 downto 4) <= "0000";
+end if;
+
+bcdcord <= temp;
+
+end behav;
