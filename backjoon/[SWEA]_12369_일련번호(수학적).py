@@ -7,9 +7,12 @@ for tc in range(1, int(input()) + 1):
     while idx <= num:
         add_idx.append(idx)
         idx = idx * len_string + 1
-        
+
     result = []
     for x in add_idx[::-1]:
+        print(x,(num - x) % len_string, string[(num - x) % len_string])
+
+
         result.append(string[(num - x) % len_string])
         num = (num - 1) // len_string
    
