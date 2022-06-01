@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <body>
+    <div id="root">
+
+    </div>
+  </body>
+  <script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <script type="text/babel">
+    const root = document.getElementById("root");
+    // const h3 = React.createElement("h3",
+    // { 
+    //   onMouseEnter: ()=> console.log("mouse enter"),
+    // },
+    // "hello im span");
+
+
+    // const Title = () =>(
+    //   <h3 id="title" onMouseEnter= {()=> console.log("mouse enter")}>
+    //     hello im a title
+    //     </h3>
+    //   );
+
+    // function Title() {
+    //   return(
+    //     <h3 id="title" onMouseEnter= {()=> console.log("mouse enter")}>
+    //     hello im a title
+    //     </h3>
+    //   );
+    // }
+
+    // function Title() {
+    //   return(
+    //     <h3 id="title" onMouseEnter= {()=> console.log("mouse enter")}>
+    //     hello im a title
+    //     </h3>
+    //   );
+    // }
+
+
+    // const btn = React.createElement(
+    //   "button",
+    //   {
+    //     onClick: () => console.log("im clicked")
+    //   },
+    //   "click me");
+
+    // const Button = () => <button onClick= {() => console.log("im clicked")}>click me</button>
+    
+    // function Btn() {
+    //   return(
+    //     <button onClick={() => console.log("im clicked")}>click mes</button>
+    //   )
+    // }
+    
+    
+    // const Container = React.createElement("div", null, [Title, Button]);
+    // const Container = (
+    //   <div>
+    //     <Title />
+    //     <Btn />
+    //   </div>
+    // )
+
+    
+    const Container = (
+      <div>
+        <h3> hello im a title</h3>
+        <button >click me</button>
+      </div>
+    )
+
+
+
+
+
+    ReactDOM.render(Container, root);
+  </script>
+</html>
